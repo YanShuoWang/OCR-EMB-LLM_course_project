@@ -1,0 +1,12 @@
+[server]
+# 最大上传文件大小（单位：MB）
+maxUploadSize = 500
+# 最大消息大小（单位：MB）
+maxMessageSize = 500
+# 启用CORS
+enableCORS = true
+# 禁用XSRF保护以解决某些上传问题
+enableXsrfProtection = false
+# 启用文件监控（可以设置为 "none" 以减少问题）
+fileWatcherType = "auto"
+

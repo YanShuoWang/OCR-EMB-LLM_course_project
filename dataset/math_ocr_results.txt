@@ -1,0 +1,2498 @@
+|函数和隐函数|函数：设有两个变量\( x \)和\( y \)，变量\( x \)的定义域为\( D \)，如果对于\( D \)中的每一个\( x \)值，按照一定的法则，变量\( y \)有一个确定的值与之对应，则称变量\( y \)为变量\( x \)的函数，记作：\( y = f(x) \)|
+
+|基本初等函数的性质及其图形，初等函数，函数关系的建立：|基本初等函数包括五类函数:<br>1 幂函数:\( y = x^{\mu} \ (\mu \in R) \);<br>2 指数函数\( y = a^x \ (a > 0 \text{ 且 } a \neq 1) \);<br>3 对数函数:\( y = \log_a x \ (a > 0 \text{ 且 } a \neq 1) \);<br>4 三角函数:如\( y = \sin x, y = \cos x, y = \tan x \)等;<br>5 反三角函数:如\( y = \arcsin x, y = \arccos x, y = \arctan x \)等.<br>初等函数：由常数\( C \)和基本初等函数经过有限次四则运算与有限次复合步骤所构成，并可用一个数学式子表示的函数，称为初等函数.|
+
+|数列极限与函数极限的定义及其性质，函数的左极限与右极限|1 \( \lim\limits_{x \to x_0} f(x) = A \Leftrightarrow f_ - (x_0) = f_ + (x_0) = A \)<br>2 \( \lim\limits_{x \to x_0} f(x) = A \Leftrightarrow f(x_0) = A + \alpha(x) \)，其中\( \lim\limits_{x \to x_0} \alpha(x) = 0 \)<br>3 (保号定理) <br>\( \lim\limits_{x \to x_0} f(x) = A \)，又\( A > 0 \)（或\( A < 0 \)），则\( \exists \delta > 0 \)，<br>当\( x \in (x_0 - \delta, x_0 + \delta) \)，且\( x \neq x_0 \)时，\( f(x) > 0 \)（或\( f(x) < 0 \)）|
+
+|无穷小和无穷大的概念及其| \( \lim \alpha(x) = 0, \lim \beta(x) = 0 \) |
+
+### 关系，无穷小的性质及无穷小的比较
+1. **无穷小阶的定义**  
+   (1) 若\(\lim \frac{\alpha(x)}{\beta(x)} = 0\)，则\(\alpha(x)\)是比\(\beta(x)\)高阶的无穷小，记为\(\alpha(x)=o(\beta(x))\)。  
+   (2) 若\(\lim \frac{\alpha(x)}{\beta(x)}=\infty\)，则\(\alpha(x)\)是比\(\beta(x)\)低阶的无穷小。  
+   (3) 若\(\lim \frac{\alpha(x)}{\beta(x)} = c(c\neq0)\)，则\(\alpha(x)\)与\(\beta(x)\)是**同阶无穷小**。  
+   (4) 若\(\lim \frac{\alpha(x)}{\beta(x)} = 1\)，则\(\alpha(x)\)与\(\beta(x)\)是**等价无穷小**，记为\(\alpha(x)\sim\beta(x)\)。  
+   (5) 若\(\lim \frac{\alpha(x)}{\beta^k(x)} = c(c\neq0),k > 0\)，则\(\alpha(x)\)是\(\beta(x)\)的\(k\)阶无穷小。  
+
+
+2. **常用等价无穷小（\(x\to0\)时）**  
+   \[
+   \begin{cases} 
+   \sin x \\
+   \arcsin x \\
+   \tan x \\
+   \arctan x \\
+   \ln(1 + x) \\
+   \mathrm{e}^x - 1 
+   \end{cases} \sim x, \quad 
+   \begin{cases} 
+   1 - \cos x \sim \frac{1}{2}x^2 \\
+   (1 + x)^{\frac{1}{n}} - 1 \sim \frac{1}{n}x 
+   \end{cases}
+   \]  
+
+
+3. **无穷小的性质**  
+   (1) 有限个无穷小的代数和为无穷小。  
+   (2) 有限个无穷小的乘积为无穷小。  
+   (3) 无穷小乘以有界变量为无穷小。  
+
+   **定理**：在同一变化趋势下，无穷大的倒数为无穷小；非零的无穷小的倒数为无穷大。  
+
+
+### 极限的四则运算
+若\(\lim f(x)=A\)，\(\lim g(x)=B\)，则：  
+(1) \(\lim \left[f(x)\pm g(x)\right]=A\pm B\)；  
+(2) \(\lim \left[f(x)g(x)\right]=A\cdot B\)；  
+(3) \(\lim \frac{f(x)}{g(x)}=\frac{A}{B}\ (B\neq0)\)。  
+
+
+### 极限存在的两个准则：单调有界准则和夹逼准则，两个重要极限：
+1. **夹逼定理**：设在\(x_0\)的邻域内，恒有\(\varphi(x)\leq f(x)\leq\psi(x)\)，且\(\lim\limits_{x\to x_0}\varphi(x)=\lim\limits_{x\to x_0}\psi(x)=A\)，则\(\lim\limits_{x\to x_0}f(x)=A\)。  
+
+2. **单调有界定理**：单调有界的数列必有极限。  
+
+3. **两个重要极限**  
+   (1) \(\boldsymbol{\lim\limits_{x\to0}\frac{\sin x}{x}=1}\)；  
+   (2) \(\boldsymbol{\lim\limits_{x\to0}(1 + x)^{\frac{1}{x}}=\mathrm{e}}\)（或\(\lim\limits_{n\to\infty}\left(1+\frac{1}{n}\right)^n=\mathrm{e}\)）。  
+
+
+4. **重要公式**  
+   设多项式\(P_n(x)=a_nx^n + a_{n-1}x^{n-1}+\cdots+a_1x + a_0\)，\(Q_m(x)=b_mx^m + b_{m-1}x^{m-1}+\cdots+b_1x + b_0\)（\(a_n\neq0,b_m\neq0\)），则：  
+   \[
+   \lim\limits_{x\to\infty}\frac{P_n(x)}{Q_m(x)}=\begin{cases} 
+   \frac{a_n}{b_m}, & n = m \\
+   0, & n < m \\
+   \infty, & n > m 
+   \end{cases}
+   \]  
+
+
+5. **几个常用极限特例**  
+   \[
+   \begin{align*}
+   \lim\limits_{n\to\infty}\sqrt[n]{n}&=1, & \lim\limits_{x\to+\infty}\arctan x&=\frac{\pi}{2}, \\
+   \lim\limits_{x\to-\infty}\arctan x&=-\frac{\pi}{2}, & \lim\limits_{x\to+\infty}\mathrm{arc}\cot x&=0, \\
+   \lim\limits_{x\to-\infty}\mathrm{arc}\cot x&=\pi, & \lim\limits_{x\to-\infty}\mathrm{e}^x&=0, \\
+   \lim\limits_{x\to+\infty}\mathrm{e}^x&=\infty, & \lim\limits_{x\to0^+}x^x&=1.
+   \end{align*}
+   \]  
+
+
+### 函数连续的概念；函数间断点的类型；初等函数的连续性；闭区间上连续函数的性质
+**闭区间上连续函数的性质**：  
+(1) **有界性**：设函数\(f(x)\)在\([a,b]\)上连续，则\(f(x)\)在\([a,b]\)上有界，即\(\exists\)常数\(M > 0\)，对任意的\(x\in[a,b]\)，恒有\(\vert f(x)\vert\leq M\)。  
+
+(2) **最值定理**：设函数\(f(x)\)在\([a,b]\)上连续，则\(f(x)\)在\([a,b]\)上至少取得最大值与最小值各一次，即\(\exists\xi,\eta\in[a,b]\)，使得：  
+   \[
+   f(\xi)=\max\limits_{x\in[a,b]}\{f(x)\}, \quad f(\eta)=\min\limits_{x\in[a,b]}\{f(x)\}
+   \]  
+
+（其余性质如“零点定理”“介值定理”若图中包含也需补充，此处根据图中内容整理）
+
+
+
+### 函数的最值与零点相关
+- 最值：\( f(\xi)=\max\limits_{x\in[a,b]}\{f(x)\}, \ \xi\in[a,b] \)；\( f(\eta)=\min\limits_{x\in[a,b]}\{f(x)\}, \ \eta\in[a,b] \)
+- 介值定理：若函数\( f(x) \)在\([a,b]\)上连续，\(\mu\)是介于\( f(a) \)与\( f(b) \)（或最大值\( M \)与最小值\( m \)）之间的任一实数，则在\([a,b]\)上至少\(\exists\)一个\(\xi\)，使得\( f(\xi)=\mu \ (a\leq\xi\leq b) \)
+- 零点定理（根的存在性定理）：设函数\( f(x) \)在\([a,b]\)上连续，且\( f(a)\cdot f(b)<0 \)，则在\((a,b)\)内至少\(\exists\)一个\(\xi\)，使得\( f(\xi)=0 \ (a<\xi<b) \)
+
+
+### （二）一元函数微分学
+#### 导数和微分的概念、左右导数、导数的几何意义和物理意义
+- 导数定义：
+  - \( f'(x_0)=\lim\limits_{\Delta x\to0}\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x} \)（1）
+  - 或 \( f'(x_0)=\lim\limits_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0} \)（2）
+- 左右导数：函数\( f(x) \)在\( x_0 \)处的左、右导数分别定义为：
+  - 左导数：\( f'_-(x_0)=\lim\limits_{\Delta x\to0^-}\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}=\lim\limits_{x\to x_0^-}\frac{f(x)-f(x_0)}{x-x_0},(x = x_0+\Delta x) \)
+  - 右导数：\( f'_+(x_0)=\lim\limits_{\Delta x\to0^+}\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}=\lim\limits_{x\to x_0^+}\frac{f(x)-f(x_0)}{x-x_0} \)
+
+#### 函数的可导性与连续性之间的关系，平面曲线的
+- Th1：函数\( f(x) \)在\( x_0 \)处可微\(\Leftrightarrow f(x) \)在\( x_0 \)处可导
+- Th2：若函数\( y = f(x) \)在点\( x_0 \)处可导，则\( y = f(x) \)在点\( x_0 \)处连续，反之则不成立，即函数连续不一定可导
+- Th3：\( f'(x_0) \)存在\(\Leftrightarrow f'_-(x_0)=f'_+(x_0) \)
+
+
+#### 切线和法线
+设函数\( f(x) \)在\( x = x_0 \)处可导，则\( f(x) \)在\( M(x_0,y_0) \)处的：
+- 切线方程：\( y - y_0 = f'(x_0)(x - x_0) \)
+- 法线方程：\( y - y_0 = -\frac{1}{f'(x_0)}(x - x_0),f'(x_0)\neq0 \)
+
+
+#### 导数和微分的四则运算，初等函数的导数
+- 四则运算法则：设函数\( u = u(x) \)，\( v = v(x) \)在点\( x \)可导，则
+  - \( (u\pm v)' = u'\pm v' \)，\( d(u\pm v)=du\pm dv \)
+  - \( (uv)' = uv' + vu' \)，\( d(uv)=udv + vdu \)
+  - \( \left( \frac{u}{v} \right)' = \frac{vu' - uv'}{v^2}(v\neq0) \)，\( d\left( \frac{u}{v} \right)=\frac{vdu - udv}{v^2} \)
+
+- 基本导数与微分表：
+  1. \( y = c \)（常数）：\( y' = 0 \)，\( dy = 0 \)
+  2. \( y = x^\alpha \)（\(\alpha\)为实数）：\( y' = \alpha x^{\alpha - 1} \)，\( dy = \alpha x^{\alpha - 1}dx \)
+  3. \( y = a^x \)：\( y' = a^x\ln a \)，\( dy = a^x\ln adx \)；特例\( (e^x)' = e^x \)，\( d(e^x)=e^xdx \)
+  4. \( y' = \frac{1}{x\ln a} \)，\( dy = \frac{1}{x\ln a}dx \)；特例\( y = \ln x \)，\( (\ln x)' = \frac{1}{x} \)，\( d(\ln x)=\frac{1}{x}dx \)
+  5. \( y = \sin x \)：\( y' = \cos x \)，\( d(\sin x)=\cos xdx \)
+  6. \( y = \cos x \)：\( y' = -\sin x \)，\( d(\cos x)=-\sin xdx \)
+  7. \( y = \tan x \)：\( y' = \frac{1}{\cos^2 x}=\sec^2 x \)，\( d(\tan x)=\sec^2 xdx \)
+  8. \( y = \cot x \)：\( y' = -\frac{1}{\sin^2 x}=-\csc^2 x \)，\( d(\cot x)=-\csc^2 xdx \)
+  9. \( y = \sec x \)：\( y' = \sec x\cdot\tan x \)，\( d(\sec x)=\sec x\tan xdx \)
+  10. \( y = \csc x \)：\( y' = -\csc x\cdot\cot x \)，\( d(\csc x)=-\csc x\cot xdx \)
+  11. \( y = \arcsin x \)：\( y' = \frac{1}{\sqrt{1 - x^2}} \)，\( d(\arcsin x)=\frac{1}{\sqrt{1 - x^2}}dx \)
+  12. \( y = \arccos x \)：\( y' = -\frac{1}{\sqrt{1 - x^2}} \)，\( d(\arccos x)=-\frac{1}{\sqrt{1 - x^2}}dx \)
+
+
+
+### 基本导数与微分公式  
+(13) \( y = \arctan x \) \( y' = \frac{1}{1+x^2} \) \( d(\arctan x) = \frac{1}{1+x^2}dx \)  
+(14) \( y = \text{arc cot } x \) \( y' = -\frac{1}{1+x^2} \) \( d(\text{arc cot } x) = -\frac{1}{1+x^2}dx \)  
+(15) \( y = \text{sh}x \) \( y' = \text{ch}x \) \( d(\text{sh}x) = \text{ch}xdx \)  
+(16) \( y = \text{ch}x \) \( y' = \text{sh}x \) \( d(\text{ch}x) = \text{sh}xdx \)  
+
+
+### 复合函数、反函数、隐函数以及参数方程所确定的函数的微分法  
+1. **反函数的运算法则**：设 \( y = f(x) \) 在点 \( x \) 的某邻域内单调连续，在点 \( x \) 处可导且 \( f'(x) \neq 0 \)，则其反函数在点 \( x \) 所对应的 \( y \) 处可导，并且有  
+   \[
+   \frac{dy}{dx} = \frac{1}{\frac{dx}{dy}}
+   \]  
+
+2. **复合函数的运算法则**：若 \( \mu = \varphi(x) \) 在点 \( x \) 可导，而 \( y = f(\mu) \) 在对应点 \( \mu \, (\mu = \varphi(x)) \) 可导，则复合函数 \( y = f(\varphi(x)) \) 在点 \( x \) 可导，且  
+   \[
+   y' = f'(\mu) \cdot \varphi'(x)
+   \]  
+
+3. **隐函数导数 \( \frac{dy}{dx} \) 的求法**（一般有三种方法）：  
+   (1) 方程两边对 \( x \) 求导，要记住 \( y \) 是 \( x \) 的函数，则 \( y \) 的函数是 \( x \) 的复合函数（例如 \( \frac{1}{y} \)，\( y^2 \)，\( \ln y \)，\( e^y \) 等均是 \( x \) 的复合函数）。对 \( x \) 求导应按复合函数连锁法则做。  
+   (2) 公式法：由 \( F(x, y) = 0 \) 知  
+      \[
+      \frac{dy}{dx} = -\frac{F'_x(x, y)}{F'_y(x, y)}
+      \]  
+      其中，\( F'_x(x, y) \)，\( F'_y(x, y) \) 分别表示 \( F(x, y) \) 对 \( x \) 和 \( y \) 的偏导数。  
+   (3) 利用微分形式不变性  
+
+
+### 高阶导数，一阶微分形式的不变性  
+**常用高阶导数公式**：  
+(1) \( (a^x)^{(n)} = a^x \ln^n a \, (a > 0) \)；\( (e^x)^{(n)} = e^x \)  
+(2) \( (\sin kx)^{(n)} = k^n \sin\left(kx + n \cdot \frac{\pi}{2}\right) \)  
+(3) \( (\cos kx)^{(n)} = k^n \cos\left(kx + n \cdot \frac{\pi}{2}\right) \)  
+(4) \( (x^m)^{(n)} = m(m-1)\cdots(m-n+1)x^{m-n} \)  
+(5) \( (\ln x)^{(n)} = (-1)^{n-1} \frac{(n-1)!}{x^n} \)  
+(6) **莱布尼兹公式**：若 \( u(x), v(x) \) 均 \( n \) 阶可导，则  
+   \[
+   (uv)^{(n)} = \sum_{k=0}^n \mathrm{C}_n^k u^{(k)} v^{(n-k)}
+   \]  
+   其中 \( u^{(0)} = u \)，\( v^{(0)} = v \)  
+
+
+### 微分中值定理，必达法则，泰勒公式  
+#### 1. 费马定理（Th1）  
+若函数 \( f(x) \) 满足条件：  
+(1) 函数 \( f(x) \) 在 \( x_0 \) 的某邻域内有定义，并且在此邻域内恒有 \( f(x) \leq f(x_0) \)（或 \( f(x) \geq f(x_0) \)）；  
+(2) \( f(x) \) 在 \( x_0 \) 处可导；  
+则有 \( f'(x_0) = 0 \)  
+
+
+#### 2. 罗尔定理（Th2）  
+设函数 \( f(x) \) 满足条件：  
+(1) 在闭区间 \( [a, b] \) 上连续；  
+(2) 在 \( (a, b) \) 内可导；  
+则在 \( (a, b) \) 内 \( \exists \) 一个 \( \xi \)，使 \( f'(\xi) = 0 \)  
+
+
+#### 3. 拉格朗日中值定理（Th3）  
+设函数 \( f(x) \) 满足条件：  
+(1) 在 \( [a, b] \) 上连续；  
+(2) 在 \( (a, b) \) 内可导；  
+则在 \( (a, b) \) 内 \( \exists \) 一个 \( \xi \)，使  
+\[
+\frac{f(b) - f(a)}{b - a} = f'(\xi)
+\]  
+
+
+#### 4. 柯西中值定理（Th4）  
+设函数 \( f(x) \)，\( g(x) \) 满足条件：  
+(1) 在 \( [a, b] \) 上连续；  
+(2) 在 \( (a, b) \) 内可导且 \( f'(x) \)，\( g'(x) \) 均存在，且 \( g'(x) \neq 0 \)；  
+则在 \( (a, b) \) 内 \( \exists \) 一个 \( \xi \)，使  
+\[
+\frac{f(b) - f(a)}{g(b) - g(a)} = \frac{f'(\xi)}{g'(\xi)}
+\]  
+
+
+#### 5. 洛必达法则  
+**法则 1（\( \frac{0}{0} \) 型）**：设函数 \( f(x), g(x) \) 满足条件：  
+\[
+\lim_{x \to x_0} f(x) = 0, \quad \lim_{x \to x_0} g(x) = 0
+\]  
+\( f(x), g(x) \) 在 \( x_0 \) 的邻域内可导（在 \( x_0 \) 处可除外）且 \( g'(x) \neq 0 \)；\( \lim_{x \to x_0} \frac{f'(x)}{g'(x)} \) 存在（或 \( \infty \)）。则  
+\[
+\lim_{x \to x_0} \frac{f(x)}{g(x)} = \lim_{x \to x_0} \frac{f'(x)}{g'(x)}
+\]  
+
+#### 法则I（$\frac{0}{0}$型）
+设函数$f(x), g(x)$满足条件：  
+$\lim\limits_{x \to x_0} f(x) = 0, \lim\limits_{x \to x_0} g(x) = 0$；$\exists$一个$X > 0$，当$|x| > X$时，$f(x), g(x)$可导，且$g'(x) \neq 0$；$\lim\limits_{x \to x_0} \frac{f'(x)}{g'(x)}$存在（或$\infty$）。则：  
+$$\lim\limits_{x \to x_0} \frac{f(x)}{g(x)} = \lim\limits_{x \to x_0} \frac{f'(x)}{g'(x)}$$  
+
+
+#### 法则II（$\frac{\infty}{\infty}$型）
+设函数$f(x), g(x)$满足条件：  
+$\lim\limits_{x \to x_0} f(x) = \infty, \lim\limits_{x \to x_0} g(x) = \infty$；$f(x), g(x)$在$x_0$的邻域内可导（在$x_0$处可除外）且$g'(x) \neq 0$；$\lim\limits_{x \to x_0} \frac{f'(x)}{g'(x)}$存在（或$\infty$）。则：  
+$$\lim\limits_{x \to x_0} \frac{f(x)}{g(x)} = \lim\limits_{x \to x_0} \frac{f'(x)}{g'(x)}$$  
+
+
+### 泰勒公式  
+设函数$f(x)$在点$x_0$处的某邻域内具有$n+1$阶导数，则对该邻域内异于$x_0$的任意点$x$，在$x_0$与$x$之间至少$\exists$一个$\xi$，使得：  
+$$
+\begin{align*}
+f(x) &= f(x_0) + f'(x_0)(x - x_0) + \frac{1}{2!}f''(x_0)(x - x_0)^2 + \cdots \\
+&\quad + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n + R_n(x)
+\end{align*}
+$$  
+其中，$R_n(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!}(x - x_0)^{n+1}$称为$f(x)$在点$x_0$处的$n$阶**泰勒余项**。  
+
+
+#### 麦克劳林公式（令$x_0 = 0$）  
+令$x_0 = 0$，则$n$阶泰勒公式为：  
+$$
+f(x) = f(0) + f'(0)x + \frac{1}{2!}f''(0)x^2 + \cdots + \frac{f^{(n)}(0)}{n!}x^n + R_n(x) \tag{1}
+$$  
+其中，$R_n(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!}x^{n+1}$，$\xi$在$0$与$x$之间。式$(1)$称为**麦克劳林公式**。  
+
+
+### 常用五种函数在$x_0 = 0$处的泰勒公式  
+#### 1. 指数函数 $\boldsymbol{e^x}$  
+$$
+\begin{align*}
+e^x &= 1 + x + \frac{1}{2!}x^2 + \cdots + \frac{1}{n!}x^n + \frac{x^{n+1}}{(n+1)!}e^\xi \\
+\text{或} \quad e^x &= 1 + x + \frac{1}{2!}x^2 + \cdots + \frac{1}{n!}x^n + o(x^n)
+\end{align*}
+$$  
+
+
+#### 2. 正弦函数 $\boldsymbol{\sin x}$  
+$$
+\begin{align*}
+\sin x &= x - \frac{1}{3!}x^3 + \cdots + \frac{x^n}{n!}\sin \frac{n\pi}{2} + \frac{x^{n+1}}{(n+1)!}\sin\left(\xi + \frac{n+1}{2}\pi\right) \\
+\text{或} \quad \sin x &= x - \frac{1}{3!}x^3 + \cdots + \frac{x^n}{n!}\sin \frac{n\pi}{2} + o(x^n)
+\end{align*}
+$$  
+
+
+#### 3. 余弦函数 $\boldsymbol{\cos x}$  
+$$
+\begin{align*}
+\cos x &= 1 - \frac{1}{2!}x^2 + \cdots + \frac{x^n}{n!}\cos \frac{n\pi}{2} + \frac{x^{n+1}}{(n+1)!}\cos\left(\xi + \frac{n+1}{2}\pi\right) \\
+\text{或} \quad \cos x &= 1 - \frac{1}{2!}x^2 + \cdots + \frac{x^n}{n!}\cos \frac{n\pi}{2} + o(x^n)
+\end{align*}
+$$  
+
+
+#### 4. 对数函数 $\boldsymbol{\ln(1+x)}$  
+$$
+\begin{align*}
+\ln(1+x) &= x - \frac{1}{2}x^2 + \frac{1}{3}x^3 - \cdots + (-1)^{n-1}\frac{x^n}{n} + \frac{(-1)^n x^{n+1}}{(n+1)(1+\xi)^{n+1}} \\
+\text{或} \quad \ln(1+x) &= x - \frac{1}{2}x^2 + \frac{1}{3}x^3 - \cdots + (-1)^{n-1}\frac{x^n}{n} + o(x^n)
+\end{align*}
+$$  
+
+
+#### 5. 幂函数 $\boldsymbol{(1+x)^m}$  
+$$
+\begin{align*}
+(1+x)^m &= 1 + mx + \frac{m(m-1)}{2!}x^2 + \cdots + \frac{m(m-1)\cdots(m-n+1)}{n!}x^n \\
+&\quad + \frac{m(m-1)\cdots(m-n+1)}{(n+1)!}x^{n+1}(1+\xi)^{m-n-1} \\
+\text{或} \quad (1+x)^m &= 1 + mx + \frac{m(m-1)}{2!}x^2 + \cdots + \frac{m(m-1)\cdots(m-n+1)}{n!}x^n + o(x^n)
+\end{align*}
+$$  
+
+
+#### 1. 函数单调性的判别  
+- **Th1**：设函数$f(x)$在$(a,b)$区间内可导，如果对$\forall x \in (a,b)$，都有$f'(x) > 0$（或$f'(x) < 0$），则函数$f(x)$在$(a,b)$内是**单调增加**的（或**单调减少**）。  
+- **Th2**（取极值的必要条件）：设函数$f(x)$在$x_0$处可导，且在$x_0$处取极值，则$f'(x_0) = 0$。
+
+
+
+### 二、一元函数微分学（续）
+#### （二）函数的极值、凹凸性、渐近线
+1. **函数的极值**  
+   - 若 \( f'(x_0) = 0 \)（或 \( f(x) \) 在 \( x_0 \) 处连续，但 \( f'(x_0) \) 不存在），则：  
+     - **Th3（取极值的第一充分条件）**：  
+       - 若 \( x \) 经过 \( x_0 \) 时，\( f'(x) \) 由“\( + \)”变“\( - \)”，则 \( f(x_0) \) 为**极大值**；  
+       - 若 \( x \) 经过 \( x_0 \) 时，\( f'(x) \) 由“\( - \)”变“\( + \)”，则 \( f(x_0) \) 为**极小值**；  
+       - 若 \( f'(x) \) 经过 \( x = x_0 \) 两侧不变号，则 \( f(x_0) \) 不是极值。  
+     - **Th4（取极值的第二充分条件）**：设 \( f(x) \) 在 \( x_0 \) 处有 \( f''(x) \neq 0 \)，且 \( f'(x_0) = 0 \)，则：  
+       - 当 \( f''(x_0) < 0 \) 时，\( f(x_0) \) 为**极大值**；  
+       - 当 \( f''(x_0) > 0 \) 时，\( f(x_0) \) 为**极小值**。  
+       （注：若 \( f''(x_0) = 0 \)，此方法失效。）  
+
+
+2. **渐近线的求法**  
+   - **水平渐近线**：若 \( \lim\limits_{x \to +\infty} f(x) = b \) 或 \( \lim\limits_{x \to -\infty} f(x) = b \)，则 \( y = b \) 是 \( y = f(x) \) 的水平渐近线。  
+   - **铅直渐近线**：若 \( \lim\limits_{x \to x_0^+} f(x) = \infty \) 或 \( \lim\limits_{x \to x_0^-} f(x) = \infty \)，则 \( x = x_0 \) 是 \( y = f(x) \) 的铅直渐近线。  
+   - **斜渐近线**：若 \( a = \lim\limits_{x \to \infty} \frac{f(x)}{x} \)，\( b = \lim\limits_{x \to \infty} [f(x) - ax] \)，则 \( y = ax + b \) 是 \( y = f(x) \) 的斜渐近线。  
+
+
+3. **函数凹凸性与拐点**  
+   - **Th1（凹凸性判定定理）**：若在区间 \( I \) 上 \( f''(x) < 0 \)（或 \( f''(x) > 0 \)），则 \( f(x) \) 在 \( I \) 上是**凸的**（或**凹的**）。  
+   - **Th2（拐点判定定理1）**：若在 \( x_0 \) 处 \( f''(x_0) = 0 \)（或 \( f''(x_0) \) 不存在），且 \( x \) 经过 \( x_0 \) 时 \( f''(x) \) 变号，则 \( (x_0, f(x_0)) \) 为**拐点**。  
+   - **Th3（拐点判定定理2）**：若 \( f(x) \) 在 \( x_0 \) 的某邻域内有三阶导数，且 \( f''(x_0) = 0 \)，\( f'''(x_0) \neq 0 \)，则 \( (x_0, f(x_0)) \) 为**拐点**。  
+
+
+4. **弧微分与曲率**  
+   - **弧微分**：\( dS = \sqrt{1 + y'^2} dx \)。  
+   - **曲率**：曲线 \( y = f(x) \) 在 \( (x, y) \) 处的曲率 \( k = \frac{|y''|}{(1 + y'^2)^{\frac{3}{2}}} \)；  
+     对参数方程 \( \begin{cases} x = \varphi(t) \\ y = \psi(t) \end{cases} \)，曲率 \( k = \frac{|\varphi'(t)\psi''(t) - \varphi''(t)\psi'(t)|}{[\varphi'^2(t) + \psi'^2(t)]^{\frac{3}{2}}} \)。  
+   - **曲率半径**：曲线在点 \( M \) 处的曲率 \( k(k \neq 0) \) 与曲率半径 \( \rho \) 的关系为 \( \rho = \frac{1}{k} \)。  
+
+
+### （三）一元函数积分学
+#### 1. 原函数与不定积分的基本性质  
+- 线性性：\( \int k f(x) dx = k \int f(x) dx \)（\( k \neq 0 \) 为常数）；  
+  \( \int \left[ f_1(x) \pm f_2(x) \pm \dots \pm f_n(x) \right] dx = \int f_1(x) dx \pm \int f_2(x) dx \pm \dots \pm \int f_n(x) dx \)。  
+- 求导与微分：\( \left[ \int f(x) dx \right]' = f(x) \) 或 \( d\left( \int f(x) dx \right) = f(x) dx \)；  
+  \( \int F'(x) dx = F(x) + C \) 或 \( \int dF(x) = F(x) + C \)（\( C \) 为任意常数）。  
+
+
+#### 2. 基本积分公式  
+\[
+\begin{align*}
+\int x^k dx &= \frac{1}{k + 1} x^{k + 1} + C \quad (k \neq -1) \\
+\int \frac{1}{x^2} dx &= -\frac{1}{x} + C, \quad \int \frac{1}{\sqrt{x}} dx = 2\sqrt{x} + C \\
+\int \frac{1}{x} dx &= \ln|x| + C \\
+\int a^x dx &= \frac{a^x}{\ln a} + C \quad (a > 0, a \neq 1), \quad \int e^x dx = e^x + C \\
+\end{align*}
+\]
+
+
+#### 不定积分基本公式
+\[
+\begin{align*}
+&\int \cos x dx = \sin x + C, \quad \int \sin x dx = -\cos x + C \\
+&\int \frac{1}{\cos^2 x} dx = \int \sec^2 x dx = \tan x + C \\
+&\int \frac{1}{\sin^2 x} dx = \int \csc^2 x dx = -\cot x + C \\
+&\int \frac{1}{\sin x} dx = \int \csc x dx = \ln|\csc x - \cot x| + C \\
+&\int \frac{1}{\cos x} dx = \int \sec x dx = \ln|\sec x + \tan x| + C \\
+&\int \sec x \tan x dx = \sec x + C, \quad \int \csc x \cot x dx = -\csc x + C \\
+&\int \tan x dx = -\ln|\cos x| + C, \quad \int \cot x dx = \ln|\sin x| + C \\
+&\int \frac{dx}{a^2 + x^2} = \frac{1}{a}\arctan \frac{x}{a} + C, \quad \int \frac{dx}{1 + x^2} = \arctan x + C \\
+&\int \frac{dx}{\sqrt{a^2 - x^2}} = \arcsin \frac{x}{a} + C, \quad \int \frac{dx}{\sqrt{1 - x^2}} = \arcsin x + C \\
+&\int \frac{dx}{a^2 - x^2} = \frac{1}{2a}\ln\left|\frac{a + x}{a - x}\right| + C, \quad \int \frac{dx}{1 - x^2} = \frac{1}{2}\ln\left|\frac{1 + x}{1 - x}\right| + C \\
+&\int \frac{dx}{\sqrt{x^2 \pm a^2}} = \ln\left|x + \sqrt{x^2 \pm a^2}\right| + C \\
+\end{align*}
+\]
+
+
+#### 重要公式（定积分/对称性/周期性）
+1. **奇偶函数在对称区间的积分**  
+   设\( f(x) \)在\([-l, l]\)上连续，则：  
+   \[
+   \int_{-l}^{l} f(x) dx = \int_{0}^{l} \left[ f(x) + f(-x) \right] dx = 
+   \begin{cases} 
+   0, & \text{当 } f(x) \text{ 为奇函数} \\
+   2\int_{0}^{l} f(x) dx, & \text{当 } f(x) \text{ 为偶函数} 
+   \end{cases}
+   \]  
+
+2. **周期函数的积分**  
+   设\( f(x) \)是以\( T \)为周期的连续函数，\( a \)为任意实数，则：  
+   \[
+   \int_{a}^{a+T} f(x) dx = \int_{0}^{T} f(x) dx = \int_{\frac{T}{2}}^{\frac{3T}{2}} f(x) dx
+   \]  
+
+3. **半圆面积积分**  
+   \[
+   \int_{0}^{a} \sqrt{a^2 - x^2} dx = \frac{1}{4}\pi a^2
+   \]  
+
+4. **Wallis公式（正弦/余弦幂积分）**  
+   \[
+   \int_{0}^{\frac{\pi}{2}} \sin^n x dx = \int_{0}^{\frac{\pi}{2}} \cos^n x dx = 
+   \begin{cases} 
+   \frac{n-1}{n} \cdot \frac{n-3}{n-2} \cdot \dots \cdot \frac{1}{2} \cdot \frac{\pi}{2}, & \text{当 } n \text{ 为偶数} \\
+   \frac{n-1}{n} \cdot \frac{n-3}{n-2} \cdot \dots \cdot \frac{2}{3} \cdot 1, & \text{当 } n \text{ 为奇数} 
+   \end{cases}
+   \]  
+
+5. **三角函数正交性（区间\([0, 2\pi]\)或\([-\pi, \pi]\)）**  
+   - 正弦余弦乘积积分：  
+     \[
+     \int_{0}^{2\pi} \sin nx \cos mx dx = \int_{0}^{\pi} \sin nx \cos mx dx = 
+     \begin{cases} 
+     \pi, & n = m \\
+     0, & n \neq m 
+     \end{cases}, \quad \int_{-\pi}^{\pi} \sin nx \cos mx dx = 0
+     \]  
+   - 余弦乘积积分：  
+     \[
+     \int_{-\pi}^{\pi} \cos nx \cos mx dx = \int_{0}^{2\pi} \cos nx \cos mx dx = 
+     \begin{cases} 
+     \pi, & n = m \\
+     0, & n \neq m 
+     \end{cases}
+     \]  
+
+
+#### 1. 定积分的基本性质
+1. **积分变量无关性**：定积分只与被积函数和积分限有关，与积分变量无关，即  
+   \[
+   \int_{a}^{b} f(x) dx = \int_{a}^{b} f(t) dt = \int_{a}^{b} f(u) du = \dots
+   \]  
+
+2. **上下限交换**：  
+   \[
+   \int_{a}^{b} f(x) dx = -\int_{b}^{a} f(x) dx
+   \]  
+
+3. **常数积分**：  
+   \[
+   \int_{a}^{b} dx = b - a
+   \]  
+
+4. **线性性（和差）**：  
+   \[
+   \int_{a}^{b} \left[ f(x) \pm g(x) \right] dx = \int_{a}^{b} f(x) dx \pm \int_{a}^{b} g(x) dx
+   \]  
+
+5. **线性性（数乘）**：  
+   \[
+   \int_{a}^{b} k f(x) dx = k \int_{a}^{b} f(x) dx \quad (k \text{ 为常数})
+   \]  
+
+6. **区间可加性**：对任意\( c \in [a, b] \)，有  
+   \[
+   \int_{a}^{b} f(x) dx = \int_{a}^{c} f(x) dx + \int_{c}^{b} f(x) dx
+   \]  
+
+7. **比较定理**：设\( f(x) \leq g(x) \)，\( x \in [a, b] \)，则  
+   \[
+   \int_{a}^{b} f(x) dx \leq \int_{a}^{b} g(x) dx
+   \]  
+   推论1：若\( f(x) \geq 0 \)，\( x \in [a, b] \)，则\( \int_{a}^{b} f(x) dx \geq 0 \)；  
+   推论2：绝对值不等式：\( \left| \int_{a}^{b} f(x) dx \right| \leq \int_{a}^{b} |f(x)| dx \)。  
+
+8. **估值定理**：设\( m \leq f(x) \leq M \)，\( x \in [a, b] \)（\( m, M \)为常数），则  
+   \[
+   m(b - a) \leq \int_{a}^{b} f(x) dx \leq M(b - a)
+   \]
+
+
+
+### 积分中值定理
+设\( f(x) \)在\([a,b]\)上连续，则在\([a,b]\)上至少一个\(\xi\)，  
+使\(\int_{a}^{b}f(x)dx=(b - a)f(\xi)\)  
+\( f(\xi)=\frac{1}{b - a}\int_{a}^{b}f(x)dx \)——平均值公式  
+
+
+### 积分上限的函数及其导数，牛顿—莱布尼兹公式
+**Th1** 设函数\( f(x) \)在\([a, b]\)上连续，\( x \in [a, b] \)，则变上限积分  
+\( F(x)=\int_{a}^{x}f(t)dt \)对\( x \)可导  
+且有\( F'(x)=\frac{d}{dx}F(x)=\frac{d}{dx}\left( \int_{a}^{x}f(t)dt \right)=f(x) \)  
+
+**推论1** 设\( F(x)=\int_{a}^{\varphi(x)}f(t)dt \)，则\( F'(x)=f\left[ \varphi(x) \right]\varphi'(x) \)．  
+
+**推论2** \( \left( \int_{\varphi(x)}^{\psi(x)}f(t)dt \right)_{x}'=f\left[ \psi(x) \right]\psi'(x)-f\left[ \varphi(x) \right]\varphi'(x) \)  
+
+**推论3** \( \left( \int_{a}^{\varphi(x)}f(t)g(x)dt \right)_{x}'=\left( g(x)\int_{a}^{\varphi(x)}f(t)dt \right)_{x}' \)  
+\( =g'(x)\int_{a}^{\varphi(x)}f(t)dt + g(x)f\left[ \varphi(x) \right]\varphi'(x) \)  
+
+**Th2** 设\( f(x) \)在\([a,b]\)上连续，\( x \in [a,b] \)，则  
+\( \int_{a}^{x}f(x)dt \)是\( f(x) \)在\([a,b]\)上的一个原函数  
+
+**Th3 牛顿—莱布尼茨公式**：设\( f(x) \)在\([a,b]\)上连续，\( F(x) \)  
+是\( f(x) \)的原函数，则\( \int_{a}^{b}f(x)dx = F(x)\big|_{a}^{b}=F(b)-F(a) \)  
+
+
+### 不定积分和定积分的换元积分法与分部积分法
+#### 1 不定积分：
+- **分部积分法**：\( \int u\mathrm{d}v = uv - \int v\mathrm{d}u \)  
+  选择\( u \)，\( \mathrm{d}v \)的原则：积分容易者选作\( \mathrm{d}v \)，求导简单者选为\( u \)  
+
+- **换元积分法**：设\( \int f(u)du = F(u) + C \)，  
+  则\( \int f\left[ \varphi(x) \right]\varphi'(x)dx = \int f\left[ \varphi(x) \right]d\varphi(x) \)  
+
+  设\( \underline{\underline{u = \varphi(x)}} \)，\( \int f(u)du = F(u) + C = F\left[ \varphi(x) \right] + C \)  
+
+
+### 2 定积分
+#### 换元法
+设函数\( f(x) \)在\([a, b]\)上连续，若\( x = \varphi(t) \)满足：  
+(1) \( \varphi(t) \)在\([\alpha, \beta]\)上连续，且\( \varphi'(t) \neq 0 \)．  
+(2) \( \varphi(\alpha) = a \)，\( \varphi(\beta) = b \)，并且当\( t \)在\([\alpha, \beta]\)上变化时，  
+\( \varphi(t) \)的值在\([a, b]\)上变化，则  
+\( \int_{a}^{b}f(x)dx = \int_{\alpha}^{\beta}f\left[ \varphi(t) \right]\varphi'(t)dt \)．  
+
+
+#### 分部积分公式
+设\( u(x) \)，\( v(x) \)在\([a, b]\)上具有连续导函数\( u'(x), v'(x) \)，则  
+\( \int_{b}^{a}u(x)v'(x)dx = u(x)v(x)\big|_{b}^{a} - \int_{b}^{a}v(x)u'(x)dx \)  
+
+
+### 3 定积分不等式证明中常用的不等式
+(1) \( a^2 + b^2 \geq 2ab \)  
+(2) \( a > 0, a + \frac{1}{a} \geq 2 \)  
+
+(3) **柯西不等式**：  
+\( \left( \int_{a}^{b}f(x)g(x)dx \right)^2 \leq \left( \int_{a}^{b}f^2(x)dx \right)\left( \int_{a}^{b}g^2(x)dx \right) \)，  
+其中\( f(x) \)，\( g(x) \)在\([a, b]\)上连续  
+
+
+### 有理函数，三角函数的有理式和简单无理函数的积分，广义积分和定积分的应用
+#### 1 三角函數代换
+| 函数\( f(x) \)含根式 | 所作代换       | 三角形示意图                                                                 |
+|----------------------|----------------|------------------------------------------------------------------------------|
+| \( \sqrt{a^2 - x^2} \) | \( x = a\sin t \) | <img src="https://latex.codecogs.com/svg.image?\dpi{150}&space;\bg_white&space;\begin{tikzpicture}&space;\draw&space;(0,0)&space;--&space;(a,0)&space;--&space;(a,x)&space;--&space;cycle;&space;\draw&space;angle&space;between&space;(a,x)&space;and&space;(0,0)&space;node[above]{\( t \)};&space;\node[below]at(a,0){\( \sqrt{a^2-x^2} \)};&space;\node[right]at(a,x){\( x \)};&space;\node[below]at(0,0){\( a \)};&space;\end{tikzpicture}" /> |
+| \( \sqrt{a^2 + x^2} \) | \( x = a\tan t \) | <img src="https://latex.codecogs.com/svg.image?\dpi{150}&space;\bg_white&space;\begin{tikzpicture}&space;\draw&space;(0,0)&space;--&space;(1,0)&space;--&space;(1,x)&space;--&space;cycle;&space;\draw&space;angle&space;between&space;(1,x)&space;and&space;(0,0)&space;node[above]{\( t \)};&space;\node[below]at(1,0){\( 1 \)};&space;\node[right]at(1,x){\( x \)};&space;\node[above]at(0,0){\( \sqrt{1+x^2} \)};&space;\end{tikzpicture}" /> |
+| \( \sqrt{x^2 - a^2} \) | \( x = a\sec t \) | <img src="https://latex.codecogs.com/svg.image?\dpi{150}&space;\bg_white&space;\begin{tikzpicture}&space;\draw&space;(0,0)&space;--&space;(a,0)&space;--&space;(x,0)&space;--&space;(x,y)&space;--&space;cycle;&space;\draw&space;angle&space;between&space;(x,y)&space;and&space;(a,0)&space;node[above]{\( t \)};&space;\node[below]at(a,0){\( a \)};&space;\node[below]at(x,0){\( x \)};&space;\node[right]at(x,y){\( \sqrt{x^2-a^2} \)};&space;\end{tikzpicture}" /> |
+
+
+
+### 有理函数积分
+1. $\boldsymbol{\int \frac{A}{x-a} d x=A \ln |x-a|+C}$  
+2. $\boldsymbol{\int \frac{A}{(x-a)^{n}} d x=-\frac{A}{n-1} \frac{1}{(x-a)^{n-1}}+C(n \neq 1)}$  
+3. $\boldsymbol{\int \frac{d x}{\left(x^{2}+p x+q\right)^{n}}=\int \frac{d x}{\left[\left(x+\frac{p}{2}\right)^{2}+\frac{4 q-p^{2}}{4}\right]^{n}} \stackrel{\text { 令 } u=\frac{2 x+p}{\sqrt{4 q-p^{2}}}}{\longrightarrow} \int \frac{d u}{\left(u^{2}+a^{2}\right)^{n}}}$（其中 $a=\sqrt{\frac{4q-p^2}{4}}$）  
+4. $\boldsymbol{\int \frac{x+a}{\left(x^{2}+p x+q\right)^{n}} d x=-\frac{1}{2(n-1)} \frac{1}{\left(x^{2}+p x+q\right)^{n-1}}+\left(a-\frac{p}{2}\right) \int \frac{d x}{\left(x^{2}+p x+q\right)^{n}}}$（$p^{2}-4 q<0$）  
+
+
+### 4. 广义积分
+#### （1）无穷限的广义积分（无穷积分）  
+设$f(x)$ 连续，则：  
+1. $\boldsymbol{\int_{a}^{+\infty} f(x) d x=\lim _{b \rightarrow+\infty} \int_{a}^{b} f(x) d x}$  
+2. $\boldsymbol{\int_{-\infty}^{b} f(x) d x=\lim _{a \rightarrow-\infty} \int_{a}^{b} f(x) d x}$  
+3. $\boldsymbol{\int_{-\infty}^{+\infty} f(x) d x=\int_{-\infty}^{c} f(x) d x+\int_{c}^{+\infty} f(x) d x}$  
+
+
+#### （2）无界函数的广义积分（瑕积分）  
+1. $\boldsymbol{\int_{a}^{b} f(x) d x=\lim _{\varepsilon \rightarrow 0^{+}} \int_{a}^{b-\varepsilon} f(x) d x,(\text { 当 } x \rightarrow b^{-} \text {时, } f(x) \rightarrow \infty)}$  
+2. $\boldsymbol{\int_{a}^{b} f(x) d x=\lim _{\varepsilon \rightarrow 0^{+}} \int_{a+\varepsilon}^{b} f(x) d x,(\text { 当 } x \rightarrow a^{+} \text {时, } f(x) \rightarrow \infty)}$  
+3. $\boldsymbol{\int_{a}^{b} f(x) d x=\lim _{\varepsilon \rightarrow 0^{+}} \int_{a}^{c-\varepsilon} f(x) d x+\lim _{\eta \rightarrow 0^{+}} \int_{c+\eta}^{b} f(x) d x}$（当$x \rightarrow c$时，$f(x) \rightarrow \infty$）  
+
+
+### (四) 向量代数和空间解析几何
+#### 向量的概念、线性运算  
+1. **向量**：既有大小又有方向的量，又称矢量。  
+2. **向量的模**：向量$\vec{a}$的大小，记为$|\vec{a}|$。  
+3. **向量的坐标表示**：若向量用坐标表示$\vec{a}=x \vec{i}+y \vec{j}+z \vec{k}=\{x, y, z\}$，则$\boldsymbol{|\vec{a}|=\sqrt{x^{2}+y^{2}+z^{2}}}$。  
+
+
+#### 4. 向量的运算法则  
+##### Ⅰ. 加减运算  
+设有矢量$\vec{a}=\{x_1, y_1, z_1\}$，$\vec{b}=\{x_2, y_2, z_2\}$，则$\boldsymbol{\vec{a} \pm \vec{b}=\{x_1 \pm x_2, y_1 \pm y_2, z_1 \pm z_2\}}$。  
+
+##### Ⅱ. 数乘运算  
+数乘运算：矢量$\vec{a}$与一数量$\lambda$之积$\lambda \vec{a}$，  
+$$
+\lambda \vec{a}= \begin{cases}|\lambda| \vec{a}^0, & \lambda>0, \text { 即与 } \vec{a} \text { 同向 } \\ \vec{0}, & \lambda=0, \text { 即为零矢量 } \\ -|\lambda| \vec{a}^0, & \lambda<0, \text { 即与 } \vec{a} \text { 反向 }\end{cases}
+$$  
+设$\vec{a}=\{x_1, y_1, z_1\}$，则$\boldsymbol{\lambda \vec{a}=\{\lambda x_1, \lambda y_1, \lambda z_1\}}$。  
+
+
+#### 向量的数量积、向量积、混合积  
+##### 1. 矢量的数积（点积，内积）  
+矢量$\vec{a}$与$\vec{b}$的数量积：$\boldsymbol{\vec{a} \cdot \vec{b}=|\vec{a}||\vec{b}| \cos (\vec{a}, \vec{b})}$。  
+设$\vec{a}=\{x_1, y_1, z_1\}$，$\vec{b}=\{x_2, y_2, z_2\}$，则$\boldsymbol{\vec{a} \cdot \vec{b}=x_1 x_2 + y_1 y_2 + z_1 z_2}$。  
+
+
+##### 2. 矢量的向量积（叉积，外积）  
+设有两个向量$\vec{a}$与$\vec{b}$，若$\exists$一个矢量$\vec{c}$，满足如下条件：  
+（1）$\boldsymbol{|\vec{c}|=|\vec{a}||\vec{b}| \sin (\vec{a}, \vec{b})}$；  
+（2）$\vec{c} \perp \vec{a}, \vec{c} \perp \vec{b}$，即$\vec{c}$垂直于$\vec{a}$，$\vec{b}$所确定的平面；  
+（3）$\vec{a}, \vec{b}, \vec{c}$成右手系。则称矢量$\vec{c}$为矢量$\vec{a}$与$\vec{b}$的矢量积，记$\boldsymbol{\vec{c}=\vec{a} \times \vec{b}}$。  
+
+设$\vec{a}=\{x_1, y_1, z_1\}$，$\vec{b}=\{x_2, y_2, z_2\}$，则  
+$$
+\vec{a} \times \vec{b}=\left|\begin{array}{ccc}
+\vec{i} & \vec{j} & \vec{k} \\
+x_1 & y_1 & z_1 \\
+x_2 & y_2 & z_2
+\end{array}\right|=\left(y_1 z_2 - y_2 z_1\right)\vec{i} + \left(z_1 x_2 - z_2 x_1\right)\vec{j} + \left(x_1 y_2 - x_2 y_1\right)\vec{k}
+$$  
+
+
+### 向量的叉乘
+\[
+\vec{a} \times \vec{b} = \begin{vmatrix}
+\vec{i} & \vec{j} & \vec{k} \\
+x_1 & y_1 & z_1 \\
+x_2 & y_2 & z_2
+\end{vmatrix} = \begin{vmatrix}
+y_1 & z_1 \\
+y_2 & z_2
+\end{vmatrix} \vec{i} - \begin{vmatrix}
+x_1 & z_1 \\
+x_2 & z_2
+\end{vmatrix} \vec{j} + \begin{vmatrix}
+x_1 & y_1 \\
+x_2 & y_2
+\end{vmatrix} \vec{k}
+\]
+
+### 混合积
+设有三个矢量\(\vec{a}, \vec{b}, \vec{c}\)，若先作\(\vec{a}, \vec{b}\)的叉积\(\vec{a} \times \vec{b}\)，再与\(\vec{c}\)作点积\((\vec{a} \times \vec{b}) \cdot \vec{c}\)，则这样的数积称为矢量\(\vec{a}, \vec{b}, \vec{c}\)的混合积，记为\((a, b, c)\)，即\((a, b, c) = (\vec{a} \times \vec{b}) \cdot \vec{c}\)。
+设\(\vec{a} = \{x_1, y_1, z_1\}\)，\(\vec{b} = \{x_2, y_2, z_2\}\)，\(\vec{c} = \{x_3, y_3, z_3\}\)，则
+\[
+(a, b, c) = \begin{vmatrix}
+x_1 & y_1 & z_1 \\
+x_2 & y_2 & z_2 \\
+x_3 & y_3 & z_3
+\end{vmatrix}
+\]
+
+### 两向量垂直、平行的条件，两向量的夹角，向量的坐标表达式及其运算，单位向量，方向数与方向余弦
+#### 1 向量之间的位置关系及结论
+设\(\vec{a} = \{x_1, y_1, z_1\}\)，\(\vec{b} = \{x_2, y_2, z_2\}\)，\(\vec{c} = \{x_3, y_3, z_3\}\)
+（1）\(\vec{a} \perp \vec{b} \Leftrightarrow \vec{a} \cdot \vec{b} = 0 \Leftrightarrow x_1x_2 + y_1y_2 + z_1z_2 = 0\)；
+（2）\(\vec{a} \parallel \vec{b} \Leftrightarrow \vec{a} \times \vec{b} = \vec{0} \Leftrightarrow \frac{x_1}{x_2} = \frac{y_1}{y_2} = \frac{z_1}{z_2}\)；
+其中\(x_2, y_2, z_2\)之中有一个为“0”，如\(x_2 = 0\)，应理解为\(x_1 = 0\)；
+（3）\(\vec{a}, \vec{b}\)不共线\(\Leftrightarrow \exists\)不全为零的数\(\lambda, \mu\)使\(\lambda \vec{a} + \mu \vec{b} = \vec{0}\)；
+（4）矢量\(\vec{a}\)与\(\vec{b}\)的夹角，可由下式求出
+\[
+\cos(\vec{a}, \vec{b}) = \frac{x_1x_2 + y_1y_2 + z_1z_2}{\sqrt{x_1^2 + y_1^2 + z_1^2} \cdot \sqrt{x_2^2 + y_2^2 + z_2^2}}
+\]
+（5）\(\vec{a}, \vec{b}, \vec{c}\)共面\(\Leftrightarrow \exists\)不全为零的数\(\lambda, \mu, v\)，使\(\lambda \vec{a} + \mu \vec{b} + v \vec{c} = \vec{0}\)或者\((a, b, c) = 0\)
+
+#### 2 单位向量
+模为1的向量。向量\(\vec{a}\)的单位向量记作\(\vec{a}^0\)，
+\[
+\vec{a}^0 = \frac{\vec{a}}{|\vec{a}|} = \left\{ \frac{x}{\sqrt{x^2 + y^2 + z^2}}, \frac{y}{\sqrt{x^2 + y^2 + z^2}}, \frac{z}{\sqrt{x^2 + y^2 + z^2}} \right\}
+\]
+
+#### 3 向量的方向余弦
+\[
+\cos\alpha = \frac{x}{\sqrt{x^2 + y^2 + z^2}}, \cos\beta = \frac{y}{\sqrt{x^2 + y^2 + z^2}}, \cos\gamma = \frac{z}{\sqrt{x^2 + y^2 + z^2}}
+\]
+其中\(\alpha, \beta, \gamma\)为向量\(\vec{a}\)与各坐标轴正向的夹角。
+
+#### 4 单位向量的方向余弦
+显然\(\vec{a}^0 = \{\cos\alpha, \cos\beta, \cos\gamma\}\)，且有\(\cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1\)。
+
+### 曲面方程和空间曲线方程的概念，平面方程，直线方程，平面与平面、平面与直线、直线与直线的垂直、平行的条件，点到平面和点到直线
+#### 1 平面方程
+(1)一般式方程 \(Ax + By + Cz + D = 0\)，法矢量\(\vec{n} = \{A, B, C\}\)，若方程中某个坐标不出现，则平面就平行于该坐标轴，例如平面\(Ax + Cz + D = 0 \parallel y\)轴
+
+(2)平面的点法式方程 \(A(x - x_0) + B(y - y_0) + C(z - z_0) = 0\) \(M(x_0, y_0, z_0)\)为平面上已知点，\(\vec{n} = \{A, B, C\}\)为法矢量
+
+(3)三点式方程 \(\begin{vmatrix}
+x - x_1 & y - y_1 & z - z_1 \\
+x_2 - x_1 & y_2 - y_1 & z_2 - z_1 \\
+x_3 - x_1 & y_3 - y_1 & z_3 - z_1
+\end{vmatrix}\)
+\(M_1(x_1, y_1, z_1), M_2(x_2, y_2, z_2), M_3(x_3, y_3, z_3)\)为平面上的三个点
+
+
+#### 平面方程
+(4) 截距式方程  
+$$\frac{x}{a} + \frac{y}{b} + \frac{z}{c} = 1$$  
+其中 \(a, b, c\) 分别为平面在坐标轴上的截距，平面过三点 \((a,0,0)\)、\((0,b,0)\)、\((0,0,c)\)  
+
+
+#### 直线方程  
+1. **一般式方程**（两平面交线）：  
+   平面 \(\pi_1: A_1x + B_1y + C_1z + D_1 = 0\)，平面 \(\pi_2: A_2x + B_2y + C_2z + D_2 = 0\)  
+   平面 \(\pi_1\) 与 \(\pi_2\) 的法向量分别为 \(\vec{n}_1 = \{A_1, B_1, C_1\}\)，\(\vec{n}_2 = \{A_2, B_2, C_2\}\)  
+   直线的方向向量为：  
+   $$\vec{s} = \vec{n}_1 \times \vec{n}_2 = \begin{vmatrix} \vec{i} & \vec{j} & \vec{k} \\ A_1 & B_1 & C_1 \\ A_2 & B_2 & C_2 \end{vmatrix}$$  
+
+2. **标准式方程**  
+   $$\frac{x - x_0}{l} = \frac{y - y_0}{m} = \frac{z - z_0}{n}$$  
+   其中 \(M(x_0, y_0, z_0)\) 为直线上已知点，\(\vec{s} = \{l, m, n\}\) 为直线的方向向量  
+
+3. **两点式方程**  
+   已知直线上两点 \(M_1(x_1, y_1, z_1)\)、\(M_2(x_2, y_2, z_2)\)，则直线方程为：  
+   $$\frac{x - x_1}{x_2 - x_1} = \frac{y - y_1}{y_2 - y_1} = \frac{z - z_1}{z_2 - z_1}$$  
+
+4. **参数式方程**  
+   已知直线上一点 \(M(x_0, y_0, z_0)\) 和方向向量 \(\vec{s} = \{l, m, n\}\)，则直线的参数方程为：  
+   $$\begin{cases} x = x_0 + lt \\ y = y_0 + mt \\ z = z_0 + nt \end{cases}$$  
+
+
+#### 平面间的关系  
+设有两个平面：平面 \(\pi_1: A_1x + B_1y + C_1z + D_1 = 0\)，平面 \(\pi_2: A_2x + B_2y + C_2z + D_2 = 0\)  
+
+1. **平行**：\(\pi_1 \parallel \pi_2 \iff \frac{A_1}{A_2} = \frac{B_1}{B_2} = \frac{C_1}{C_2}\)  
+
+2. **垂直**：\(\pi_1 \perp \pi_2 \iff A_1A_2 + B_1B_2 + C_1C_2 = 0\)  
+
+3. **夹角**：平面 \(\pi_1\) 与 \(\pi_2\) 的夹角 \(\theta\) 满足：  
+   $$\cos\theta = \frac{A_1A_2 + B_1B_2 + C_1C_2}{\sqrt{A_1^2 + B_1^2 + C_1^2} \cdot \sqrt{A_2^2 + B_2^2 + C_2^2}}$$  
+
+
+#### 平面与直线的关系  
+直线 \(L: \frac{x - x_0}{l} = \frac{y - y_0}{m} = \frac{z - z_0}{n}\)，平面 \(\pi: Ax + By + Cz + D = 0\)  
+
+1. **直线与平面平行**：\(L \parallel \pi \iff Al + Bm + Cn = 0\)  
+
+2. **直线与平面垂直**：\(L \perp \pi \iff \frac{A}{l} = \frac{B}{m} = \frac{C}{n}\)  
+
+3. **直线与平面的夹角**：直线 \(L\) 与平面 \(\pi\) 的夹角 \(\theta\) 满足：  
+   $$\sin\theta = \frac{|Al + Bm + Cn|}{\sqrt{A^2 + B^2 + C^2} \cdot \sqrt{l^2 + m^2 + n^2}}$$  
+
+
+#### 直线间的关系  
+设有两直线：  
+直线 \(L_1: \frac{x - x_1}{l_1} = \frac{y - y_1}{m_1} = \frac{z - z_1}{n_1}\)（方向向量 \(\vec{s}_1 = \{l_1, m_1, n_1\}\)）  
+直线 \(L_2: \frac{x - x_2}{l_2} = \frac{y - y_2}{m_2} = \frac{z - z_2}{n_2}\)（方向向量 \(\vec{s}_2 = \{l_2, m_2, n_2\}\)）  
+
+1. **直线平行**：\(L_1 \parallel L_2 \iff \frac{l_1}{l_2} = \frac{m_1}{m_2} = \frac{n_1}{n_2}\)  
+
+2. **直线垂直**：\(L_1 \perp L_2 \iff l_1l_2 + m_1m_2 + n_1n_2 = 0\)  
+
+3. **直线的夹角**：直线 \(L_1\) 与 \(L_2\) 的夹角 \(\theta\) 满足：  
+   $$\cos\theta = \frac{|l_1l_2 + m_1m_2 + n_1n_2|}{\sqrt{l_1^2 + m_1^2 + n_1^2} \cdot \sqrt{l_2^2 + m_2^2 + n_2^2}}$$  
+
+
+#### 点到平面的距离  
+点 \(M(x_0, y_0, z_0)\) 到平面 \(\pi: Ax + By + Cz + D = 0\) 的距离为：  
+$$d = \frac{|Ax_0 + By_0 + Cz_0 + D|}{\sqrt{A^2 + B^2 + C^2}}$$  
+
+
+#### 点到直线的距离  
+（图中未完整显示，需结合上下文补充：点 \(M(x_0, y_0, z_0)\) 到直线的距离公式通常用向量叉乘计算，若直线过点 \(M_1(x_1, y_1, z_1)\) 且方向向量为 \(\vec{s} = \{l, m, n\}\)，则距离为：  
+$$d = \frac{|\vec{M_1M} \times \vec{s}|}{|\vec{s}|}$$  
+其中 \(\vec{M_1M} = \{x_0 - x_1, y_0 - y_1, z_0 - z_1\}\)）
+
+
+
+### 异面直线距离公式
+直线 \( L_1: \frac{x - x_1}{l_1} = \frac{y - y_1}{m_1} = \frac{z - z_1}{n_1} \) 与直线 \( L_2: \frac{x - x_0}{l} = \frac{y - y_0}{m} = \frac{z - z_0}{n} \) （\( M_0(x_0,y_0,z_0) \) 在 \( L_2 \) 上，\( M_1(x_1,y_1,z_1) \) 在 \( L_1 \) 上）的距离为：  
+\[
+d = \frac{\left| \overrightarrow{M_0M_1} \times \overrightarrow{M_0P} \right|}{\left| \overrightarrow{M_0P} \right|} = \frac{\begin{vmatrix}
+\vec{i} & \vec{j} & \vec{k} \\
+x_0 - x_1 & y_0 - y_1 & z_0 - z_1 \\
+l & m & n
+\end{vmatrix}}{\sqrt{l^2 + m^2 + n^2}}
+\]  
+
+
+### 柱面方程的求法  
+#### （1）母线平行于坐标轴的柱面  
+- 母线平行于 \( z \) 轴，准线为 \( \Gamma: \begin{cases} f(x,y) = 0 \\ z = 0 \end{cases} \)，柱面方程为：\( \boldsymbol{f(x,y) = 0} \)  
+- 母线平行于 \( y \) 轴，准线为 \( \Gamma: \begin{cases} \varphi(x,z) = 0 \\ y = 0 \end{cases} \)，柱面方程为：\( \boldsymbol{\varphi(x,z) = 0} \)  
+- 母线平行于 \( x \) 轴，准线为 \( \Gamma: \begin{cases} \psi(y,z) = 0 \\ x = 0 \end{cases} \)，柱面方程为：\( \boldsymbol{\psi(y,z) = 0} \)  
+
+
+#### （2）母线方向为 \( \{l,m,n\} \) 的柱面（一般柱面）  
+准线为 \( \Gamma: \begin{cases} f(x,y,z) = 0 \\ g(x,y,z) = 0 \end{cases} \)，母线方向向量为 \( \{l,m,n\} \)，求柱面方程的步骤：  
+1. 在准线 \( \Gamma \) 上任取一点 \( (x,y,z) \)；  
+2. 过 \( (x,y,z) \) 的母线方程为：\( \frac{X - x}{l} = \frac{Y - y}{m} = \frac{Z - z}{n} \)（\( (X,Y,Z) \) 为母线上动点）；  
+3. 联立准线方程 \( \begin{cases} f(x,y,z) = 0 \\ g(x,y,z) = 0 \end{cases} \) 和母线方程，消去 \( x,y,z \)，得到只含 \( X,Y,Z \) 的方程，即为柱面方程（习惯将 \( X,Y,Z \) 换为 \( x,y,z \)）。  
+
+
+### 常见柱面方程（母线平行于坐标轴）  
+| 名称       | 方程                 | 图形特征                     |  
+|------------|----------------------|------------------------------|  
+| 圆柱面     | \( x^2 + y^2 = R^2 \) | 母线平行于 \( z \) 轴的圆柱   |  
+| 椭圆柱面   | \( \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 \) | 母线平行于 \( z \) 轴的椭圆柱 |  
+| 双曲柱面   | \( \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1 \) | 母线平行于 \( z \) 轴的双曲柱 |  
+| 抛物柱面   | \( x^2 = 2py \ (p > 0) \) | 母线平行于 \( z \) 轴的抛物柱 |  
+
+
+### 标准二次曲面及其方程  
+| 名称   | 方程（\( a,b,c > 0 \)）               | 图形特征                     |  
+|--------|--------------------------------------|------------------------------|  
+| 椭球面 | \( \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1 \) | 封闭曲面，关于坐标平面对称   |  
+| （其他二次曲面如双曲面、抛物面等，可参考类似形式扩展） |  
+
+
+### 空间曲线的投影与一般柱面  
+空间曲线 \( \Gamma: \begin{cases} f(x,y,z) = 0 \\ g(x,y,z) = 0 \end{cases} \) 在坐标面（如 \( xOy \) 面）上的投影，可通过消去 \( z \) 得到柱面 \( h(x,y) = 0 \)，再联立 \( z = 0 \) 得到投影曲线：\( \begin{cases} h(x,y) = 0 \\ z = 0 \end{cases} \)。  
+
+
+### 二次曲面
+| 曲面类型       | 方程（\(a,b,c,p\) 为正数）               | 图形示意（文字描述）                     |
+|----------------|------------------------------------------|------------------------------------------|
+| 单叶双曲面     | \(\frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{z^2}{c^2} = 1\) | 类似“中间粗、上下渐细且开口向两侧”的曲面 |
+| 双叶双曲面     | \(-\frac{x^2}{a^2} - \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1\) | 类似“上下两个独立、对称的‘碗’”的曲面     |
+| 椭圆的抛物面   | \(\frac{x^2}{a^2} + \frac{y^2}{b^2} = 2pz\) | 类似“碗口朝上（\(p>0\) 时）的椭圆碗”曲面 |
+| 双曲抛物面（马鞍面） | \(\frac{x^2}{a^2} - \frac{y^2}{b^2} = 2pz\) | 类似“马鞍”形状的曲面                     |
+| 二次锥面       | \(\frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{z^2}{c^2} = 0\) | 类似“从原点出发、向上下（或四周）发散的锥”曲面 |
+
+
+
+#### 多元函数的概念，二元函数的几何意义，二元函数的极限和连续的概念
+- 二元函数 \( z = f(x,y) \) 连续、可导（两偏导存在）与可微三者的关系：  
+  可导 \(\xleftarrow{}\) 可微 \(\xrightarrow{}\) 函数连续（“\(\xleftarrow{}\)”“\(\xrightarrow{}\)”表示逻辑推出关系）。  
+
+- 可微性验证（全微分定义）：  
+  若 \(\lim\limits_{\rho \to 0} \frac{\Delta z - f_x(x,y)\Delta x - f_y(x,y)\Delta y}{\rho} = 0\)（其中 \(\rho = \sqrt{(\Delta x)^2 + (\Delta y)^2}\)），则函数在该点可微。  
+
+
+#### 有界闭区域上多元连续函数的性质，多元函数偏导数和全微分，全微分存在的必要条件和充分条件
+- **Th1（求偏导与次序无关定理）**：  
+  设 \( z = f(x,y) \) 的两个混合偏导数 \( f_{xy}(x,y) \)、\( f_{yx}(x,y) \) 在区域 \( D \) 内连续，则 \( f_{xy}(x,y) = f_{yx}(x,y) \)。  
+
+- **Th2（可微与偏导存在的关系定理）**：  
+  若 \( z = f(x,y) \) 在 \( P(x,y) \) 点处可微，则在该点处 \(\frac{\partial z}{\partial x}\)、\(\frac{\partial z}{\partial y}\) 必存在，且有全微分公式：  
+  \[
+  dz = \frac{\partial z}{\partial x}dx + \frac{\partial z}{\partial y}dy
+  \]  
+
+- **Th3（偏导存在与可微的关系定理）**：  
+  若 \( z = f(x,y) \) 的两个偏导数 \(\frac{\partial z}{\partial x}\)、\(\frac{\partial z}{\partial y}\) 在 \( P(x,y) \) 点的某邻域内存在，且在 \( P(x,y) \) 点连续，则 \( z = f(x,y) \) 在 \( P(x,y) \) 点处可微。  
+
+
+#### 多元复合函数、隐函数的求导法，二阶偏导数，方向导数和梯度
+- **复合函数微分法**：  
+  1. 若 \( z = f(u,v) \)，\( u = \varphi(x,y) \)，\( v = \psi(x,y) \)，则复合函数的偏导数为：  
+     \[
+     \begin{cases} 
+     \frac{\partial z}{\partial x} = \frac{\partial z}{\partial u} \cdot \frac{\partial u}{\partial x} + \frac{\partial z}{\partial v} \cdot \frac{\partial v}{\partial x} \\[6pt] 
+     \frac{\partial z}{\partial y} = \frac{\partial z}{\partial u} \cdot \frac{\partial u}{\partial y} + \frac{\partial z}{\partial v} \cdot \frac{\partial v}{\partial y} 
+     \end{cases}
+     \]  
+
+  2. 若 \( z = f(u,v) \)，\( u = \varphi(x) \)，\( v = \psi(x) \)，则复合函数的**全导数**为：  
+     \[
+     \frac{dz}{dx} = \frac{\partial z}{\partial u} \cdot \frac{du}{dx} + \frac{\partial z}{\partial v} \cdot \frac{dv}{dx}
+     \]
+
+
+
+### 复合函数求导
+(3) 设 \( z = f(x, u, v), u = \varphi(x, y), v = \psi(x, y) \)，则
+\[
+\begin{cases}
+\frac{\partial z}{\partial x} = \frac{\partial f}{\partial x} + \frac{\partial f}{\partial u} \cdot \frac{\partial u}{\partial x} + \frac{\partial f}{\partial v} \cdot \frac{\partial v}{\partial x} \\
+\frac{\partial z}{\partial y} = 0 + \frac{\partial f}{\partial u} \cdot \frac{\partial u}{\partial y} + \frac{\partial f}{\partial v} \cdot \frac{\partial v}{\partial y}
+\end{cases}
+\]
+注：复合函数一定要设中间变量，抽象函数的高阶偏导数，其中间变量用数字 \( 1, 2, 3\cdots \) 表示更简洁。
+
+### 隐函数微分法
+(1) 设 \( F(x, y) = 0 \)，则 \( \frac{dy}{dx} = -\frac{F'_x(x, y)}{F'_y(x, y)} \)
+
+(2) \( F(x, y, z) = 0 \)，则 \( \frac{\partial z}{\partial x} = -\frac{F'_x(x, y, z)}{F'_z(x, y, z)}, \frac{\partial z}{\partial y} = -\frac{F'_y(x, y, z)}{F'_z(x, y, z)} \)
+
+(3) 设由方程组 \( \begin{cases} F(x, y, z) = 0 \\ G(x, y, z) = 0 \end{cases} \) 确定的隐函数 \( y = y(x), z = z(x) \)，则 \( \frac{dy}{dx}, \frac{dz}{dx} \) 可通过解关于 \( \frac{dy}{dx}, \frac{dz}{dx} \) 的线性方程组
+\[
+\begin{cases}
+F'_x + F'_y \frac{dy}{dx} + F'_z \frac{dz}{dx} = 0 \\
+G'_x + G'_y \frac{dy}{dx} + G'_z \frac{dz}{dx} = 0
+\end{cases} \implies \begin{cases}
+F'_y \frac{dy}{dx} + F'_z \frac{dz}{dx} = -F'_x \\
+G'_y \frac{dy}{dx} + G'_z \frac{dz}{dx} = -G'_x
+\end{cases}
+\]
+来求解
+
+### 方向导数和梯度
+**Th1** 设 \( z = f(x, y) \) 在 \( M_0(x_0, y_0) \) 处可微，则 \( f(x, y) \) 在点 \( M_0(x_0, y_0) \) 沿任意方向 \( l = (\cos\alpha, \cos\beta) \) 存在方向导数且
+\[
+\frac{\partial f(x_0, y_0)}{\partial l} = \frac{\partial f(x_0, y_0)}{\partial x} \cos\alpha + \frac{\partial f(x_0, y_0)}{\partial y} \cos\beta
+\]
+在平面上 \( l \) 除了用方向角表示外也可用极角表示：\( l = (\cos\theta, \sin\theta) \)，\( \theta \) 是的极角，\( \theta \in [0, 2\pi] \) 此时相应的方向导数的计算公式为
+\[
+\frac{\partial f(x_0, y_0)}{\partial l} = \frac{\partial f(x_0, y_0)}{\partial x} \cos\theta + \frac{\partial f(x_0, y_0)}{\partial y} \sin\theta
+\]
+
+**Th2** 设三元函数 \( u = f(x, y, z) \) 在 \( M_0(x_0, y_0, z_0) \) 处可微，则 \( u = f(x, y, z) \) 在点 \( M_0(x_0, y_0, z_0) \) 沿任意方向 \( l = (\cos\alpha, \cos\beta, \cos\gamma) \) 存在方向导数且有
+\[
+\frac{\partial f(x_0, y_0, z_0)}{\partial l} = \frac{\partial f(x_0, y_0, z_0)}{\partial x} \cos\alpha + \frac{\partial f(x_0, y_0, z_0)}{\partial y} \cos\beta + \frac{\partial f(x_0, y_0, z_0)}{\partial z} \cos\gamma
+\]
+
+梯度：\( z = f(x, y) \) 在点 \( M_0 \) 的方向导数计算公式可改写成
+\[
+\frac{\partial f(x_0, y_0)}{\partial l} = \left( \frac{\partial f(x_0, y_0)}{\partial x}, \frac{\partial f(x_0, y_0)}{\partial y} \right) \cdot (\cos\alpha, \cos\beta)
+\]
+\[
+= \text{grad}f(x_0, y_0) \cdot l = |\text{grad}f(x_0, y_0)| \cos\langle \text{grad}f(x_0, y_0), l \rangle
+\]
+这里向量 \( \text{grad}f(x_0, y_0) = \left( \frac{\partial f(x_0, y_0)}{\partial x}, \frac{\partial f(x_0, y_0)}{\partial y} \right) \) 成为 \( z = f(x, y) \) 在点 \( M_0 \) 的梯度向量
+
+\( \frac{\partial f(x_0, y_0)}{\partial l} \) 随 \( l \) 而变化 \( l = \frac{\text{grad}f(x_0, y_0)}{|\text{grad}f(x_0, y_0)|} \) 即沿梯度方向时，方向导数取最大值 \( |\text{grad}f(x_0, y_0)| \)
+
+
+#### 1. 曲线的切线及法平面方程
+(1) 曲线 \( \begin{cases} x = x(t) \\ y = y(t) \\ z = z(t) \end{cases} \) 在 \( (x_0, y_0, z_0) \iff t = t_0 \) 处的
+- 切线方程：\( \frac{x - x_0}{x'(t_0)} = \frac{y - y_0}{y'(t_0)} = \frac{z - z_0}{z'(t_0)} \)
+- 法平面方程：\( x'(t_0)(x - x_0) + y'(t_0)(y - y_0) + z'(t_0)(z - z_0) = 0 \)
+
+(2) 空间曲线 \( \Gamma \) 的一般式方程为 \( \begin{cases} F(x, y, z) = 0 \\ G(x, y, z) = 0 \end{cases} \)，则在曲线 \( \Gamma \) 的 \( P(x_0, y_0, z_0) \) 处的
+- 切线方程：\( \frac{x - x_0}{\left. \frac{\partial (F, G)}{\partial (y, z)} \right|_P} = \frac{y - y_0}{\left. \frac{\partial (F, G)}{\partial (z, x)} \right|_P} = \frac{z - z_0}{\left. \frac{\partial (F, G)}{\partial (x, y)} \right|_P} \)
+- 法线方程：（需结合切线方向向量推导，此处省略具体形式，核心公式如上）
+
+(3) 对于由方程组 \( \begin{cases} F(x, y, z) = 0 \\ G(x, y, z) = 0 \end{cases} \) 确定的空间曲线 \( \Gamma \)，其在点 \( P(x_0, y_0, z_0) \) 处的切线方向向量由雅可比行列式构成：
+\[
+\left. \frac{\partial (F, G)}{\partial (y, z)} \right|_P = \begin{vmatrix} F'_y & F'_z \\ G'_y & G'_z \end{vmatrix}, \quad \left. \frac{\partial (F, G)}{\partial (z, x)} \right|_P = \begin{vmatrix} F'_z & F'_x \\ G'_z & G'_x \end{vmatrix}, \quad \left. \frac{\partial (F, G)}{\partial (x, y)} \right|_P = \begin{vmatrix} F'_x & F'_y \\ G'_x & G'_y \end{vmatrix}
+\]
+
+
+#### 2. 空间曲面在其上某点处的切平面和法线方程
+(1) 设曲面\(\sum\)为显示方程\(z = f(x, y)\)，则在\(\sum\)上一点\(P(x_0, y_0, z_0)\)处的  
+切平面方程：\(\left. \frac{\partial z}{\partial x} \right|_p (x - x_0) + \left. \frac{\partial z}{\partial y} \right|_p (y - y_0) - (z - z_0) = 0\)。  
+法线方程：\(\frac{x - x_0}{\left. \frac{\partial z}{\partial x} \right|_p} = \frac{y - y_0}{\left. \frac{\partial z}{\partial y} \right|_p} = \frac{z - z_0}{-1}\)  
+
+(2) 设曲面\(\sum\)为隐式方程\(F(x, y, z) = 0\)，则在\(\sum\)上一点\(P(x_0, y_0, z_0)\)的  
+切平面方程：\(\left. F'_x \right|_p (x - x_0) + \left. F'_y \right|_p (y - y_0) + \left. F'_z \right|_p (z - z_0) = 0\)  
+法线方程：\(\frac{x - x_0}{\left. F'_x \right|_p} = \frac{y - y_0}{\left. F'_y \right|_p} = \frac{z - z_0}{\left. F'_z \right|_p}\)  
+
+
+#### 1 多元函数的极值
+**定义：**  
+设函数\(z = f(x, y)\)在\(P(x_0, y_0)\)的某邻域内有定义，若对于该邻域内异于\(P(x_0, y_0)\)点的任一点\(Q(x, y)\)恒有  
+\(f(x, y) > f(x_0, y_0)\)（或\( < f(x_0, y_0) \)）  
+则称\(f(x_0, y_0)\)为\(f(x, y)\)的**极小值**（**极大值**）  
+
+
+**Th1（取极值的必要条件）**  
+设\(z = f(x, y)\)在\(P(x_0, y_0)\)点的一阶偏导数存在，且\(P(x_0, y_0)\)是\(z = f(x, y)\)的极值点，则  
+\[
+\begin{cases}
+f'_x(x_0, y_0) = 0 \\
+f'_y(x_0, y_0) = 0
+\end{cases}
+\]  
+
+
+**Th2（函数取极值的充分条件）**  
+设\(z = f(x, y)\)在\(P(x_0, y_0)\)点的某邻域内有连续的二阶偏导数，且\(f'_x(x_0, y_0) = 0, f'_y(x_0, y_0) = 0\)  
+\[
+\left[ f''_{xy}(x_0, y_0) \right]^2 - f''_{xx}(x_0, y_0) f''_{yy}(x_0, y_0) < 0
+\]  
+则\(P(x_0, y_0)\)是\(z = f(x, y)\)的一个极值点  
+
+(1) 若\(f''_{xx}(x_0, y_0) > 0\)（或\(f''_{yy}(x_0, y_0) > 0\)），则\(P(x_0, y_0)\)为**极小值点**。  
+
+(2) 若\(f''_{xx}(x_0, y_0) < 0\)（或\(f''_{yy}(x_0, y_0) < 0\)），则\(P(x_0, y_0)\)为**极大值点**。  
+
+
+#### 2 无条件极值  
+**解题程序：**  
+(1) 求出\(z = f(x, y)\)的**驻点**\((x_0, y_0)\)；  
+
+(2) 用\(Th2\)判别\((x_0, y_0)\)是否为极值点：是，则\(f(x_0, y_0)\)为\(z = f(x, y)\)的极值。  
+
+
+#### 3 条件极值（拉格朗日乘数法）  
+1）由条件\(\varphi(x, y) = 0\)，求\(z = f(x, y)\)的极值  
+
+**解题程序：**  
+令\(F(x, y) = f(x, y) + \lambda \varphi(x, y)\)；  
+
+解方程组  
+\[
+\begin{cases}
+f'_x(x, y) + \lambda \varphi'_x(x, y) = 0 \\
+f'_y(x, y) + \lambda \varphi'_y(x, y) = 0 \\
+\varphi(x, y) = 0
+\end{cases}
+\]  
+求驻点\((x_0, y_0)\)；  
+
+\(f(x_0, y_0)\)即为\(f(x, y)\)的极值（存在的话）。
+
+
+
+### 条件极值与拉格朗日乘数法
+2) 由条件\(\boldsymbol{\varphi(x, y, z)=0}\)，求\(\boldsymbol{u = f(x, y, z)}\)的极值。解题程序：  
+令\(F(x, y, z)=\lambda\varphi(x, y, z)\)  
+解方程组\(\begin{cases}f'_x(x, y, z)+\lambda\varphi'_x(x, y, z)=0 \\ f'_y(x, y, z)+\lambda\varphi'_y(x, y, z)=0 \\ f'_z(x, y, z)+\lambda\varphi'_z(x, y, z)=0 \\ \varphi(x, y, z)=0\end{cases}\)  
+若\((x_0, y_0, z_0)\)为其解\((x_0, y_0, z_0)\)即为\(f(x, y, z)\)的极值（若存在的话）  
+
+3) 由条件\(\boldsymbol{\varphi_1(x, y, z)=0, \varphi_2(x, y, z)=0}\)求函数\(\boldsymbol{u = f(x, y, z)}\)的极值  
+解题程序：  
+令\(F(x, y, z)=f(x, y, z)+\lambda_1\varphi_1(x, y, z)+\lambda_2\varphi_2(x, y, z)\)  
+以下仿1)，2)  
+
+
+### (六)多元函数积分学
+#### 考试内容：二重积分与三重积分的概念、性质、计算和应用  
+| 考试内容 | 对应公式、定理、概念 |
+| --- | --- |
+| 二重积分与三重积分的概念、性质、计算和应用 | 1 **二重积分**：<br>\[ \iint\limits_D f(x,y)d\sigma=\lim\limits_{\lambda\to 0}\sum\limits_{i=1}^n f(\xi_i,\eta_i)\Delta\sigma_i \]，其中\( d=\max\limits_{1\leq i\leq n}\{d_i\} \)，\( d_i \)为\(\Delta\sigma_i\)的直径（\( i=1,2,\cdots,n \)）<br>**几何意义**：<br>当\( z=f(x,y)\geq0, (x,y)\in D \)时，二重积分\(\iint\limits_D f(x,y)d\sigma\)表示以\( z=f(x,y) \)为曲顶，以\( D \)为底的柱体体积。<br><br>2 **三重积分**：<br>\[ \iiint\limits_\Omega F(x,y,z)dv=\lim\limits_{\lambda\to 0}\sum\limits_{i=1}^m f(\xi_i,\eta_i,\zeta_i)\Delta v_i \]，其中\( d=\max\limits_{1\leq i\leq m}\{d_i\} \)，\( d_i \)为\(\Delta v_i\)的直径（\( i=1,2,\cdots,m \)）<br>**物理意义**：<br>三重积分\(\iiint\limits_\Omega f(x,y,z)dv\)表示体密度为\( \mu=f(x,y,z) \)的空间形体\(\Omega\)的质量。<br><br>3 **性质**（只叙述二重积分的性质，三重积分类似）<br>(1) \[ \iint\limits_D kf(x, y) d\sigma=k\iint\limits_D f(x, y)d\sigma \]，\( k \)为常数 |
+
+
+### 二重积分的性质与定理
+(2) \[ \iint\limits_D \left[ f(x,y)\pm g(x,y) \right] d\sigma=\iint\limits_D f(x,y)d\sigma\pm\iint\limits_D g(x,y)d\sigma \]  
+(3) \[ \iint\limits_D f(x,y)d\sigma=\sum\limits_{i=1}^m \iint\limits_{D_i} f(x,y)d\sigma \]，其中\( D_i \)为\( D \)的构成子域且任两个子域没有重迭部分（\( i=1,2,\cdots,m \)）  
+(4) \[ \iint\limits_D d\sigma=A \]，其中\( A \)为\( D \)的面积。  
+(5)（**比较定理**）<br>若在\( D \)上恒有\( f(x,y)\leq g(x,y) \)，则\[ \iint\limits_D f(x,y)d\sigma\leq\iint\limits_D g(x,y)d\sigma \]  
+(6)（**估值定理**）设\( M, m \)分别为\( f(x,y) \)在闭域\( D \)上的最大与最小值，\( A \)为\( D \)的面积，则\[ mA\leq\iint\limits_D f(x,y)d\sigma\leq MA \]  
+(7)（**中值定理**）若\( f(x,y) \)在闭域\( D \)上连续，\( A \)为\( D \)的面积，则在\( D \)上至少\(\boldsymbol{一}\)点\( (\xi, \eta) \)，使\[ \iint\limits_D f(x,y)d\sigma=f(\xi,\eta)A \]  
+(8) **二重积分的对称性原理**  
+1）如果积分域\( D \)关于\( x \)轴对称，\( f(x,y) \)为\( y \)的奇偶函数，则二重积分\(\iint\limits_D f(x,y)d\sigma\)  
+\[ 
+= \begin{cases} 
+0, & f \text{ 关于} y \text{ 为奇函数，即} f(x,-y)=-f(x,y) \\
+2\iint\limits_{D_1} f(x,y)d\sigma, & f \text{ 关于} y \text{ 为偶函数，即} f(x,-y)=f(x,y) 
+\end{cases} 
+\]  
+其中\( D_1 \)为\( D \)在上半平面部分  
+
+
+### 二重积分的对称性
+2）如果积分域\( D \)关于\( y \)-轴对称，\( f(x,y) \)为\( x \)的奇偶函数，则二重积分\(\iint\limits_{D} f(x,y) d\sigma \)
+\[
+= \begin{cases} 
+0, & f\text{关于}x\text{的奇函数，即}f(-x,y) = -f(x,y) \\
+2\iint\limits_{D_1} f(x,y) d\sigma, & f\text{关于}x\text{为偶函数，即}f(-x,y) = f(x,y)
+\end{cases}
+\]
+其中\( D_1 \)为\( D \)在右半平面部分。
+
+3）如果\( D \)关于原点对称，\( f(x,y) \)同时为\( x,y \)的奇偶函数，则二重积分\(\iint\limits_{D} f(x,y) d\sigma \)
+\[
+= \begin{cases} 
+0, & f\text{关于}x,y\text{的奇函数，即}f(-x,-y) = -f(x,y) \\
+2\iint\limits_{D_2} f(x,y) d\sigma, & f\text{关于}x,y\text{为偶函数，即}f(-x,-y) = f(x,y)
+\end{cases}
+\]
+其中\( D_2 \)为\( D \)在上半平面部分。
+
+4）如果\( D \)关于直线\( y = x \)对称，则\(\iint\limits_{D} f(x,y) d\sigma = \iint\limits_{D} f(y,x) d\sigma \)
+
+### 两类曲线积分的概念、性质及计算，两类曲线积分的关系，格林公式，平面曲线积分与路径无关的条件
+#### 1 平面曲线积分与路径无关的四个等价条件
+设函数\( P(x,y), Q(x,y) \)在单连通区域\( D \)上具有一阶连续偏导数，则
+\[
+\int_{L} Pdx + Qdy \text{ 与路径无关}
+\]
+\[
+\iff \frac{\partial Q}{\partial x} = \frac{\partial P}{\partial y}, \quad \forall (x,y) \in D
+\]
+\[
+\iff \oint_{L} Pdx + Qdy = 0, \, L\text{为一简单分段光滑封闭曲线}
+\]
+\[
+\iff \text{存在函数 } u(x,y), (x,y) \in D \text{ 使 } du(x,y) = Pdx + Qdy, \text{ 且}
+\]
+\[
+u(x,y) = \int_{(x_0,y_0)}^{(x,y)} Pdx + Qdy
+\]
+
+#### 2 格林公式
+设平面上的有界闭区域\( D \)由分段光滑的曲线\( L \)围成，函数\( P(x,y), Q(x,y) \)在有\( D \)连续的一阶偏导数，则有
+\[
+\iint\limits_{D} \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) dxdy = \oint_{L} Pdx + Qdy
+\]
+或者
+\[
+\iint\limits_{D} \left( \frac{\partial Q}{\partial x} + \frac{\partial P}{\partial y} \right) dxdy = \oint_{L} Pdx - Qdy
+\]
+
+### 二元函数全微分的原函数，两类曲面积分的概念、性质及计算，两类曲面积分的关系，高斯公式，斯托克斯公式
+#### 1 高斯（Gauss）公式
+设\( \Omega \)是空间中的有界闭区域，由分块光滑的曲面所\( S \)围成，函数\( P(x,y,z), Q(x,y,z), R(x,y,z) \)在\( \Omega \)由连续的一阶偏导数，则
+\[
+\iiint\limits_{\Omega} \left( \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z} \right) dV = \iint\limits_{S} Pdydz + Qdzdx + Rd xdy
+\]
+或
+\[
+\iiint\limits_{\Omega} \left( \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z} \right) dV = \iint\limits_{S} \left( P\cos\alpha + Q\cos\beta + R\cos\gamma \right) dS
+\]
+这里\( S \)是\( \Omega \)的整个边界的外侧（即取外法向），\( \cos\alpha, \cos\beta, \cos\gamma \)是\( S \)上点\( (x,y,z) \)处的外法向量的方向余弦。
+
+#### 2 斯托克斯公式
+设\( \Gamma \)为分段光滑的又向闭曲线，\( S \)是以\( \Gamma \)为边界的分块光滑有向曲面，\( \Gamma \)的正向与\( S \)的侧（即法向量的指向）符合右手法则，函数\( P(x,y,z), Q(x,y,z), R(x,y,z) \)在包含\( S \)的一个空间区域内有连续的一阶偏导数，则有
+\[
+\iint\limits_{S} \left( \frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z} \right) dydz + \left( \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x} \right) dzdx + \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) dxdy = \oint_{\Gamma} Pdx + Qdy + Rdz
+\]
+或
+\[
+\iint\limits_{S} \begin{vmatrix}
+dydz & dzdx & dxdy \\
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+P & Q & R
+\end{vmatrix} = \oint_{\Gamma} Pdx + Qdy + Rdz
+\]
+
+### 散度和旋度的概念及计算，曲线积分和曲面积分的应用
+1. **散度的计算公式**  
+设\(\vec{A} = P(x,y,z)\vec{i} + Q(x,y,z)\vec{j} + R(x,y,z)\vec{k}\)，\(P,Q,R\)均可导，则\(\vec{A}\)在\(P(x,y,z)\)处的散度为：  
+\[
+\mathrm{div}\vec{A} = \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z}
+\]  
+
+2. **旋度的计算公式**  
+设有矢量场\(\vec{A} = P(x,y,z)\vec{i} + Q(x,y,z)\vec{j} + R(x,y,z)\vec{k}\)，其中\(P,Q,R\)均有连续的一阶偏导数，则旋度\(\mathrm{rot}\vec{A}\)为：  
+\[
+\mathrm{rot}\vec{A} = \begin{vmatrix}
+\vec{i} & \vec{j} & \vec{k} \\
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+P & Q & R
+\end{vmatrix}
+\]  
+
+
+### (七)无穷级数  
+#### 常数项级数的收敛与发散的概念，收敛级数的和的概念，级数的基本性质与收敛的必要条件  
+1. **级数\(\boldsymbol{\sum_{n=1}^{\infty} u_n}\)的性质**：  
+   (1) 设\(c \neq 0\)的常数，则\(\sum_{n=1}^{\infty} u_n\)与\(\sum_{n=1}^{\infty} c u_n\)有相同敛散性。  
+   (2) 设有两个级数\(\sum_{n=1}^{\infty} u_n\)与\(\sum_{n=1}^{\infty} v_n\)：  
+      - 若\(\sum_{n=1}^{\infty} u_n = s\)，\(\sum_{n=1}^{\infty} v_n = \sigma\)，则\(\sum_{n=1}^{\infty} (u_n \pm v_n) = s \pm \sigma\)。  
+      - 若\(\sum_{n=1}^{\infty} u_n\)收敛，\(\sum_{n=1}^{\infty} v_n\)发散，则\(\sum_{n=1}^{\infty} (u_n \pm v_n)\)发散。  
+      - 若\(\sum_{n=1}^{\infty} u_n\)，\(\sum_{n=1}^{\infty} v_n\)均发散，则\(\sum_{n=1}^{\infty} (u_n \pm v_n)\)敛散性不定。  
+
+   注：添加或去掉有限项不影响一个级数的敛散性。  
+
+   设级数\(\sum_{n=1}^{\infty} u_n\)收敛，则对其各项任意加括号后所得新级数仍收敛于原级数的和。  
+
+
+#### 几何级数与\(p\)级数以及他们的敛散性，正项级数收敛性的判别法  
+**正项级数\(\boldsymbol{\sum_{n=1}^{\infty} u_n\ (u_n \geq 0)}\)的判别法**：  
+
+1. **比较判别法**：设\(0 \leq u_n \leq v_n\)。若\(\sum_{n=1}^{\infty} u_n\)收敛，则\(\sum_{n=1}^{\infty} v_n\)收敛；若\(\sum_{n=1}^{\infty} u_n\)发散，则\(\sum_{n=1}^{\infty} v_n\)发散。  
+
+2. **比较法的极限形式**：设\(\sum_{n=1}^{\infty} u_n\)及\(\sum_{n=1}^{\infty} v_n\)均为正项级数，且\(\lim\limits_{n \to \infty} \frac{u_n}{v_n} = A\ (v_n \neq 0)\)。  
+   - 若\(0 < A < +\infty\)，且\(\sum_{n=1}^{\infty} v_n\)收敛，则\(\sum_{n=1}^{\infty} u_n\)收敛。  
+   - 若\(0 < A < +\infty\)，且\(\sum_{n=1}^{\infty} v_n\)发散，则\(\sum_{n=1}^{\infty} u_n\)发散。  
+
+   两个常用的比较级数：  
+   - 等比级数：\(\sum_{n=1}^{\infty} a r^{n-1} = \begin{cases} \frac{a}{1 - r}, & |r| < 1 \\ \text{发散}, & |r| \geq 1 \end{cases}\)  
+   - \(p\)级数：\(\sum_{n=1}^{\infty} \frac{1}{n^p} = \begin{cases} \text{收敛}, & p > 1 \\ \text{发散}, & p \leq 1 \end{cases}\)  
+
+3. **比值判别法（达朗贝尔准则）**：适用于通项\(u_n\)中含有\(n!\)或关于\(n\)的若干连乘积形式。  
+   设\(u_n \geq 0\ (n = 1,2,\dots)\)，对\(\sum_{n=1}^{\infty} u_n\)来讲，若\(\lim\limits_{n \to \infty} \frac{u_{n+1}}{u_n} = \rho\)，则：  
+   \[
+   \begin{cases} 
+   \rho > 1 \text{ 时，}\sum_{n=1}^{\infty} u_n \text{ 发散} \\
+   \rho = 1 \text{ 时，方法失效} \\
+   \rho < 1 \text{ 时，}\sum_{n=1}^{\infty} u_n \text{ 收敛}
+   \end{cases}
+   \]
+
+
+
+### 交错级数与莱布尼兹定理，任意项级数的绝对收敛与条件收敛
+1. **交错级数的判敛法**  
+   交错级数\(\sum_{n=1}^{\infty} (-1)^{n-1}u_n\ (u_n > 0)\)的判敛法：  
+
+   莱布尼兹准则：若交错级数\(\sum_{n=1}^{\infty} (-1)^{n-1}u_n\ (u_n > 0)\)满足条件：  
+   \((1)\ u_n \geq u_{n+1}\ (n = 1, 2, \dots)\); \((2)\ \lim_{n \to \infty} u_n = 0\),  
+   则交错级数收敛，其和\(S \leq u_1\)，其\(n\)项余项和的绝对值\(|R_n| \leq u_{n+1}\)。  
+
+
+### 函数项级数的收敛域与和函数的概念，幂级数及其收敛半径，收敛区间(指开区间)和收敛域，幂级数的和函数
+1. **幂级数**：\(a_0 + a_1x + a_2x^2 + \dots + a_nx^n + \dots = \sum_{n=0}^{\infty} a_nx^n\)  
+   收敛半径：若\(\lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| = \rho\)，则\(R = \frac{1}{\rho}\)（\(\rho = 0\)时\(R = +\infty\)，\(\rho = +\infty\)时\(R = 0\)）。  
+
+2. **函数项级数\(\sum_{n=1}^{\infty} u_n(x)\)收敛域的求法步骤**：  
+   \((1)\) 用比值（或根值）法求\(p(x)\)，即  
+   \(\lim_{n \to \infty} \left| \frac{u_{n+1}(x)}{u_n(x)} \right| = p(x)\)（或\(\lim_{n \to \infty} \sqrt[n]{|u_n(x)|} = p(x)\)）;  
+   \((2)\) 解不等式方程\(p(x) < 1\)，求出\(\sum_{n=1}^{\infty} u_n(x)\)的收敛区间\((a, b)\);  
+   \((3)\) 考察\(x = a\)（或\(x = b\)）时\(\sum_{n=1}^{\infty} u_n(a)\)（或\(\sum_{n=1}^{\infty} u_n(b)\)）的敛散性；  
+   \((4)\) 写出\(\sum_{n=1}^{\infty} u_n(x)\)的收敛域。  
+
+
+### 幂级数在其收敛区间内的基本性质，简单幂级数的和函数的求法，初等函数幂级数展开式
+1. **幂级数的四则运算性质**：  
+   设\(\sum_{n=0}^{\infty} a_nx^n = f(x)\)，\(\sum_{n=0}^{\infty} b_nx^n = g(x)\)，其收敛半径分别为\(R_1, R_2\)，\(R = \min\{R_1, R_2\}\)，则对\(\forall x \in (-R, R)\)有：  
+   \((1)\ \sum_{n=0}^{\infty} a_nx^n \pm \sum_{n=0}^{\infty} b_nx^n = \sum_{n=0}^{\infty} (a_n \pm b_n)x^n = f(x) \pm g(x)\)，且在\((-R, R)\)内绝对收敛；  
+   \((2)\ \left( \sum_{n=0}^{\infty} a_nx^n \right) \left( \sum_{n=0}^{\infty} b_nx^n \right) = \sum_{n=0}^{\infty} (a_0b_n + a_1b_{n-1} + \dots + a_{n-1}b_1 + a_nb_0)x^n = f(x)g(x)\)；  
+   \((3)\) 设\(b_0 \neq 0\)，则在\(x = 0\)的足够小邻域内  
+   \(\frac{f(x)}{g(x)} = \frac{a_0 + a_1x + \dots + a_nx^n + \dots}{b_0 + b_1x + \dots + b_nx^n + \dots} = C_0 + C_1x + C_2x^2 + \dots + C_nx^n + \dots\)，  
+   利用多项式的长除法可得：\(C_0 = \frac{a_0}{b_0}\)，\(C_1 = \frac{a_1b_0 - a_0b_1}{b_0^2}\)，…  
+
+
+### 幂级数的分析性质
+设幂级数\(\sum_{n=0}^{\infty} a_nx^n\)的收敛半径为\(R\)，则在\((-R, R)\)内有：  
+\((1)\ \sum_{n=0}^{\infty} a_nx^n\)的和函数\(f(x)\)是连续的；  
+\((2)\ \sum_{n=0}^{\infty} a_nx^n\)可逐项微分，且\(f^\prime(x) = \left( \sum_{n=0}^{\infty} a_nx^n \right)^\prime = \sum_{n=0}^{\infty} (a_nx^n)^\prime = \sum_{n=0}^{\infty} na_nx^{n-1}\)；  
+\((3)\ \sum_{n=0}^{\infty} a_nx^n\)可逐项积分，且\(\int_0^x f(t)dt = \int_0^x \left( \sum_{n=0}^{\infty} a_nt^n \right) dt = \sum_{n=0}^{\infty} \int_0^x (a_nt^n)dt = \sum_{n=0}^{\infty} \frac{a_n}{n+1}x^{n+1}\)。  
+
+
+### 函数的幂级数展开
+**泰勒级数**：设\(f(x)\)在\(x = x_0\)的某一邻域内具有任意阶导数，  
+级数：\(\sum_{n=0}^{\infty} \frac{f^{(n)}(x_0)}{n!} (x - x_0)^n = f(x_0) + f^\prime(x_0)(x - x_0) + \frac{f^{\prime\prime}(x_0)}{2!}(x - x_0)^2 + \dots + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n + \dots\)  
+称为\(f(x)\)在\(x = x_0\)处的**泰勒级数**。  
+
+当\(x_0 = 0\)时，泰勒级数变为\(\sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!} x^n\)，称为**麦克劳林级数**。
+
+
+
+### 泰勒级数与常见幂级数展开式
+- 当\( x_0 = 0 \)时，级数化为：
+  \[
+  \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!} x^n = f(0) + f'(0)x + \frac{f''(0)}{2!} x^2 + \cdots + \frac{f^{(n)}(0)}{n!} x^n + \cdots
+  \]
+  称为**麦克劳林级数**。
+
+- 定理（泰勒级数收敛条件）：设\( f(x) \)在\( x = x_0 \)某领域内具有任意阶导数，则泰勒级数
+  \[
+  \sum_{n=0}^{\infty} \frac{f^{(n)}(x_0)}{n!} (x - x_0)^n
+  \]
+  收敛于\( f(x) \)的充分条件是\( \lim_{n \to \infty} R_n(x) = 0 \)，其中余项：
+  \[
+  R_n(x) = \frac{1}{(n+1)!} f^{(n+1)}\left[ x_0 + \theta(x - x_0) \right] (x - x_0)^{n+1}, \quad 0 < \theta < 1
+  \]
+
+- **常见幂级数展开式**：
+  1. 几何级数：
+     \[
+     \frac{1}{1 - u} = 1 + u + u^2 + \cdots + u^n + \cdots = \sum_{n=0}^{\infty} u^n, \quad u \in (-1, 1)
+     \]
+  2. 交错几何级数：
+     \[
+     \frac{1}{1 + u} = 1 - u + u^2 - \cdots + (-1)^n u^n + \cdots = \sum_{n=0}^{\infty} (-1)^n u^n, \quad u \in (-1, 1)
+     \]
+  3. 指数函数：
+     \[
+     e^u = 1 + u + \frac{u^2}{2!} + \cdots + \frac{u^n}{n!} + \cdots = \sum_{n=0}^{\infty} \frac{u^n}{n!}, \quad u \in (-\infty, +\infty)
+     \]
+  4. 正弦函数：
+     \[
+     \sin u = u - \frac{u^3}{3!} + \cdots + (-1)^n \frac{u^{2n+1}}{(2n+1)!} + \cdots = \sum_{n=0}^{\infty} (-1)^n \frac{u^{2n+1}}{(2n+1)!}, \quad u \in (-\infty, +\infty)
+     \]
+  5. 余弦函数：
+     \[
+     \cos u = 1 - \frac{u^2}{2!} + \frac{u^4}{4!} - \cdots + (-1)^n \frac{u^{2n}}{(2n)!} + \cdots = \sum_{n=0}^{\infty} (-1)^n \frac{u^{2n}}{(2n)!}, \quad u \in (-\infty, +\infty)
+     \]
+  6. 对数函数：
+     \[
+     \ln(1 + u) = u - \frac{u^2}{2} + \frac{u^3}{3} - \cdots + (-1)^n \frac{u^{n+1}}{n+1} + \cdots = \sum_{n=0}^{\infty} (-1)^n \frac{u^{n+1}}{n+1}, \quad u \in (-1, 1]
+     \]
+  7. 二项式级数（\( a \)为任意实数）：
+     \[
+     (1 + u)^a = 1 + au + \frac{a(a-1)}{2!} u^2 + \cdots + \frac{a(a-1)\cdots(a-n+1)}{n!} u^n + \cdots
+     \]
+     收敛区间为\( (-1, 1) \)（端点敛散性随\( a \)不同而变化）。
+
+
+### 傅里叶级数（周期函数的三角级数展开）
+#### 1. 以\( 2\pi \)为周期的函数（\( l = \pi \)）
+设\( f(x) \)以\( 2\pi \)为周期，且在\( [-\pi, \pi] \)（或\( [0, 2\pi] \)）上可积，则**傅里叶系数**为：
+\[
+\begin{cases}
+a_n = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos nx \, dx = \frac{1}{\pi} \int_{0}^{2\pi} f(x) \cos nx \, dx, & n = 0, 1, 2, \cdots \\
+b_n = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin nx \, dx = \frac{1}{\pi} \int_{0}^{2\pi} f(x) \sin nx \, dx, & n = 1, 2, \cdots
+\end{cases}
+\]
+
+以傅里叶系数为系数的三角级数：
+\[
+\frac{a_0}{2} + \sum_{n=1}^{\infty} \left( a_n \cos nx + b_n \sin nx \right)
+\]
+称为\( f(x) \)的**傅里叶级数**，记为：
+\[
+f(x) \sim \frac{a_0}{2} + \sum_{n=1}^{\infty} \left( a_n \cos nx + b_n \sin nx \right)
+\]
+
+
+#### 2. 以\( 2l \)为周期的函数（一般周期）
+设\( f(x) \)以\( 2l \)为周期，且在\( [-l, l] \)上可积，则**傅里叶系数**为：
+\[
+\begin{cases}
+a_n = \frac{1}{l} \int_{-l}^{l} f(x) \cos \frac{n\pi x}{l} \, dx, & n = 0, 1, 2, \cdots \\
+b_n = \frac{1}{l} \int_{-l}^{l} f(x) \sin \frac{n\pi x}{l} \, dx, & n = 1, 2, \cdots
+\end{cases}
+\]
+
+以傅里叶系数为系数的三角级数：
+\[
+\frac{a_0}{2} + \sum_{n=1}^{\infty} \left( a_n \cos \frac{n\pi x}{l} + b_n \sin \frac{n\pi x}{l} \right)
+\]
+称为\( f(x) \)的**傅里叶级数**，记为：
+\[
+f(x) \sim \frac{a_0}{2} + \sum_{n=1}^{\infty} \left( a_n \cos \frac{n\pi x}{l} + b_n \sin \frac{n\pi x}{l} \right)
+\]
+
+
+#### 3. 狄利克雷收敛定理
+设函数\( f(x) \)在\( [-\pi, \pi] \)上满足：
+1. 除有限个**第一类间断点**外都连续；
+2. 只有有限个极值点；
+
+则\( f(x) \)的傅里叶级数在\( [-\pi, \pi] \)上收敛，且和函数为：
+\[
+\frac{a_0}{2} + \sum_{n=1}^{\infty} \left( a_n \cos nx + b_n \sin nx \right) = 
+\begin{cases}
+f(x), & x \text{ 为 } f(x) \text{ 的连续点} \\
+\frac{1}{2} \left[ f(x_0^-) + f(x_0^+) \right], & x = x_0 \text{ 为 } f(x) \text{ 的第一类间断点} \\
+\frac{1}{2} \left[ f(-\pi^+) + f(\pi^-) \right], & x = \pm \pi
+\end{cases}
+\]
+
+
+
+### 函数在$[0,l]$上的正弦级数与余弦级数
+1. $f(x)$为$[0,l]$上的非周期函数，令：  
+   $$F(x)=\begin{cases}f(x),&0\leq x\leq l\\f(-x),&-l\leq x<0\end{cases}$$  
+   则 $f(x)\sim \frac{a_0}{2}+\sum_{n=1}^{\infty}a_n\cos\frac{n\pi}{l}x$（余弦级数），其中：  
+   $$a_n=\frac{2}{l}\int_0^l f(x)\cos\frac{n\pi}{l}x dx \quad (n=0,1,2,\cdots)$$  
+
+2. $f(x)$为$[0,l]$上的非周期函数，令：  
+   $$F(x)=\begin{cases}f(x),&0\leq x\leq l\\-f(-x),&-l\leq x<0\end{cases}$$  
+   则$F(x)$除$x=0$外在区间$[-\pi,\pi]$上为奇函数，故 $f(x)\sim \sum_{n=1}^{\infty}b_n\sin\frac{n\pi}{l}x$（正弦级数），其中：  
+   $$b_n=\frac{2}{l}\int_0^l f(x)\sin\frac{n\pi}{l}x dx \quad (n=1,2,\cdots)$$  
+
+
+#### 常微分方程的基本概念，变量可分离的微分方程
+- **常微分方程**：含有自变量、未知函数及未知函数的某些导数的方程式，称为微分方程；当未知函数是一元函数时，称为**常微分方程**。  
+- **可分离变量方程**：形如 $f_1(x)g_1(y)dx + f_2(x)g_2(y)dy = 0$ 的方程。  
+  解法：两边同除 $g_1(y)f_2(x)\neq 0$，得：  
+  $$\frac{f_1(x)}{f_2(x)}dx + \frac{g_2(y)}{g_1(y)}dy = 0$$  
+  积分得通解：  
+  $$\int \frac{f_1(x)}{f_2(x)}dx + \int \frac{g_2(y)}{g_1(y)}dy = C$$  
+
+
+#### 齐次微分方程，一阶线性微分方程，伯努利方程，全微分方程
+1. **齐次方程**：形如 $y' = f\left(\frac{y}{x}\right)$ 的方程。  
+   解法：令 $u = \frac{y}{x}$，则 $y = ux$，$y' = u + x\frac{du}{dx}$。代入原方程得：  
+   $$u + x\frac{du}{dx} = f(u) \implies \frac{du}{f(u)-u} = \frac{dx}{x}$$  
+   积分得 $\int \frac{du}{f(u)-u} = \ln|x| + C$，再代回 $u = \frac{y}{x}$ 得通解。  
+
+
+2. **可化为齐次型的方程**：形如 $\frac{dy}{dx} = f\left( \frac{a_1x + b_1y + c_1}{a_2x + b_2y + c_2} \right)$ 的方程。  
+   - 当 $c_1 = c_2 = 0$ 时：  
+     $$\frac{dy}{dx} = f\left( \frac{a_1x + b_1y}{a_2x + b_2y} \right) = f\left( \frac{a_1 + b_1\frac{y}{x}}{a_2 + b_2\frac{y}{x}} \right) = g\left( \frac{y}{x} \right)$$  
+     属于**齐次方程**（令 $u = \frac{y}{x}$ 求解）。  
+
+   - 当 $\begin{vmatrix} a_1 & b_1 \\ a_2 & b_2 \end{vmatrix} = 0$（即 $\frac{a_1}{a_2} = \frac{b_1}{b_2} = \lambda$）时：  
+     $$\frac{dy}{dx} = f\left( \frac{\lambda(a_2x + b_2y) + c_1}{a_2x + b_2y + c_2} \right) = g(a_2x + b_2y)$$  
+     令 $u = a_2x + b_2y$，则 $\frac{du}{dx} = a_2 + b_2g(u)$，属于**可分离变量方程**。  
+
+   - 当 $\begin{vmatrix} a_1 & b_1 \\ a_2 & b_2 \end{vmatrix} \neq 0$ 且 $c_1, c_2$ 不全为0时：  
+     解方程组 $\begin{cases} a_1x + b_1y + c_1 = 0 \\ a_2x + b_2y + c_2 = 0 \end{cases}$，得交点 $(\alpha, \beta)$。令 $x = X + \alpha$，$y = Y + \beta$，则原方程化为：  
+     $$\frac{dY}{dX} = \varphi\left( \frac{Y}{X} \right)$$  
+     属于**齐次方程**，按齐次方程解法求解。  
+
+
+3. **一阶线性方程**：形如 $y' + p(x)y = q(x)$ 的方程。  
+   解法：**常数变易法**。  
+   - 对应齐次方程 $y' + p(x)y = 0$ 的通解：  
+     $$y = C e^{-\int p(x)dx}$$  
+   - 设原方程的解为 $y = C(x) e^{-\int p(x)dx}$，代入原方程得：  
+     $$C'(x) e^{-\int p(x)dx} = q(x) \implies C(x) = \int q(x) e^{\int p(x)dx} dx + C$$  
+   - 因此，原方程的通解为：  
+     $$y = e^{-\int p(x)dx} \left( \int q(x) e^{\int p(x)dx} dx + C \right)$$  
+
+
+
+### 微分方程解法
+1. **一阶线性微分方程**  
+   方程形式：\( y' + p(x)y = q(x) \)  
+   - 齐次解：\( y_h = Ce^{-\int p(x)dx} \)  
+   - 非齐次通解（常数变易法）：  
+     \( C(x)e^{\int p(x)dx} = q(x) \implies C(x) = \int q(x)e^{\int p(x)dx} dx + C \)  
+     原方程通解：  
+     \[
+     y = \left[ \int q(x)e^{\int p(x)dx} dx + C \right] e^{-\int p(x)dx}
+     \]  
+
+2. **贝努里方程**  
+   方程形式：\( y' + p(x)y = q(x)y^n \)（\( n \neq 0,1 \)）  
+   解法：令 \( Z = y^{1-n} \)，则方程化为：  
+   \[
+   \frac{1}{1-n} \frac{dz}{dx} + p(x)z = q(x) \implies \frac{dz}{dx} + (1-n)p(x)z = (1-n)q(x)
+   \]  
+   属于一阶线性方程（第3类），解出 \( z \) 后回代 \( Z = y^{1-n} \) 得 \( y \)。  
+
+3. **全微分方程**  
+   方程形式：\( M(x,y)dx + N(x,y)dy = 0 \)  
+   条件：\( \frac{\partial M}{\partial y} = \frac{\partial N}{\partial x} \)  
+   通解：  
+   \[
+   \int_{x_0}^{x} M(x,y_0)dx + \int_{y_0}^{y} N(x,y)dy = C
+   \]  
+
+
+### 线性微分方程（二阶及高阶）
+#### 二阶线性方程的一般形式  
+非齐次：\( y'' + p(x)y' + q(x)y = f(x) \)（\( 8.1 \)）  
+齐次（\( f(x) \equiv 0 \)）：\( y'' + p(x)y' + q(x)y = 0 \)（\( 8.2 \)）  
+
+
+#### 解的性质与结构  
+1. **齐次方程的解**：  
+   若 \( y_1(x), y_2(x) \) 是（\( 8.2 \)）的两个特解，则其线性组合 \( C_1y_1 + C_2y_2 \) 仍为（\( 8.2 \)）的解。  
+   若 \( y_1(x), y_2(x) \) **线性无关**（\( \frac{y_1(x)}{y_2(x)} \not\equiv \text{常数} \)），则（\( 8.2 \)）的通解为：  
+   \[
+   y(x) = C_1y_1(x) + C_2y_2(x)
+   \]  
+
+2. **非齐次与齐次解的关系**：  
+   设 \( y_1(x), y_2(x) \) 为（\( 8.1 \)）的两个特解，则 \( y_1(x) - y_2(x) \) 是（\( 8.2 \)）的特解。  
+
+3. **非齐次方程的通解**：  
+   设 \( y^*(x) \) 为（\( 8.1 \)）的一个特解，\( y_h(x) = C_1y_1 + C_2y_2 \) 为（\( 8.2 \)）的通解，则（\( 8.1 \)）的通解为：  
+   \[
+   y(x) = y^*(x) + C_1y_1(x) + C_2y_2(x)
+   \]  
+
+
+### 常系数线性微分方程（齐次）
+#### 1. 二阶常系数齐次线性方程  
+方程形式：\( y'' + py' + qy = 0 \)（\( p,q \) 为常数）  
+**特征方程**：\( \lambda^2 + p\lambda + q = 0 \)  
+
+- **相异实根**（\( \lambda_1 \neq \lambda_2 \)）：通解为 \( y(x) = C_1e^{\lambda_1 x} + C_2e^{\lambda_2 x} \)  
+- **重根**（\( \lambda_1 = \lambda_2 = \lambda \)）：通解为 \( y(x) = (C_1 + C_2x)e^{\lambda x} \)  
+- **共轭复根**（\( \lambda = \alpha \pm i\beta \)）：通解为  
+  \[
+  y(x) = e^{\alpha x} \left( C_1\cos\beta x + C_2\sin\beta x \right)
+  \]  
+
+
+#### 2. \( n \) 阶常系数齐次线性方程  
+方程形式：\( y^{(n)} + p_1y^{(n-1)} + \dots + p_ny = 0 \)（\( p_i \) 为常数）  
+**特征方程**：\( \lambda^n + p_1\lambda^{n-1} + \dots + p_n = 0 \)  
+
+特征根与通解的关系（类似二阶）：  
+- **相异实根** \( \lambda_1, \dots, \lambda_n \)：通解为 \( y(x) = C_1e^{\lambda_1 x} + \dots + C_ne^{\lambda_n x} \)  
+- **\( k \) 重实根** \( \lambda = \lambda_0 \)：通解含项 \( (C_1 + C_2x + \dots + C_kx^{k-1})e^{\lambda_0 x} \)  
+- **\( k \) 重共轭复根** \( \lambda = \alpha \pm i\beta \)：通解含项  
+  \[
+  e^{\alpha x} \left[ (C_1 + C_2x + \dots + C_kx^{k-1})\cos\beta x + (D_1 + D_2x + \dots + D_kx^{k-1})\sin\beta x \right]
+  \]  
+
+
+### 二阶常系数线性非齐次方程  
+方程形式：\( y'' + py' + qy = f(x) \)（\( p,q \) 为常数）  
+解法：通解 = 齐次通解 \( y_h \) + 非齐次特解 \( y^* \)，即 \( y = y_h + y^* \)。  
+特解 \( y^* \) 的形式需根据 \( f(x) \) 的类型（如 \( f(x) = e^{\lambda x}P_m(x) \)、\( f(x) = e^{\alpha x}(A\cos\beta x + B\sin\beta x) \) 等）用**待定系数法**或**常数变易法**确定。  
+
+
+### 注  
+- 高阶（\( n \geq 3 \)）常系数齐次线性方程的通解结构与二阶类似，但需解高次特征方程（三次及以上无通用求根公式，仅特殊情形可解）。  
+- 非齐次方程的特解需结合 \( f(x) \) 的形式假设，再代入方程确定待定系数。
+
+
+
+### 非齐次线性微分方程，欧拉方程，微分方程简单应用
+**解法：通解的求法程序**
+1. 求对应齐次方程的通解\( Y(x) \)
+2. 求出(2)的特解\( y^*(x) \)
+3. 方程(2)的通解\( y = Y(x)+y^*(x) \)
+方程(2)特解\( y^*(x) \)的求法有三种：微分算子法、常数变易法、待定系数法.
+
+2 形如\( x^n y^{(n)} + a_1 x^{n - 1} y^{(n - 1)} + \cdots + a_{n - 1} x y' + a_n y = 0 \)的方程成为欧拉方程.
+
+
+### 二、线性代数
+#### (一) 行列式
+|考试内容|对应公式、定理、概念|
+| ---- | ---- |
+|行列式的概念和基本性质、行列式按行（列）展开定理|行列式按行（列）展开定理<br>(1) 设\( A=(a_{ij})_{n\times n} \)，则\( a_{i1}A_{j1}+a_{i2}A_{j2}+\cdots +a_{in}A_{jn}=\begin{cases}|A|,i = j\\0,i\neq j\end{cases} \)<br>或\( a_{1i}A_{1j}+a_{2i}A_{2j}+\cdots +a_{ni}A_{nj}=\begin{cases}|A|,i = j\\0,i\neq j\end{cases} \)<br>即\( AA^* = A^*A = |A|E \)，其中<br>\( A^*=\begin{pmatrix}A_{11}&A_{21}&\cdots&A_{n1}\\A_{12}&A_{22}&\cdots&A_{n2}\\\cdots&\cdots&\cdots&\cdots\\A_{1n}&A_{2n}&\cdots&A_{nn}\end{pmatrix}=(A_{ji})=(A_{ij})^T \)<br>(2) 设\( A,B \)为\( n \)阶方阵，则\( |AB| = |A||B| = |B||A| = |BA| \)<br>但\( |A\pm B|\neq|A|\pm|B| \)不一定成立.<br>(3) \( |kA| = k^n|A| \)，\( A \)为\( n \)阶方阵<br>(4) 设\( A \)为\( n \)阶方阵，则\( |A^T| = |A| \)；\( |A^k| = |A|^k \)；\( |A^{-1}| = |A|^{-1} \)（若\( A \)可逆）；\( |A^*| = |A|^{n - 1} \)（\( n\geq2 \)）<br>(5) \( \begin{vmatrix}A&O\\O&B\end{vmatrix}=\begin{vmatrix}A&C\\O&B\end{vmatrix}=\begin{vmatrix}A&O\\C&B\end{vmatrix}=|A||B| \)，\( A,B \)为方阵，<br>但\( \begin{vmatrix}O&A_{m\times m}\\B_{n\times n}&O\end{vmatrix}=(-1)^{mn}|A||B| \).<br>(6) 范德蒙行列式\( D_n=\begin{vmatrix}1&1&\cdots&1\\x_1&x_2&\cdots&x_n\\\cdots&\cdots&\cdots&\cdots\\x_1^{n - 1}&x_2^{n - 1}&\cdots&x_n^{n - 1}\end{vmatrix}=\prod_{1\leq j\lt i\leq n}(x_i - x_j) \)<br>设\( A \)是\( n \)阶方阵，\( \lambda_i(i = 1,2,\cdots,n) \)是\( A \)的\( n \)个特征值，则<br>\( |A|=\prod_{i = 1}^{n}\lambda_i \)|
+
+#### (二)矩阵
+|考试内容|对应公式、定理、概念|
+| ---- | ---- |
+|矩阵的概念，矩阵的线性运算，矩阵的乘法，|矩阵：\( m\times n \)个数\( a_{ij} \)排成\( m \)行\( n \)列的表格\( \begin{bmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\a_{21}&a_{22}&\cdots&a_{2n}\\\cdots&\cdots&\cdots&\cdots\\a_{m1}&a_{m2}&\cdots&a_{mn}\end{bmatrix} \)称为矩阵，简记为\( A \)或\( (a_{ij})_{m\times n} \).若\( m = n \)，则称\( A \)是\( n \)阶矩阵或\( n \)阶方阵.<br>矩阵的线性运算<br>1 矩阵的加法 设\( A=(a_{ij}),B=(b_{ij}) \)是两个\( m\times n \)矩阵，则\( m\times n \)矩阵\( C=(c_{ij}) = a_{ij}+b_{ij} \)称为矩阵\( A \) 与\( B \)的和，记为\( A + B = C \)|
+
+
+
+### 矩阵的数乘与乘法
+1. **矩阵的数乘**：设\( A=(a_{ij}) \)是\( m \times n \)矩阵，\( k \)是一个常数，则\( m \times n \)矩阵\( (ka_{ij}) \)称为数\( k \)与矩阵\( A \)的数乘，记为\( kA \)。  
+2. **矩阵的乘法**：设\( A=(a_{ij}) \)是\( m \times n \)矩阵，\( B=(b_{ij}) \)是\( n \times s \)矩阵，那么\( m \times s \)矩阵\( C=(c_{ij}) \)，其中  
+   \[
+   c_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{in}b_{nj} = \sum_{k=1}^{n} a_{ik}b_{kj}
+   \]  
+   称为\( A \)与\( B \)的乘积，记为\( C = AB \)。  
+
+
+### 方阵的幂、乘积、行列式、转置、逆矩阵、伴随矩阵
+#### 1. \( \boldsymbol{A^T} \)、\( \boldsymbol{A^{-1}} \)、\( \boldsymbol{A^*} \)三者之间的关系  
+1) 转置的性质：  
+   \[
+   (A^T)^T = A, \quad (AB)^T = B^T A^T, \quad (kA)^T = kA^T, \quad (A \pm B)^T = A^T \pm B^T
+   \]  
+2) 逆的性质：  
+   \[
+   (A^{-1})^{-1} = A, \quad (AB)^{-1} = B^{-1} A^{-1}, \quad (kA)^{-1} = \frac{1}{k}A^{-1}
+   \]  
+   但\( (A \pm B)^{-1} = A^{-1} \pm B^{-1} \)**不一定成立**。  
+3) 伴随的性质（\( n \geq 3 \)）：  
+   \[
+   (A^n)^* = |A|^{n-2} A \quad (n \geq 3), \quad (AB)^* = B^* A^*
+   \]  
+   数乘伴随：\( (kA)^* = k^{n-1} A^* \ (n \geq 2) \)，但\( (A \pm B)^* = A^* \pm B^* \)**不一定成立**。  
+4) 转置、逆、伴随的混合性质：  
+   \[
+   (A^T)^* = (A^*)^T, \quad (A^{-1})^* = (A^*)^{-1}, \quad (A^*)^T = (A^T)^*
+   \]  
+
+
+#### 2. 有关\( \boldsymbol{A^*} \)的结论  
+1) 伴随的基本恒等式：\( AA^* = A^* A = |A| E \)。  
+2) 伴随的行列式：\( |A^*| = |A|^{n-1} \ (n \geq 2) \)，数乘伴随：\( (kA)^* = k^{n-1} A^* \)，幂伴随：\( (A^n)^* = |A|^{n-2} A \ (n \geq 3) \)。  
+3) 可逆矩阵的伴随：若\( A \)可逆，则\( A^* = |A| A^{-1} \)，且\( (A^*)^* = \frac{1}{|A|} A \)。  
+4) 伴随的秩：若\( A \)为\( n \)阶方阵，则  
+   \[
+   r(A^*) = \begin{cases} 
+   n, & r(A) = n \\
+   1, & r(A) = n-1 \\
+   0, & r(A) < n-1 
+   \end{cases}
+   \]  
+
+
+#### 3. 有关\( \boldsymbol{A^{-1}} \)的结论  
+\( A \)可逆 \( \iff AB = E \iff |A| \neq 0 \iff r(A) = n \)  
+\( \iff A \)可表示为初等矩阵的乘积；  
+\( \iff A \)无零特征值；\( \iff Ax = 0 \)只有零解。  
+
+
+### 矩阵的秩、初等变换、分块矩阵
+#### 1. 有关矩阵秩的结论  
+1) 秩的定义：\( r(A) = \)行秩\( = \)列秩；  
+2) 秩的范围：\( r(A_{m \times n}) \leq \min(m, n) \)；  
+3) 非零矩阵的秩：\( A \neq O \implies r(A) \geq 1 \)；  
+4) 和的秩：\( r(A \pm B) \leq r(A) + r(B) \)；  
+5) 初等变换不改变矩阵的秩；  
+6) 乘积的秩不等式：\( r(A) + r(B) - n \leq r(AB) \leq \min(r(A), r(B)) \)，特别若\( AB = O \)，则\( r(A) + r(B) \leq n \)；  
+7) 可逆矩阵与乘积的秩：  
+   - 若\( A^{-1} \)存在，则\( r(AB) = r(B) \)；若\( B^{-1} \)存在，则\( r(AB) = r(A) \)；  
+   - 若\( r(A_{m \times n}) = n \)，则\( r(AB) = r(B) \)；若\( r(A_{m \times n}) = m \)，则\( r(AB) = r(A) \)；  
+8) 满秩等价于只有零解：\( r(A_{n \times n}) = n \iff Ax = 0 \)只有零解。  
+
+
+#### 2. 分块求逆公式  
+- 对角分块：  
+  \[
+  \begin{pmatrix} A & O \\ O & B \end{pmatrix}^{-1} = \begin{pmatrix} A^{-1} & O \\ O & B^{-1} \end{pmatrix}
+  \]  
+- 上三角分块（\( A, B \)可逆）：  
+  \[
+  \begin{pmatrix} A & C \\ O & B \end{pmatrix}^{-1} = \begin{pmatrix} A^{-1} & -A^{-1} C B^{-1} \\ O & B^{-1} \end{pmatrix}
+  \]  
+- 下三角分块（\( A, B \)可逆）：  
+  \[
+  \begin{pmatrix} A & O \\ C & B \end{pmatrix}^{-1} = \begin{pmatrix} A^{-1} & O \\ -B^{-1} C A^{-1} & B^{-1} \end{pmatrix}
+  \]  
+- 反对角分块（\( A, B \)可逆）：  
+  \[
+  \begin{pmatrix} O & A \\ B & O \end{pmatrix}^{-1} = \begin{pmatrix} O & B^{-1} \\ A^{-1} & O \end{pmatrix}
+  \]
+
+
+
+### (三) 向量
+#### 向量的概念，向量的线性组合和线性表示，向量的线性相关与线性无关
+1. **有关向量组的线性表示**
+   - (1) $\boldsymbol{\alpha_1,\alpha_2,\cdots,\alpha_s}$ 线性相关 $\Leftrightarrow$ 至少有一个向量可以用其余向量线性表示.
+   - (2) 若 $\boldsymbol{\alpha_1,\alpha_2,\cdots,\alpha_s}$ 线性无关，$\boldsymbol{\alpha_1,\alpha_2,\cdots,\alpha_s}$，$\boldsymbol{\beta}$ 线性相关 $\Leftrightarrow \boldsymbol{\beta}$ 可以由 $\boldsymbol{\alpha_1,\alpha_2,\cdots,\alpha_s}$ 惟一线性表示.
+   - (3) $\boldsymbol{\beta}$ 可以由 $\boldsymbol{\alpha_1,\alpha_2,\cdots,\alpha_s}$ 线性表示  
+     $\Leftrightarrow r(\alpha_1,\alpha_2,\cdots,\alpha_s)=r(\alpha_1,\alpha_2,\cdots,\alpha_s,\beta)$
+2. **有关向量组的线性相关性**
+   - (1) 部分相关，整体相关；整体无关，部分无关.
+   - (2) ① $n$ 个 $n$ 维向量  
+     $\boldsymbol{\alpha_1,\alpha_2,\cdots,\alpha_n}$ 线性无关 $\Leftrightarrow |[\alpha_1,\alpha_2,\cdots,\alpha_n]| \neq 0,$  
+     $n$ 个 $n$ 维向量 $\boldsymbol{\alpha_1,\alpha_2,\cdots,\alpha_n}$ 线性相关  
+     $\Leftrightarrow |[\alpha_1,\alpha_2,\cdots,\alpha_n]| = 0,$  
+     ② $n+1$ 个 $n$ 维向量线性相关.  
+     ③ 若 $\boldsymbol{\alpha_1,\alpha_2,\cdots,\alpha_s}$ 线性无关，则添加分量后仍线性无关；  
+     或一组向量线性相关，去掉某些分量后仍线性相关  
+
+
+#### 向量组的极大线性无关组，等价向量组，向量组的秩
+1. **有关向量组的线性表示**
+   - (1) $\boldsymbol{\alpha_1,\alpha_2,\cdots,\alpha_s}$ 线性相关 $\Leftrightarrow$ 至少有一个向量可以用其余向量线性表示.
+   - (2) 若 $\boldsymbol{\alpha_1,\alpha_2,\cdots,\alpha_s}$ 线性无关，$\boldsymbol{\alpha_1,\alpha_2,\cdots,\alpha_s}$，$\boldsymbol{\beta}$ 线性相关 $\Leftrightarrow \boldsymbol{\beta}$ 可以由 $\boldsymbol{\alpha_1,\alpha_2,\cdots,\alpha_s}$ 惟一线性表示.
+   - (3) $\boldsymbol{\beta}$ 可以由 $\boldsymbol{\alpha_1,\alpha_2,\cdots,\alpha_s}$ 线性表示  
+     $\Leftrightarrow r(\alpha_1,\alpha_2,\cdots,\alpha_s)=r(\alpha_1,\alpha_2,\cdots,\alpha_s,\beta)$  
+
+
+#### 向量组的秩与矩阵的秩之间的关系，向量空间及相关概念
+1. 设 $r(A_{m \times n}) = r$，则 $A$ 的秩 $r(A)$ 与 $A$ 的行列向量组的线性相关性关系为：
+   - (1) 若 $r(A_{m \times n}) = r = m$，则 $A$ 的行向量组线性无关.
+   - (2) 若 $r(A_{m \times n}) = r \lt m$，则 $A$ 的行向量组线性相关.
+   - (3) 若 $r(A_{m \times n}) = r = n$，则 $A$ 的列向量组线性无关.
+   - (4) 若 $r(A_{m \times n}) = r \lt n$，则 $A$ 的列向量组线性相关.  
+
+
+#### $n$ 维向量空间的基变换和坐标变换，过渡矩阵
+1. **基变换公式及过渡矩阵**  
+   若 $\boldsymbol{\alpha_1,\alpha_2,\cdots,\alpha_n}$ 与 $\boldsymbol{\beta_1,\beta_2,\cdots,\beta_n}$ 是向量空间 $V$ 的两组基，则基变换公式为  
+   $$
+   (\beta_1,\beta_2,\cdots,\beta_n) = (\alpha_1,\alpha_2,\cdots,\alpha_n) \begin{bmatrix} c_{11} & c_{12} & \cdots & c_{1n} \\ c_{21} & c_{22} & \cdots & c_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ c_{n1} & c_{n2} & \cdots & c_{nn} \end{bmatrix} = (\alpha_1,\alpha_2,\cdots,\alpha_n) C
+   $$  
+   其中 $C$ 是可逆矩阵，称为由基 $\boldsymbol{\alpha_1,\alpha_2,\cdots,\alpha_n}$ 到基 $\boldsymbol{\beta_1,\beta_2,\cdots,\beta_n}$ 的过渡矩阵  
+
+2. **坐标变换公式**  
+   若向量 $\boldsymbol{\gamma}$ 在基 $\boldsymbol{\alpha_1,\alpha_2,\cdots,\alpha_n}$ 与基 $\boldsymbol{\beta_1,\beta_2,\cdots,\beta_n}$ 的坐标分别是  
+   $X = (x_1, x_2, \cdots, x_n)^T$，$Y = (y_1, y_2, \cdots, y_n)^T$ 即  
+   $$\gamma = x_1\alpha_1 + x_2\alpha_2 + \cdots + x_n\alpha_n = y_1\beta_1 + y_2\beta_2 + \cdots + y_n\beta_n$$，则向量坐标变换公式为 $X = CY$ 或 $Y = C^{-1}X$  
+   其中 $C$ 是从基 $\boldsymbol{\alpha_1,\alpha_2,\cdots,\alpha_n}$ 到基 $\boldsymbol{\beta_1,\beta_2,\cdots,\beta_n}$ 的过渡矩阵
+
+
+
+### 向量的内积，线性无关向量组的正交规范化方法
+- **内积**：$(\boldsymbol{\alpha},\boldsymbol{\beta}) = a_1b_1 + a_2b_2 + \cdots + a_nb_n = \boldsymbol{\alpha}^T\boldsymbol{\beta} = \boldsymbol{\beta}^T\boldsymbol{\alpha}$
+- **Schmidt 正交化**：若$\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_t$线性无关，则可构造$\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_t$使其两两正交，且$\boldsymbol{\beta}_i$仅是$\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_i$的线性组合$(i = 1,2,\cdots,n)$，再把$\boldsymbol{\beta}_i$单位化，记$\boldsymbol{\gamma}_i = \frac{\boldsymbol{\beta}_i}{\|\boldsymbol{\beta}_i\|}$，则$\boldsymbol{\gamma}_1,\boldsymbol{\gamma}_2,\cdots,\boldsymbol{\gamma}_t$是规范正交向量组. 其中：
+  $$
+  \begin{align*}
+  \boldsymbol{\beta}_1 &= \boldsymbol{\alpha}_1, \\
+  \boldsymbol{\beta}_2 &= \boldsymbol{\alpha}_2 - \frac{(\boldsymbol{\alpha}_2,\boldsymbol{\beta}_1)}{(\boldsymbol{\beta}_1,\boldsymbol{\beta}_1)}\boldsymbol{\beta}_1, \\
+  \boldsymbol{\beta}_3 &= \boldsymbol{\alpha}_3 - \frac{(\boldsymbol{\alpha}_3,\boldsymbol{\beta}_1)}{(\boldsymbol{\beta}_1,\boldsymbol{\beta}_1)}\boldsymbol{\beta}_1 - \frac{(\boldsymbol{\alpha}_3,\boldsymbol{\beta}_2)}{(\boldsymbol{\beta}_2,\boldsymbol{\beta}_2)}\boldsymbol{\beta}_2, \\
+  &\ \ \vdots \\
+  \boldsymbol{\beta}_i &= \boldsymbol{\alpha}_i - \frac{(\boldsymbol{\alpha}_i,\boldsymbol{\beta}_1)}{(\boldsymbol{\beta}_1,\boldsymbol{\beta}_1)}\boldsymbol{\beta}_1 - \frac{(\boldsymbol{\alpha}_i,\boldsymbol{\beta}_2)}{(\boldsymbol{\beta}_2,\boldsymbol{\beta}_2)}\boldsymbol{\beta}_2 - \cdots - \frac{(\boldsymbol{\alpha}_i,\boldsymbol{\beta}_{i - 1})}{(\boldsymbol{\beta}_{i - 1},\boldsymbol{\beta}_{i - 1})}\boldsymbol{\beta}_{i - 1}.
+  \end{align*}
+  $$
+
+### 规范正交基，正交矩阵及其性质
+- **正交基及规范正交基**：向量空间一组基中的向量如果两两正交，就称为正交基；若正交基中每个向量都是单位向量，就称其为规范正交基.
+
+
+### (四)线性方程组
+#### 线性方程组的克莱姆法则，奇次线性方程组有非零解的充分必要条件
+- **克莱姆法则**：对于线性方程组
+  $$
+  \begin{cases}
+  a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1, \\
+  a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2, \\
+  \vdots \\
+  a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n = b_n,
+  \end{cases}
+  $$
+  如果系数行列式$D = |A| \neq 0$，则方程组有唯一解
+  $$
+  x_1 = \frac{D_1}{D},\ x_2 = \frac{D_2}{D},\ \cdots,\ x_n = \frac{D_n}{D},
+  $$
+  其中$D_j$是把$D$中第$j$列元素换成方程组右端的常数项所得的行列式.
+
+#### 非奇次线性方程组有解的充分必要条件，线性方程组解的性质和解的结构
+1. 设$A$为$m \times n$矩阵，若$r(A_{m \times n}) = m$，则对$Ax = b$而言必有$r(A) = r(A \mid b) = m$，从而$Ax = b$有解.
+2. 设$x_1, x_2, \cdots, x_t$为$Ax = b$的解，则$k_1x_1 + k_2x_2 + \cdots + k_tx_t$当$k_1 + k_2 + \cdots + k_t = 1$时仍为$Ax = b$的解；但当$k_1 + k_2 + \cdots + k_t = 0$时，则为$Ax = 0$的解. 特别地，$\frac{x_1 + x_2}{2}$为$Ax = b$的解；$2x_3 - (x_1 + x_2)$为$Ax = 0$的解.
+3. 非齐次线性方程组$Ax = b$无解$\Leftrightarrow r(A) + 1 = r(\overline{A}) \Leftrightarrow b$不能由$A$的列向量$\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \cdots, \boldsymbol{\alpha}_n$线性表示.
+
+#### 奇次线性方程组的基础解系和通解，解空间，非奇次线性方程组的通解.
+1. 齐次方程组$Ax = 0$恒有解(必有零解). 当有非零解时，由于解向量的任意线性组合仍是该齐次方程组的解向量，因此$Ax = 0$的全体解向量构成一个向量空间，称为该方程组的解空间，解空间的维数是$n - r(A)$，解空间的一组基称为齐次方程组的基础解系.
+2. $\eta_1, \eta_2, \cdots, \eta_t$是$Ax = 0$的基础解系，即
+   - $\eta_1, \eta_2, \cdots, \eta_t$是$Ax = 0$的解；
+   - $\eta_1, \eta_2, \cdots, \eta_t$线性无关；
+   - $Ax = 0$的任一解都可以由$\eta_1, \eta_2, \cdots, \eta_t$线性表出.
+3. $k_1\eta_1 + k_2\eta_2 + \cdots + k_t\eta_t$是$Ax = 0$的通解，其中$k_1, k_2, \cdots, k_t$是任意常数.
+
+
+### (五)矩阵的特征值和特征向量
+#### 矩阵的特征值和特征向量的
+1. 设$\lambda$是$A$的一个特征值，则$kA, aA + bE, A^2, f(A), A^T, A^{-1}, A^*$有一个特征值分别为$k\lambda, a\lambda + b, \lambda^2, f(\lambda), \lambda, \lambda^{-1}, \frac{|A|}{\lambda}$(假设$A$可逆，$\lambda \neq 0$).
+
+
+
+### 概念及性质
+1. \( k\lambda, a\lambda + b, \lambda^2, A^m, f(\lambda), \lambda, \lambda^{-1}, \frac{|A|}{\lambda} \)，且对应特征向量相同（\( A^T \)例外）。
+2. 若\( \lambda_1, \lambda_2, \dots, \lambda_n \)为\( A \)的\( n \)个特征值，则\( \sum_{i=1}^n \lambda_i = \sum_{i=1}^n a_{ii}, \prod_{i=1}^n \lambda_i = |A| \)。从而\( |A| \neq 0 \Leftrightarrow A \)没有零特征值。
+3. 设\( \lambda_1, \lambda_2, \dots, \lambda_s \)为\( A \)的\( s \)个特征值，对应特征向量为\( \alpha_1, \alpha_2, \dots, \alpha_s \)，若\( \alpha = k_1\alpha_1 + k_2\alpha_2 + \dots + k_s\alpha_s \)，则\( A^m\alpha = k_1\lambda_1^m\alpha_1 + k_2\lambda_2^m\alpha_2 + \dots + k_s\lambda_s^m\alpha_s \)。
+
+### 相似变换、相似矩阵的概念及性质
+1. 若\( A \sim B \)，则：
+   - \( A^T \sim B^T, A^{-1} \sim B^{-1}, A^m \sim B^m \)。
+   - \( |A| = |B|, \sum_{i=1}^n A_{ii} = \sum_{i=1}^n b_{ii}, r(A) = r(B) \)。
+   - \( |\lambda E - A| = |\lambda E - B| \)，对\( \forall \lambda \)成立。
+
+### 矩阵可相似对角化的充分必要条件及相似对角矩阵
+1. 设\( A \)为\( n \)阶方阵，则\( A \)可对角化\( \Leftrightarrow \)对每个\( k_i \)重根特征值\( \lambda_i \)，有\( n - r(\lambda_i E - A) = k_i \)。
+2. 设\( A \)可对角化，则由\( P^{-1}AP = \Lambda \)，有\( A = P\Lambda P^{-1} \)，从而\( A^m = P\Lambda^m P^{-1} \)。
+3. 重要结论：
+   - 若\( A \sim B, C \sim D \)，则\( \begin{pmatrix} A & O \\ O & C \end{pmatrix} \sim \begin{pmatrix} B & O \\ O & D \end{pmatrix} \)。
+   - 若\( A \sim B \)，则\( f(A) \sim f(B), |f(A)| = |f(B)| \)，其中\( f(A) \)为关于\( n \)阶方阵\( A \)的多项式。
+   - 若\( A \)为可对角化矩阵，则其非零特征值的个数（重根重复计算）= 秩\( (A) \)。
+
+### 实对称矩阵的特征值、特征向量及相似对角阵
+1. 相似矩阵：设\( A, B \)为两个\( n \)阶方阵，如果存在一个可逆矩阵\( P \)，使得\( B = P^{-1}AP \)成立，则称矩阵\( A \)与\( B \)相似，记为\( A \sim B \)。
+2. 相似矩阵的性质：如果\( A \sim B \)则有：
+   - \( A^T \sim B^T \)
+   - \( A^{-1} \sim B^{-1} \)（若\( A, B \)均可逆）
+   - \( A^k \sim B^k \)（\( k \)为正整数）
+   - \( |\lambda E - A| = |\lambda E - B| \)，从而\( A, B \)有相同的特征值
+   - \( |A| = |B| \)，从而\( A, B \)同时可逆或同时不可逆
+   - 秩\( (A) = \)秩\( (B), |\lambda E - A| = |\lambda E - B| \)，\( A, B \)不一定相似
+
+---
+
+### (六)二次型
+#### 二次型及其矩阵表示，合同变换与合同矩阵，二次型的秩
+1. \( n \)个变量\( x_1, x_2, \dots, x_n \)的二次齐次函数\( f(x_1, x_2, \dots, x_n) = \sum_{i=1}^n \sum_{j=1}^n a_{ij}x_i x_j \)，其中\( a_{ij} = a_{ji}(i, j = 1, 2, \dots, n) \)，称为\( n \)元二次型，简称二次型。若令\( \boldsymbol{x} = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}, A = \begin{pmatrix} a_{11} & a_{12} & \dots & a_{1n} \\ a_{21} & a_{22} & \dots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{n1} & a_{n2} & \dots & a_{nn} \end{pmatrix} \)，这二次型\( f \)可改写成矩阵向量形式\( f = \boldsymbol{x}^T A \boldsymbol{x} \)。其中\( A \)称为二次型矩阵，因为\( a_{ij} = a_{ji}(i, j = 1, 2, \dots, n) \)，所以二次型矩阵均为对称矩阵，且二次型与对称矩阵一一对应，并把矩阵\( A \)的秩称为二次型的秩。
+
+#### 惯性定理，二次型的标准形和规范形
+1. 惯性定理：对于任一个二次型，不论选取怎样的合同变换它化为仅含平方项的标准型，其正负惯性指数与所选变换无关，这就是所谓的惯性定理。
+2. 标准形：二次型\( f(x_1, x_2, \dots, x_n) = \boldsymbol{x}^T A \boldsymbol{x} \)经过合同变换\( \boldsymbol{x} = C\boldsymbol{y} \)化为。
+
+
+
+### 二次型的标准形与规范形
+1. **标准形**：  
+   \( f = \boldsymbol{x}^T A\boldsymbol{x} = \boldsymbol{y}^T C^T A C\boldsymbol{y} = \sum_{i=1}^r d_i y_i^2 \) 称为二次型的**标准形**（\( r \leq n \)）。  
+   一般数域内，二次型的标准形不唯一，与合同变换有关，但**非零平方项的个数由秩 \( r(A) \) 唯一确定**。  
+
+2. **规范形**：  
+   任一实二次型 \( f \) 可经合同变换化为规范形：  
+   \( f = z_1^2 + z_2^2 + \dots + z_p^2 - z_{p+1}^2 - \dots - z_r^2 \)，  
+   其中 \( r \) 为 \( A \) 的秩，\( p \) 为**正惯性指数**，\( r-p \) 为**负惯性指数**，且规范形唯一。  
+
+
+### 用正交变换和配方法化二次型为标准形，二次型及其矩阵的正定性
+1. **矩阵正定的等价条件**：  
+   设 \( A \) 为 \( n \) 阶实对称矩阵，以下命题等价：  
+   - \( A \) 正定 \( \Leftrightarrow kA \ (k>0),\ A^T, \ A^{-1}, \ A^* \) 正定；  
+   - \( A \) 正定 \( \Leftrightarrow |A| > 0 \)（\( A \) 可逆），且 \( a_{ii} > 0 \)，\( |A_i| > 0 \)（所有顺序主子式大于0）；  
+   - \( A \) 正定 \( \Leftrightarrow f(\boldsymbol{x}) = \boldsymbol{x}^T A\boldsymbol{x} > 0,\ \forall \boldsymbol{x} \neq \boldsymbol{0} \)；  
+   - \( A \) 正定 \( \Leftrightarrow A \) 的**所有特征值大于0**；  
+   - \( A \) 正定 \( \Leftrightarrow \) 存在可逆阵 \( P \)，使 \( A = P^T P \)；  
+   - \( A \) 正定 \( \Leftrightarrow \) 存在正交矩阵 \( Q \)，使 \( Q^T A Q = Q^{-1} A Q = \begin{pmatrix} \lambda_1 \\ & \ddots \\ & & \lambda_n \end{pmatrix} \)，其中 \( \lambda_i > 0 \ (i=1,2,\dots,n) \)。  
+
+2. **正定矩阵的运算性质**：  
+   - 若 \( A, B \) 正定，则 \( A + B \) 正定，但 \( AB, BA \) 不一定正定；  
+   - 若 \( A \) 正定，则 \( A \) 的**各阶顺序主子式全大于0**。  
+
+
+### 三、概率论与数理统计  
+#### (一) 随机事件和概率  
+##### 随机事件与样本空间，事件的关系与运算，完全事件组  
+| 考试内容 | 对应概念、定理、公式 |  
+| --- | --- |  
+| 1. 事件的关系与运算 | (1) 子事件：\( A \subset B \)（若 \( A \) 发生，则 \( B \) 发生）。<br>(2) 相等事件：\( A = B \)（即 \( A \subset B \) 且 \( B \subset A \)）。<br>(3) 和事件：\( A \cup B \)（或 \( A+B \)，\( A \) 与 \( B \) 至少一个发生）。<br>(4) 差事件：\( A - B \)（\( A \) 发生但 \( B \) 不发生）。<br>(5) 积事件：\( A \cap B \)（或 \( AB \)，\( A \) 与 \( B \) 同时发生）。<br>(6) 互斥事件（互不相容）：\( A \cap B = \varnothing \)。<br>(7) 互逆事件（对立事件）：\( A \cap B = \varnothing \) 且 \( A \cup B = \Omega \)，记 \( \bar{A} = B \) 或 \( B = \bar{A} \)。 |  
+| 2. 运算律 | (1) 交换律：\( A \cup B = B \cup A \)，\( A \cap B = B \cap A \)。<br>(2) 结合律：\( (A \cup B) \cup C = A \cup (B \cup C) \)；\( (A \cap B) \cap C = A \cap (B \cap C) \)。<br>(3) 分配律：\( (A \cup B) \cap C = (A \cap C) \cup (B \cap C) \)。<br>(4) 德·摩根律：\( \overline{A \cup B} = \bar{A} \cap \bar{B} \)，\( \overline{A \cap B} = \bar{A} \cup \bar{B} \)。 |  
+| 3. 完全事件组 | 若 \( A_1, A_2, \dots, A_n \) 两两互斥（\( A_i \cap A_j = \varnothing, \ i \neq j \)），且 \( \bigcup_{i=1}^n A_i = \Omega \)，则 \( \{A_1, A_2, \dots, A_n\} \) 为完全事件组。 |  
+
+
+##### 概率的概念，概率的基本性质，古典概率，几何型概率  
+| 考试内容 | 对应概念、定理、公式 |  
+| --- | --- |  
+| 1. 概率的定义 | 概率 \( P(\cdot) \) 是定义在事件集合上的函数，满足：<br>(1) 非负性：\( P(A) \geq 0,\ \forall A \)；<br>(2) 规范性：\( P(\Omega) = 1 \)；<br>(3) 可列可加性：若 \( A_1, A_2, \dots \) 两两互斥（\( A_i \cap A_j = \varnothing, \ i \neq j \)），则 \( P\left( \bigcup_{i=1}^\infty A_i \right) = \sum_{i=1}^\infty P(A_i) \)。 |  
+| 2. 概率的基本性质 | （结合上述定义推导，如：\( P(\varnothing) = 0 \)，\( P(\bar{A}) = 1 - P(A) \)，加法公式 \( P(A \cup B) = P(A) + P(B) - P(AB) \) 等） |
+
+
+
+### 概率的基本公式、事件的独立性、独立重复试验
+#### 1 概率的基本公式
+1. 对立事件概率：$P(\overline{A}) = 1 - P(A)$；
+2. 差事件概率：$P(A - B) = P(A) - P(AB)$；
+3. 并事件概率：$P(A \cup B) = P(A) + P(B) - P(AB)$；特别地，当$B \subset A$时，$P(A - B) = P(A) - P(B)$且$P(B) \leq P(A)$；
+   对于三个事件：$P(A \cup B \cup C) = P(A) + P(B) + P(C) - P(AB) - P(BC) - P(AC) + P(ABC)$；
+4. 互斥事件概率：若$A_1, A_2, \dots, A_n$两两互斥，则$P\left(\bigcup_{i=1}^{n} A_i\right) = \sum_{i=1}^{n} P(A_i)$。
+
+#### 3 古典型概率
+实验的所有结果只有有限个，且每个结果发生的可能性相同，其概率计算公式：
+$$P(A) = \frac{\text{事件}A\text{发生的基本事件数}}{\text{基本事件总数}}$$
+
+#### 4 几何型概率
+样本空间$\Omega$为欧氏空间中的一个区域，且每个样本点的出现具有等可能性，其概率计算公式：
+$$P(A) = \frac{A\text{的度量（长度、面积、体积）}}{\Omega\text{的度量（长度、面积、体积）}}$$
+
+#### 1 概率的基本公式（续）
+1. 条件概率：$P(B \mid A) = \frac{P(AB)}{P(A)}$，表示$A$发生的条件下，$B$发生的概率；
+2. 全概率公式：$P(A) = \sum_{i=1}^{n} P(A \mid B_i)P(B_i)$，其中$B_i B_j = \varnothing, i \neq j$，且$\bigcup_{i=1}^{n} B_i = \Omega$；
+3. Bayes 公式：$P(B_j \mid A) = \frac{P(A \mid B_j)P(B_j)}{\sum_{i=1}^{n} P(A \mid B_i)P(B_i)}, j = 1, 2, \dots, n$；
+   注：上述公式中事件$B_i$的个数可为可列个；
+4. 乘法公式：
+   $$\begin{align*}
+   P(A_1 A_2) &= P(A_1)P(A_2 \mid A_1) = P(A_2)P(A_1 \mid A_2) \\
+   P(A_1 A_2 \dots A_n) &= P(A_1)P(A_2 \mid A_1)P(A_3 \mid A_1 A_2) \dots P(A_n \mid A_1 A_2 \dots A_{n-1})
+   \end{align*}$$
+
+#### 2 事件的独立性
+1. $A$与$B$相互独立 $\Leftrightarrow P(AB) = P(A)P(B)$；
+2. $A$，$B$，$C$两两独立 $\Leftrightarrow P(AB) = P(A)P(B)$；$P(BC) = P(B)P(C)$；$P(AC) = P(A)P(C)$；
+3. $A$，$B$，$C$相互独立 $\Leftrightarrow \begin{cases} P(AB) = P(A)P(B); & P(BC) = P(B)P(C); \\ P(AC) = P(A)P(C); & P(ABC) = P(A)P(B)P(C). \end{cases}$
+
+#### 3 独立重复试验
+将某试验独立重复$n$次，若每次实验中事件$A$发生的概率为$p$，则$n$次试验中$A$发生$k$次的概率为：
+$$P(X = k) = \mathrm{C}_n^k p^k (1 - p)^{n - k}$$
+
+#### 4 重要公式与结论
+1. $P(\overline{A}) = 1 - P(A)$；
+2. $P(A \cup B) = P(A) + P(B) - P(AB)$；
+   对于三个事件：$P(A \cup B \cup C) = P(A) + P(B) + P(C) - P(AB) - P(BC) - P(AC) + P(ABC)$；
+3. $P(A - B) = P(A) - P(AB)$；
+4. $P(A\overline{B}) = P(A) - P(AB)$，$P(A) = P(AB) + P(A\overline{B})$，$P(A \cup B) = P(A) + P(\overline{A}B) = P(AB) + P(A\overline{B}) + P(\overline{A}B)$；
+5. 条件概率$P(\cdot \mid B)$满足概率的所有性质。
+
+
+
+### （一）事件概率相关公式
+- 条件概率的性质：
+  - \( P(\overline{A} \mid B) = 1 - P(A \mid B) \)
+  - \( P(A_1 \cup A_2 \mid B) = P(A_1 \mid B) + P(A_2 \mid B) - P(A_1 A_2 \mid B) \)
+  - \( P(A_1 A_2 \mid B) = P(A_1 \mid B)P(A_2 \mid A_1 B) \)
+- 独立性：
+  - 若 \( A_1, A_2, \cdots, A_n \) 相互独立，则 \( P\left( \bigcap_{i=1}^n A_i \right) = \prod_{i=1}^n P(A_i) \)，\( P\left( \bigcup_{i=1}^n A_i \right) = \prod_{i=1}^n \left( 1 - P(A_i) \right) \)
+  - 互斥、互逆与独立性的关系：\( A \) 与 \( B \) 互逆 \( \Rightarrow A \) 与 \( B \) 互斥，但反之不成立；\( A \) 与 \( B \) 互斥（或互逆）且均非零概率事件 \( \Rightarrow A \) 与 \( B \) 不独立
+  - 若 \( A_1, A_2, \cdots, A_n, B_1, B_2, \cdots, B_m \) 相互独立，则 \( f(A_1, A_2, \cdots, A_n) \) 与 \( g(B_1, B_2, \cdots, B_m) \) 也相互独立（\( f, g \) 为事件运算后的事件）；概率为1（或0）的事件与任何事件相互独立
+
+
+### （二）随机变量及其概率分布
+#### 1. 随机变量及概率分布的基本概念
+- **随机变量定义**：取值带有随机性的变量，严格地说是定义在样本空间上，取值于实数的函数称为随机变量。
+- **分布函数定义**：\( F(x) = P\{ X \leq x \}, -\infty < x < +\infty \)
+- **分布函数性质**：
+  - \( 0 \leq F(x) \leq 1 \)
+  - \( F(x) \) 单调不减
+  - 右连续：\( F(x + 0) = F(x) \)
+  - \( F(-\infty) = 0, F(+\infty) = 1 \)
+
+
+#### 2. 离散型随机变量
+- **概率分布**：\( P\{ X = x_i \} = p_i, \, i = 1, 2, \cdots, n, \cdots \)，满足 \( p_i \geq 0, \sum_{i=1}^{\infty} p_i = 1 \)
+
+
+#### 3. 连续型随机变量
+- **概率密度性质**：
+  - \( f(x) \geq 0 \)
+  - \( \int_{-\infty}^{+\infty} f(x) dx = 1 \)
+  - 若 \( x \) 为 \( f(x) \) 的连续点，则 \( f(x) = F'(x) \)（分布函数 \( F(x) = \int_{-\infty}^x f(t) dt \)）
+
+
+#### 4. 常见随机变量的概率分布
+- **0 - 1分布**：\( P\{ X = k \} = p^k (1 - p)^{1 - k}, \, k = 0, 1 \)
+- **二项分布 \( B(n, p) \)**：\( P\{ X = k \} = \binom{n}{k} p^k (1 - p)^{n - k}, \, k = 0, 1, \cdots, n \)
+- **Poisson分布 \( P(\lambda) \)**：\( P\{ X = k \} = \frac{\lambda^k e^{-\lambda}}{k!}, \, \lambda > 0, \, k = 0, 1, 2, \cdots \)
+- **均匀分布 \( U(a, b) \)**：\( f(x) = \begin{cases} \frac{1}{b - a}, & a < x < b \\ 0, & \text{其他} \end{cases} \)
+- **正态分布 \( N(\mu, \sigma^2) \)**：\( \varphi(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x - \mu)^2}{2\sigma^2}}, \, \sigma > 0, \, -\infty < x < +\infty \)
+- **指数分布 \( E(\lambda) \)**：\( f(x) = \begin{cases} \lambda e^{-\lambda x}, & x > 0, \, \lambda > 0 \\ 0, & \text{其他} \end{cases} \)
+- **几何分布 \( G(p) \)**：\( P\{ X = k \} = (1 - p)^{k - 1} p, \, 0 < p < 1, \, k = 1, 2, \cdots \)
+- **超几何分布 \( H(N, M, n) \)**：\( P\{ X = k \} = \frac{\binom{M}{k} \binom{N - M}{n - k}}{\binom{N}{n}}, \, k = 0, 1, \cdots, \min(n, M) \)
+
+
+#### 5. 随机变量函数的概率分布
+- **离散型**：若 \( Y = g(X) \)，则 \( P\{ Y = y_j \} = \sum_{g(x_i) = y_j} P\{ X = x_i \} \)
+
+
+
+### （二）一维随机变量及其分布（续）
+#### 2. 连续型随机变量函数的分布
+若 \( X \sim f_X(x) \)，\( Y = g(x) \)，则：
+\[
+F_Y(y) = P(Y \leq y) = P(g(X) \leq y) = \int_{g(x) \leq y} f_X(x) dx
+\]
+概率密度为：
+\[
+f_Y(y) = F_Y'(y)
+\]
+
+#### 3. 重要公式与结论
+1. 标准正态分布：\( X \sim N(0,1) \)，则：
+\[
+\varphi(0) = \frac{1}{\sqrt{2\pi}}, \quad \Phi(0) = \frac{1}{2}
+\]
+\[
+\Phi(-a) = P(X \leq -a) = 1 - \Phi(a)
+\]
+
+2. 一般正态分布标准化：若 \( X \sim N(\mu, \sigma^2) \)，则：
+\[
+\frac{X - \mu}{\sigma} \sim N(0,1)
+\]
+且：
+\[
+P(X \leq a) = \Phi\left( \frac{a - \mu}{\sigma} \right)
+\]
+
+3. 指数分布的无记忆性：若 \( X \sim E(\lambda) \)，则：
+\[
+P(X > s + t | X > s) = P(X > t)
+\]
+
+4. 几何分布的无记忆性：若 \( X \sim G(p) \)，则：
+\[
+P(X = m + k | X > m) = P(X = k)
+\]
+
+5. 分布函数的性质：
+   - 离散型随机变量的分布函数为**阶梯间断函数**；
+   - 连续型随机变量的分布函数为**连续函数**，但不一定处处可导；
+   - 存在既非离散也非连续型的随机变量。
+
+
+### （三）多维随机变量及其分布
+#### 考试内容：多维随机变量及其分布，二维离散型随机变量的概率分布、边缘分布和条件分布
+### 1. 二维随机变量及其联合分布
+- 二维随机向量：由两个随机变量构成的随机向量 \( (X, Y) \)，联合分布函数定义为：
+\[
+F(x, y) = P(X \leq x, Y \leq y)
+\]
+
+
+### 2. 二维离散型随机变量的分布律
+#### （1）联合概率分布律
+\[
+P\{ X = x_i, Y = y_j \} = p_{ij}, \quad i, j = 1, 2, \dots
+\]
+
+#### （2）边缘分布律
+- \( X \) 的边缘分布：
+\[
+p_i = \sum_{j=1}^{\infty} p_{ij}, \quad i = 1, 2, \dots
+\]
+- \( Y \) 的边缘分布：
+\[
+p_j = \sum_{i=1}^{\infty} p_{ij}, \quad j = 1, 2, \dots
+\]
+
+#### （3）条件分布律
+- 给定 \( Y = y_j \) 时 \( X \) 的条件分布：
+\[
+P\{ X = x_i | Y = y_j \} = \frac{p_{ij}}{p_j}
+\]
+- 给定 \( X = x_i \) 时 \( Y \) 的条件分布：
+\[
+P\{ Y = y_j | X = x_i \} = \frac{p_{ij}}{p_i}
+\]
+
+
+### 二维连续性随机变量的概率密度、边缘概率密度和条件密度
+#### 1. 联合概率密度 \( f(x, y) \) 的性质
+（1）非负性：\( f(x, y) \geq 0 \)；
+（2）归一性：
+\[
+\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f(x, y) dxdy = 1
+\]
+
+#### 2. 分布函数
+\[
+F(x, y) = \int_{-\infty}^{x} \int_{-\infty}^{y} f(u, v) dudv
+\]
+
+#### 3. 边缘概率密度
+- \( X \) 的边缘密度：
+\[
+f_X(x) = \int_{-\infty}^{\infty} f(x, y) dy
+\]
+- \( Y \) 的边缘密度：
+\[
+f_Y(y) = \int_{-\infty}^{\infty} f(x, y) dx
+\]
+
+#### 4. 条件概率密度
+- 给定 \( Y = y \) 时 \( X \) 的条件密度：
+\[
+f_{X|Y}(x | y) = \frac{f(x, y)}{f_Y(y)} \quad (f_Y(y) > 0)
+\]
+- 给定 \( X = x \) 时 \( Y \) 的条件密度：
+\[
+f_{Y|X}(y | x) = \frac{f(x, y)}{f_X(x)} \quad (f_X(x) > 0)
+\]
+
+
+### 随机变量的独立性和不相关性，常用二维随机变量的分布
+#### 1. 常见二维随机变量的联合分布
+##### （1）二维均匀分布
+若 \( (X, Y) \) 在区域 \( D \) 上服从均匀分布，记为 \( (X, Y) \sim U(D) \)，则联合密度为：
+\[
+f(x, y) = \begin{cases} 
+\frac{1}{S(D)}, & (x, y) \in D \\
+0, & \text{其他}
+\end{cases}
+\]
+其中 \( S(D) \) 为区域 \( D \) 的面积。
+
+##### （2）二维正态分布
+若 \( (X, Y) \sim N(\mu_1, \mu_2, \sigma_1^2, \sigma_2^2, \rho) \)，则联合密度为：
+\[
+f(x, y) = \frac{1}{2\pi\sigma_1\sigma_2\sqrt{1 - \rho^2}} \exp\left\{ \frac{-1}{2(1 - \rho^2)} \left[ \frac{(x - \mu_1)^2}{\sigma_1^2} - 2\rho \frac{(x - \mu_1)(y - \mu_2)}{\sigma_1\sigma_2} + \frac{(y - \mu_2)^2}{\sigma_2^2} \right] \right\}
+\]
+
+
+#### 2. 随机变量的独立性和相关性
+- **独立性**：\( X \) 和 \( Y \) 相互独立当且仅当：
+  - 离散型：\( p_{ij} = p_i \cdot p_j \)（对所有 \( i, j \)）；
+  - 连续型：\( f(x, y) = f_X(x) \cdot f_Y(y) \)（几乎处处成立）；
+  - 分布函数：\( F(x, y) = F_X(x) \cdot F_Y(y) \)（对所有 \( x, y \)）。
+
+- **相关性**：相关系数 \( \rho_{XY} = 0 \) 时，称 \( X \) 和 \( Y \) **不相关**；否则称 \( X \) 和 \( Y \) **相关**。
+
+
+### 机变量简单函数的分布
+1. **离散型**：  
+   $P(X = x_i, Y = y_j) = p_{ij}, Z = g(X,Y)$则  
+   $P\{Z = z_k\} = P\{g(X,Y) = z_k\} = \sum\limits_{g(x_i,y_j)=z_k} P(X = x_i, Y = y_j)$  
+
+2. **连续型**：  
+   $(X,Y) \sim f(x,y), Z = g(X,Y)$则  
+   $F_Z(z) = P\{g(X,Y) \leq z\} = \iint\limits_{g(x,y) \leq z} f(x,y) dxdy$，$f_Z(z) = F_Z'(z)$  
+
+
+### 2 重要公式与结论
+1. **边缘密度公式**：  
+   $f_X(x) = \int_{-\infty}^{+\infty} f(x,y) dy$，$f_Y(y) = \int_{-\infty}^{+\infty} f(x,y) dx$  
+
+2. $P\{(X,Y) \in D\} = \iint\limits_{D} f(x,y) dxdy$  
+
+3. 若$(X, Y)$服从二维正态分布$N(\mu_1, \mu_2, \sigma_1^2, \sigma_2^2, \rho)$则有：  
+   ① $X \sim N(\mu_1, \sigma_1^2),\ Y \sim N(\mu_2, \sigma_2^2)$  
+   ② $X$与$Y$相互独立$\Leftrightarrow \rho = 0$，即$X$与$Y$不相关  
+   ③ $C_1X + C_2Y \sim N(C_1\mu_1 + C_2\mu_2, C_1^2\sigma_1^2 + C_2^2\sigma_2^2 + 2C_1C_2\sigma_1\sigma_2\rho)$  
+   ④ $X$关于$Y=y$的条件分布为：$N\left( \mu_1 + \rho \frac{\sigma_1}{\sigma_2}(y - \mu_2),\ \sigma_1^2(1 - \rho^2) \right)$  
+   ⑤ $Y$关于$X=x$的条件分布为：$N\left( \mu_2 + \rho \frac{\sigma_2}{\sigma_1}(x - \mu_1),\ \sigma_2^2(1 - \rho^2) \right)$  
+
+4. 若$X$与$Y$独立，且分别服从$N(\mu_1, \sigma_1^2),\ N(\mu_2, \sigma_2^2)$，则$(X,Y) \sim N(\mu_1, \mu_2, \sigma_1^2, \sigma_2^2, 0)$，且$C_1X + C_2Y \sim N(C_1\mu_1 + C_2\mu_2,\ C_1^2\sigma_1^2 + C_2^2\sigma_2^2)$  
+
+5. 若$X$与$Y$相互独立，$f(x)$和$g(x)$为连续函数，则$f(X)$与$g(Y)$也相互独立  
+
+
+### (四)随机变量的数字特征  
+| 考试内容 | 对应概念、定义、定理、公式 |
+| --- | --- |
+| 随机变量的数学期望（均值）、方差和标准差及其性质 | 1 **数学期望**<br>离散型：$P\{X = x_i\} = p_i,\ E(X) = \sum\limits_i x_i p_i$；<br>连续型：$X \sim f(x),\ E(X) = \int_{-\infty}^{+\infty} x f(x) dx$<br><br>**性质**：<br>(1) $E(C) = C,\ E[E(X)] = E(X)$<br>(2) $E(C_1X + C_2Y) = C_1E(X) + C_2E(Y)$<br>(3) 若$X$和$Y$独立，则$E(XY) = E(X)E(Y)$<br>(4) $[E(XY)]^2 \leq E(X^2)E(Y^2)$<br><br>2 **方差**：$D(X) = E\left[ X - E(X) \right]^2 = E(X^2) - \left[ E(X) \right]^2$<br><br>3 **标准差**：$\sqrt{D(X)}$<br><br>4 离散型：$D(X) = \sum\limits_i \left[ x_i - E(X) \right]^2 p_i$<br><br>5 连续型：$D(X) = \int_{-\infty}^{+\infty} \left[ x - E(X) \right]^2 f(x) dx$<br><br>**性质**：<br>(1) $D(C) = 0,\ D[E(X)] = 0,\ D[D(X)] = 0$<br>(2) $X$与$Y$相互独立，则$D(X \pm Y) = D(X) + D(Y)$<br>(3) $D(C_1X + C_2) = C_1^2 D(X)$ |
+
+
+
+### 随机变量函数的数学期望，矩、协方差，相关系数的数字特征
+1. **随机变量函数的数学期望**
+    - (1) 对于函数\( Y = g(x) \)
+      - \( X \)为离散型：\( P\{X = x_i\} = p_i, E(Y) = \sum_{i} g(x_i) p_i \)；
+      - \( X \)为连续型：\( X \sim f(x), E(Y) = \int_{-\infty}^{+\infty} g(x) f(x) dx \)
+    - (2) \( Z = g(X,Y); (X,Y) \sim P\{X = x_i, Y = y_j\} = p_{ij} \);
+      \[
+      E(Z) = \sum_{i} \sum_{j} g(x_i, y_j) p_{ij}
+      \]
+      \[
+      (X,Y) \sim f(x,y); E(Z) = \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} g(x,y) f(x,y) dxdy
+      \]
+2. **协方差**
+\[
+\text{Cov}(X,Y) = E\left[(X - E(X))(Y - E(Y))\right]
+\]
+3. **相关系数**
+\[
+\rho_{XY} = \frac{\text{Cov}(X,Y)}{\sqrt{D(X)}\sqrt{D(Y)}}
+\]
+\( k \)阶原点矩 \( E(X^k) \);  
+\( k \)阶中心矩 \( E\left\{[X - E(X)]^k\right\} \)
+4. **性质**
+    - (1) \( \text{Cov}(X,Y) = \text{Cov}(Y,X) \)
+    - (2) \( \text{Cov}(aX, bY) = ab\text{Cov}(Y,X) \)
+    - (3) \( \text{Cov}(X_1 + X_2, Y) = \text{Cov}(X_1,Y) + \text{Cov}(X_2,Y) \)
+    - (4) \( |\rho(X,Y)| \leq 1 \)
+    - (5) \( \rho(X,Y) = 1 \Leftrightarrow P\{Y = aX + b\} = 1, \text{其中} a > 0 \) 
+    - (6) 一般有
+\[
+D(X \pm Y) = D(X) + D(Y) \pm 2\text{Cov}(X,Y) = D(X) + D(Y) \pm 2\rho \sqrt{D(X)}\sqrt{D(Y)}
+\]
+    - (7) \( D(X) < E(X - C)^2, C \neq E(X) \)
+    - (8) \( D(X) = 0 \Leftrightarrow P\{X = C\} = 1 \)
+    - (9) \( \rho(X,Y) = -1 \Leftrightarrow P\{Y = aX + b\} = 1, \text{其中} a < 0 \)
+
+
+### 重要公式与结论
+1. \( D(X) = E(X^2) - E^2(X) \)
+2. \( \text{Cov}(X,Y) = E(XY) - E(X)E(Y) \)
+3. \( |\rho(X,Y)| \leq 1, \text{且} \)
+\[
+\rho(X,Y) = 1 \Leftrightarrow P\{Y = aX + b\} = 1, \text{其中} a > 0
+\]
+\[
+\rho(X,Y) = -1 \Leftrightarrow P\{Y = aX + b\} = 1, \text{其中} a < 0
+\]
+4. 下面5个条件互为充要条件：
+\[
+(X,Y) = 0
+\]
+\[
+\Leftrightarrow \text{Cov}(X,Y) = 0
+\]
+\[
+\Leftrightarrow E(X,Y) = E(X)E(Y)
+\]
+\[
+\Leftrightarrow D(X + Y) = D(X) + D(Y)
+\]
+\[
+\Leftrightarrow D(X - Y) = D(X) + D(Y)
+\]
+注：\( X \)与\( Y \)独立为上述5个条件中任何一个成立的充分条件，但非必要条件.
+
+
+### (五)大数定律和中心极限定理
+#### 切比雪夫(Chebyshev)不等式，切比雪夫大数定律
+1. **切比雪夫不等式**：
+\[
+P\left\{|X - E(X)| \geq \varepsilon\right\} \leq \frac{D(X)}{\varepsilon^2} \text{ 或 }
+\]
+\[
+P\left\{|X - E(X)| < \varepsilon\right\} \geq 1 - \frac{D(X)}{\varepsilon^2}
+\]
+2. **切比雪夫大数定律**：设\( X_1, X_2, \dots, X_n, \dots \)相互独立，且\( E(X_i) = \mu, D(X_i) = \sigma^2 (i = 1,2,\dots) \).则对于任意正数\( \varepsilon \)，有
+\[
+\lim_{n \to \infty} P\left\{\left|\frac{1}{n} \sum_{i=1}^{n} X_i - \mu\right| < \varepsilon\right\} = 1
+\]
+
+
+
+### 伯努利大数定律，辛钦（Khinchin）大数定律
+1. **伯努利大数定律**  
+设\( X_1,X_2,\cdots,X_n,\cdots \)相互独立，同\( 0\text{-}1 \)分布\( B(1,p) \)，则对任意正数\( \varepsilon \)，有：  
+\[
+\lim_{n \to \infty} P\left\{ \left| \frac{1}{n}\sum_{i=1}^n X_i - p \right| < \varepsilon \right\} = 1
+\]  
+
+2. **辛钦大数定律**  
+设\( X_1,X_2,\cdots,X_n,\cdots \)相互独立同分布，\( EX_i = \mu, \, i=1,2,\cdots \)，则对任意正数\( \varepsilon \)，有：  
+\[
+\lim_{n \to \infty} P\left\{ \left| \frac{1}{n}\sum_{i=1}^n X_i - \mu \right| < \varepsilon \right\} = 1
+\]  
+
+
+### 隶莫弗-拉普拉斯（De Moivre-Laplace）定理，列维-林德伯格（Levy-Lindeberg）定理
+1. **隶莫弗-拉普拉斯定理**  
+设\( \eta_n \sim B(n,p) \)（即\( X_1,X_2,\cdots,X_n \)相互独立且同服从\( 0\text{-}1 \)分布，\( \eta_n = \sum_{i=1}^n X_i \)），则有：  
+\[
+\lim_{n \to \infty} P\left\{ \frac{\eta_n - np}{\sqrt{np(1-p)}} \leq x \right\} = \int_{-\infty}^x \frac{1}{\sqrt{2\pi}} e^{-\frac{t^2}{2}} dt
+\]  
+
+2. **列维-林德伯格定理**  
+设\( X_1,X_2,\cdots,X_n,\cdots \)相互独立分布，\( E(X_i) = \mu, \, D(X_i) = \sigma^2 \, (\sigma \neq 0), \, i=1,2,\cdots \)，则：  
+\[
+\lim_{n \to \infty} P\left\{ \frac{\sum_{i=1}^n X_i - n\mu}{\sqrt{n}\sigma} \leq x \right\} = \int_{-\infty}^x \frac{1}{\sqrt{2\pi}} e^{-\frac{t^2}{2}} dt
+\]  
+
+
+### (六)数理统计的基本概念
+#### 总体、个体、简单随机样本、统计量
+- **总体**：研究对象的全体，是一个随机变量，用\( X \)表示。  
+- **个体**：组成总体的每个基本元素。  
+- **简单随机样本**：来自总体\( X \)的\( n \)个相互独立且与总体同分布的随机变量\( X_1,X_2,\cdots,X_n \)，称为容量为\( n \)的简单随机样本（简称样本）。  
+- **统计量**：设\( X_1,X_2,\cdots,X_n \)是来自总体\( X \)的样本，\( g(X_1,X_2,\cdots,X_n) \)是样本的连续函数，且\( g(\cdot) \)中不含任何未知参数，则称\( g(X_1,X_2,\cdots,X_n) \)为统计量。  
+
+
+#### 样本均值、样本方差、样本矩
+- **样本均值**：\( \bar{X} = \frac{1}{n}\sum_{i=1}^n X_i \)  
+- **样本方差**：\( S^2 = \frac{1}{n-1}\sum_{i=1}^n (X_i - \bar{X})^2 \)  
+- **样本\( k \)阶原点矩**：\( A_k = \frac{1}{n}\sum_{i=1}^n X_i^k, \, k=1,2,\cdots \)  
+- **样本\( k \)阶中心矩**：\( B_k = \frac{1}{n}\sum_{i=1}^n (X_i - \bar{X})^k, \, k=1,2,\cdots \)  
+
+
+#### \( \chi^2 \)分布、\( t \)分布、\( F \)分布、分位数
+- **\( \chi^2 \)分布**：若\( X_1,X_2,\cdots,X_n \)相互独立且同服从\( N(0,1) \)，则\( \chi^2 = X_1^2 + X_2^2 + \cdots + X_n^2 \sim \chi^2(n) \)。  
+- **\( t \)分布**：若\( X \sim N(0,1), \, Y \sim \chi^2(n) \)，且\( X,Y \)相互独立，则\( T = \frac{X}{\sqrt{Y/n}} \sim t(n) \)。  
+- **\( F \)分布**：若\( X \sim \chi^2(n_1), \, Y \sim \chi^2(n_2) \)，且\( X,Y \)相互独立，则\( F = \frac{X/n_1}{Y/n_2} \sim F(n_1,n_2) \)。  
+- **分位数**：若\( P(X \leq x_\alpha) = \alpha \)，则称\( x_\alpha \)为\( X \)的\( \alpha \)分位数。  
+
+
+#### 正态总体的常用样本分布
+设\( X_1,X_2,\cdots,X_n \)为来自正态总体\( N(\mu,\sigma^2) \)的样本，\( \bar{X} = \frac{1}{n}\sum_{i=1}^n X_i, \, S^2 = \frac{1}{n-1}\sum_{i=1}^n (X_i - \bar{X})^2 \)，则：  
+1. \( \bar{X} \sim N\left( \mu, \frac{\sigma^2}{n} \right) \)，或等价地\( \frac{\bar{X} - \mu}{\sigma / \sqrt{n}} \sim N(0,1) \)；  
+2. \( \frac{(n-1)S^2}{\sigma^2} = \frac{1}{\sigma^2}\sum_{i=1}^n (X_i - \bar{X})^2 \sim \chi^2(n-1) \)。
+
+
+
+### 重要公式与结论
+1. 对于\(\chi^{2}\sim\chi^{2}(n)\)，有\(E(\chi^{2}(n)) = n\)，\(D(\chi^{2}(n)) = 2n\)；
+2. 对于\(T\sim t(n)\)，有\(E(T)=0\)，\(D(T)=\frac{n}{n - 2}(n>2)\)；
+3. 对于\(F\sim F(m,n)\)，有\(\frac{1}{F}\sim F(n,m)\)，\(F_{1-\frac{\alpha}{2}}(m,n)=\frac{1}{F_{\frac{\alpha}{2}}(n,m)}\)；
+4. 对于任意总体\(X\)，有\(E(\overline{X}) = E(X)\)，\(E(S^{2}) = D(X)\)，\(D(\overline{X})=\frac{D(X)}{n}\)。
+
+
+### (七)参数估计
+#### 点估计的概念，估计量与估计值，矩估计法，最大似然估计法
+|考试内容|对应公式、概念、定理|
+|----|----|
+|点估计的概念，估计量与估计值，矩估计法，最大似然估计法|1. \(\hat{\theta}\)为\(\theta\)的矩估计，\(g(x)\)为连续函数，则\(g(\hat{\theta})\)为\(g(\theta)\)的矩估计。<br>2. \(\hat{\theta}\)为\(\theta\)的极大似数估计，\(g(x)\)为单调函数，则\(g(\hat{\theta})\)为\(g(\theta)\)的极大似然估计。<br>3. \(E(\overline{X}) = E(X)\)，\(E(S^{2}) = D(X)\)，即\(\overline{X}\)，\(S^{2}\)分别为总体\(E(X)\)，\(D(X)\)的无偏估计量。<br>4. 由大数定律易知\(\overline{X}\)，\(S^{2}\)也分别是\(E(X)\)，\(D(X)\)的一致估量。<br>5. 若\(E(\hat{\theta})=\theta\)，\(D(\hat{\theta})\to0(n\to\infty)\)则\(\hat{\theta}\)为\(\theta\)的一致估计。|
+
+
+#### 估计量的评选标准 区间估计的概念
+|估计量的评选标准 区间估计的概念|内容|
+|----|----|
+|1. 估计量的选取标准：无偏性、有效性、相合性<br>2. \((\hat{\theta}_{1},\hat{\theta}_{2})\)为\(\theta\)的置信度是\(1 - \alpha\)的置信区间，\(g(x)\)为单调增加（或单调减少）函数，则\((g(\hat{\theta}_{1}),g(\hat{\theta}_{2}))\)或\((g(\hat{\theta}_{2}),g(\hat{\theta}_{1}))\)为\(g(\theta)\)的置信度是\(1 - \alpha\)的置信区间|
+
+
+#### 正态总体均值与方差的置信区间
+|类型|待估参数|抽样分布|双侧置信区间|
+|----|----|----|----|
+|**单个正态总体的均值和方差的区间估计**|\(\mu\)|\(\sigma^{2}\)已知：\(U=\frac{\overline{X}-\mu}{\frac{\sigma}{\sqrt{n}}}\sim N(0,1)\)|\(\left(\overline{X}-\mu_{\frac{\alpha}{2}}\cdot\frac{\sigma}{\sqrt{n}},\overline{X}+\mu_{\frac{\alpha}{2}}\cdot\frac{\sigma}{\sqrt{n}}\right)\)，\(P\{|u|\geq u_{\frac{\alpha}{2}}\}=\alpha\)|
+|\(\mu\)|\(\sigma^{2}\)未知：\(T=\frac{\overline{X}-\mu}{S/\sqrt{n}}\sim t(n - 1)\)|\(\left(\overline{X}-t_{\frac{\alpha}{2}}\cdot\frac{S}{\sqrt{n}},\overline{X}+t_{\frac{\alpha}{2}}\cdot\frac{S}{\sqrt{n}}\right)\)，\(P\{|T|\geq t_{\frac{\alpha}{2}}\}=\alpha\)|
+|**两个正态总体的均值差和方差比的区间估计**|\(\mu\)，\(\sigma^{2}\)已知：\(W=\frac{1}{\sigma^{2}}\sum_{i = 1}^{n}(X_{i}-\mu)^{2}\sim\chi^{2}(n)\)|\(\left(\frac{\sum_{i = 1}^{n}(X_{i}-\mu)^{2}}{\chi_{\frac{\alpha}{2}}^{2}(n)},\frac{\sum_{i = 1}^{n}(X_{i}-\mu)^{2}}{\chi_{1-\frac{\alpha}{2}}^{2}(n)}\right)\)，\(P\{W\geq\chi_{\frac{\alpha}{2}}^{2}(n)\}=\frac{\alpha}{2}\)，\(P\{W\leq\chi_{1 - \frac{\alpha}{2}}^{2}(n)\}=\frac{\alpha}{2}\)|
+|\(\mu\)，\(\sigma^{2}\)未知：\(W=\frac{(n - 1)S^{2}}{\sigma^{2}}\sim\chi^{2}(n - 1)\)|\(\left(\frac{(n - 1)S^{2}}{\chi_{\frac{\alpha}{2}}^{2}(n - 1)},\frac{(n - 1)S^{2}}{\chi_{1-\frac{\alpha}{2}}^{2}(n - 1)}\right)\)|
+
+
+
+### （八）假设检验  
+#### 1. 两个正态总体参数的假设检验（均值差\(\boldsymbol{\mu_1 - \mu_2}\)、方差比\(\boldsymbol{\frac{\sigma_1^2}{\sigma_2^2}}\)）  
+
+| 待检验参数 | 条件 | 检验统计量及分布 | 置信区间（双侧\(\alpha\)） |
+|------------|------|------------------|---------------------------|
+| \(\mu_1 - \mu_2\) | \(\boldsymbol{\sigma_1^2, \sigma_2^2}\)已知 | \( U = \frac{(\bar{X}_1 - \bar{X}_2) - (\mu_1 - \mu_2)}{\sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}} \sim N(0,1) \) | \( \left( (\bar{X}_1 - \bar{X}_2) - u_{\frac{\alpha}{2}} \sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}, \ (\bar{X}_1 - \bar{X}_2) + u_{\frac{\alpha}{2}} \sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}} \right) \) <br> \( P\left\{ |U| \geq u_{\frac{\alpha}{2}} \right\} = \alpha \) |
+| \(\mu_1 - \mu_2\) | \(\boldsymbol{\sigma_1^2 = \sigma_2^2 = \sigma^2}\)（\(\sigma^2\)未知） | \( T = \frac{(\bar{X}_1 - \bar{X}_2) - (\mu_1 - \mu_2)}{S_p \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}} \sim t(n_1 + n_2 - 2) \) <br> 其中\( S_p^2 = \frac{(n_1 - 1)S_1^2 + (n_2 - 1)S_2^2}{n_1 + n_2 - 2} \) | \( \left( (\bar{X}_1 - \bar{X}_2) - t_{\frac{\alpha}{2}}(n_1 + n_2 - 2) S_p \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}, \ (\bar{X}_1 - \bar{X}_2) + t_{\frac{\alpha}{2}}(n_1 + n_2 - 2) S_p \sqrt{\frac{1}{n_1} + \frac{1}{n_2}} \right) \) <br> \( P\left\{ |T| \geq t_{\frac{\alpha}{2}}(n_1 + n_2 - 2) \right\} = \alpha \) |
+| \(\frac{\sigma_1^2}{\sigma_2^2}\) | \(\boldsymbol{\mu_1, \mu_2}\)未知 | \( F = \frac{S_1^2 / \sigma_1^2}{S_2^2 / \sigma_2^2} \sim F(n_1 - 1, n_2 - 1) \) | \( \left( \frac{1}{F_{\frac{\alpha}{2}}(n_1 - 1, n_2 - 1)} \cdot \frac{S_1^2}{S_2^2}, \ \frac{1}{F_{1 - \frac{\alpha}{2}}(n_1 - 1, n_2 - 1)} \cdot \frac{S_1^2}{S_2^2} \right) \) <br> \( P\left\{ F \geq F_{\frac{\alpha}{2}}(n_1 - 1, n_2 - 1) \right\} = \frac{\alpha}{2}, \ P\left\{ \frac{1}{F} \geq F_{\frac{\alpha}{2}}(n_2 - 1, n_1 - 1) \right\} = \frac{\alpha}{2} \) |  
+
+
+#### 2. 假设检验的一般步骤与两类错误  
+
+##### （1）假设检验的一般步骤  
+1. 确定待检验的原假设\( H_0 \)和备择假设\( H_1 \)；  
+2. 选择检验统计量，并确定其在\( H_0 \)成立时的分布；  
+3. 给定显著性水平\( \alpha \)，查分布表得**临界值**，确定**拒绝域**；  
+4. 由样本计算检验统计量的观测值，判断是否落入拒绝域，从而对\( H_0 \)作出“拒绝”或“接受”的判断。  
+
+
+##### （2）两类错误  
+- **第一类错误（弃真错误）**：\( H_0 \)为真时，错误地拒绝\( H_0 \)。概率记为\( \alpha \)（显著性水平），即\( P(\text{拒绝}H_0 | H_0 \text{真}) = \alpha \)。  
+- **第二类错误（存伪错误）**：\( H_0 \)为假时，错误地接受\( H_0 \)。概率记为\( \beta \)，即\( P(\text{接受}H_0 | H_0 \text{假}) = \beta \)。  
+
+
+#### 3. 单个及两个正态总体的均值、方差的假设检验  
+
+| 检验类型 | 原假设\(\boldsymbol{H_0}\) | 检验统计量及分布（\( H_0 \)成立时） | 拒绝域（显著性水平\(\alpha\)） |
+|----------|---------------------------|------------------------------------|------------------------------|
+| **单个正态总体均值**（\(\boldsymbol{\sigma^2}\)已知） | \( \mu = \mu_0 \) | \( U = \frac{\bar{X} - \mu_0}{\sigma / \sqrt{n}} \sim N(0,1) \) | \( |U| \geq u_{\frac{\alpha}{2}} \) |
+| **单个正态总体均值**（\(\boldsymbol{\sigma^2}\)未知） | \( \mu = \mu_0 \) | \( T = \frac{\bar{X} - \mu_0}{S / \sqrt{n}} \sim t(n - 1) \) | \( |T| \geq t_{\frac{\alpha}{2}}(n - 1) \) |
+| **单个正态总体方差**（\(\boldsymbol{\mu}\)已知） | \( \sigma^2 = \sigma_0^2 \) | \( \chi^2 = \sum_{i=1}^n \left( \frac{X_i - \mu}{\sigma_0} \right)^2 \sim \chi^2(n) \) | \( \chi^2 \geq \chi^2_{\frac{\alpha}{2}}(n) \) 或 \( \chi^2 \leq \chi^2_{1 - \frac{\alpha}{2}}(n) \) |
+| **单个正态总体方差**（\(\boldsymbol{\mu}\)未知） | \( \sigma^2 = \sigma_0^2 \) | \( \chi^2 = \frac{(n - 1)S^2}{\sigma_0^2} \sim \chi^2(n - 1) \) | \( \chi^2 \geq \chi^2_{\frac{\alpha}{2}}(n - 1) \) 或 \( \chi^2 \leq \chi^2_{1 - \frac{\alpha}{2}}(n - 1) \) |
+| **两个正态总体均值差**（\(\boldsymbol{\sigma_1^2, \sigma_2^2}\)已知） | \( \mu_1 - \mu_2 = \delta \) | \( U = \frac{(\bar{X}_1 - \bar{X}_2) - \delta}{\sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}} \sim N(0,1) \) | \( |U| \geq u_{\frac{\alpha}{2}} \) |  
+（注：表中\( u_{\frac{\alpha}{2}} \)为标准正态分布上\(\frac{\alpha}{2}\)分位数，\( t_{\frac{\alpha}{2}}(n) \)为\( t \)分布上\(\frac{\alpha}{2}\)分位数，\( \chi^2_{\frac{\alpha}{2}}(n) \)为\(\chi^2\)分布上\(\frac{\alpha}{2}\)分位数，\( F_{\frac{\alpha}{2}}(n_1, n_2) \)为\( F \)分布上\(\frac{\alpha}{2}\)分位数。）
+
+
+
+|  | 态总体 | $\mu_1 - \mu_2 = \delta$ <br> ($\sigma_1^2, \sigma_2^2$未知，但$\sigma_1^2 = \sigma_2^2$) | $T = \frac{\bar{X_1} - \bar{X_2} - \delta}{S_W \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}$ <br> $\sim t(n_1 + n_2 - 2)$ <br> $S_W^2 = \frac{(n_1 - 1)S_1^2 + (n_2 - 1)S_2^2}{n_1 + n_2 - 2}$ | $\vert t \vert = \left\vert \frac{\bar{X_1} - \bar{X_2} - \delta}{S_W \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}} \right\vert$ <br> $\geq t_{\frac{\alpha}{2}}(n_1 + n_2 - 2)$ |
+| --- | --- | --- | --- | --- |
+|  |  | $\sigma_1^2 = \sigma_2^2$ <br> ($\mu_1, \mu_2$未知) | $F = \frac{S_1^2}{S_2^2}$ <br> $\sim F(n_1 - 1, n_2 - 1)$ | $f = \frac{S_1^2}{S_2^2} \geq F_{\frac{\alpha}{2}}(n_1 - 1, n_2 - 1)$或 <br> $f \leq F_{1 - \frac{\alpha}{2}}(n_2 - 1, n_1 - 1)$ |
+
+
+### 经常用到的初等数学公式
+#### 初等代数
+##### 1. 乘法公式与因式分解
+(1) $\boldsymbol{(a \pm b)^2 = a^2 \pm 2ab + b^2}$  
+(2) $\boldsymbol{(a + b + c)^2 = a^2 + b^2 + c^2 + 2ab + 2ac + 2bc}$  
+(3) $\boldsymbol{a^2 - b^2 = (a - b)(a + b)}$  
+(4) $\boldsymbol{(a \pm b)^3 = a^3 \pm 3a^2b + 3ab^2 \pm b^3}$  
+(5) $\boldsymbol{a^3 \pm b^3 = (a \pm b)(a^2 \mp ab + b^2)}$  
+(6) $\boldsymbol{a^n - b^n = (a - b)(a^{n-1} + a^{n-2}b + a^{n-3}b^2 + \cdots + ab^{n-2} + b^{n-1})}$  
+
+
+##### 2. 比例$\boldsymbol{\left( \frac{a}{b} = \frac{c}{d} \right)}$  
+(1) 合比定理 $\boldsymbol{\frac{a + b}{b} = \frac{c + d}{d}}$  
+(2) 分比定理 $\boldsymbol{\frac{a - b}{b} = \frac{c - d}{d}}$  
+(3) 合分比定理 $\boldsymbol{\frac{a + b}{a - b} = \frac{c + d}{c - d}}$  
+(4) 若$\boldsymbol{\frac{a}{b} = \frac{c}{d} = \frac{e}{f}}$，则令$\boldsymbol{\frac{a}{b} = \frac{c}{d} = \frac{e}{f} = t}$，于是$\boldsymbol{\frac{a}{b} = \frac{c}{d} = \frac{e}{f} = \frac{a + c + e}{b + d + f}}$  
+(5) 若$y$与$x$成正比，则$\boldsymbol{y = kx}$（$k$为比例系数）  
+(6) 若$y$与$x$成反比，则$\boldsymbol{y = \frac{k}{x}}$（$k$为比例系数）  
+
+
+##### 3. 不等式  
+(1) 设$\boldsymbol{a > b > 0, n > 0}$，则$\boldsymbol{a^n > b^n}$  
+(2) 设$\boldsymbol{a > b > 0, n}$为正整数，则$\boldsymbol{\sqrt[n]{a} > \sqrt[n]{b}}$  
+(3) 设$\boldsymbol{\frac{a}{b} < \frac{c}{d}}$，则$\boldsymbol{\frac{a}{b} < \frac{a + c}{b + d} < \frac{c}{d}}$  
+(4) 非负数的算术平均值不小于其几何平均值，即  
+$\boldsymbol{\frac{a + b}{2} \geq \sqrt{ab}},$  
+$\boldsymbol{\frac{a + b + c}{3} \geq \sqrt[3]{abc}},$  
+$\boldsymbol{\frac{a_1 + a_2 + a_3 + \cdots + a_n}{n} \geq \sqrt[n]{a_1a_2 \cdots a_n}}$  
+
+(5) 绝对值不等式  
+1) $\boldsymbol{\vert a + b \vert \leq \vert a \vert + \vert b \vert}$  
+2) $\boldsymbol{\vert a - b \vert \leq \vert a \vert + \vert b \vert}$  
+3) $\boldsymbol{\vert a - b \vert \geq \vert \vert a \vert - \vert b \vert \vert}$  
+4) $\boldsymbol{- \vert a \vert \leq a \leq \vert a \vert}$  
+
+
+##### 4. 二次方程 $\boldsymbol{ax^2 + bx + c = 0}$  
+(1) 根：$\boldsymbol{x_1 = \frac{-b + \sqrt{b^2 - 4ac}}{2a},\ x_2 = \frac{-b - \sqrt{b^2 - 4ac}}{2a}}$
+
+
+
+### （2）韦达定理：
+\[ x_1 + x_2 = -\frac{b}{a}, \quad x_1x_2 = \frac{c}{a} \]
+
+### （3）判别式
+\[
+\Delta = b^2 - 4ac 
+\begin{cases} 
+> 0, & \text{方程有两不等实根} \\
+= 0, & \text{方程有两相等实根} \\
+< 0, & \text{方程有两共轭虚根}
+\end{cases}
+\]
+
+### 5. 一元三次方程的韦达定理：
+若\( x^3 + px^2 + qx + r = 0 \)的三个根分别为\( x_1, x_2, x_3 \)，则：
+\[
+\begin{align*}
+x_1 + x_2 + x_3 &= -p \\
+x_1 \cdot x_2 + x_2 \cdot x_3 + x_3 \cdot x_1 &= q \\
+x_1 \cdot x_2 \cdot x_3 &= -r
+\end{align*}
+\]
+
+### 6. 指数
+(1) \( a^m \cdot a^n = a^{m + n} \)  
+(2) \( a^m \div a^n = a^{m - n} \)  
+(3) \( (a^m)^n = a^{mn} \)  
+(4) \( (ab)^n = a^n b^n \)  
+(5) \( \left( \frac{a}{b} \right)^m = \frac{a^m}{b^m} \)  
+(6) \( a^{-m} = \frac{1}{a^m} \)  
+
+
+### 7. 对数 \( \log_a N, (a > 0, a \neq 1, N > 0) \)
+(1) 对数恒等式：\( N = a^{\log_a N} \)，更常用 \( N = e^{\ln N} \)  
+(2) \( \log_a (MN) = \log_a M + \log_a N \)  
+(3) \( \log_a \left( \frac{M}{N} \right) = \log_a M - \log_a N \)  
+(4) \( \log_a (M^n) = n \log_a M \)  
+(5) \( \log_a \sqrt[n]{M} = \frac{1}{n} \log_a M \)  
+(6) 换底公式：\( \log_a M = \frac{\log_b M}{\log_b a} \)  
+(7) \( \log_a 1 = 0 \)  
+(8) \( \log_a a = 1 \)  
+
+
+### 8. 数列
+#### （1）等差数列
+设 \( a_1 \) ---- 首项，\( a_n \) ---- 通项；\( d \) ---- 公差，\( S_n \) ---- 前 \( n \) 项和  
+
+1) 通项公式：\( a_n = a_1 + (n - 1)d \)  
+2) 前 \( n \) 项和：\( S_n = \frac{a_1 + a_n}{2} n = n a_1 + \frac{n(n - 1)}{2} d \)  
+3) 若 \( a, b, c \) 成等差数列，则等差中项 \( b = \frac{1}{2}(a + c) \)  
+
+
+#### （2）等比数列
+设 \( a_1 \) ---- 首项，\( q \) ---- 公比，\( a_n \) ---- 通项，则：  
+
+1) 通项公式：\( a_n = a_1 q^{n - 1} \)  
+2) 前 \( n \) 项和：\( S_n = \frac{a_1(1 - q^n)}{1 - q} = \frac{a_1 - a_n q}{1 - q} \)  
+
+
+#### （3）常用的几种数列的和
+1) \( 1 + 2 + 3 + \cdots + n = \frac{1}{2} n(n + 1) \)  
+2) \( 1^2 + 2^2 + 3^2 + \cdots + n^2 = \frac{1}{6} n(n + 1)(2n + 1) \)
+
+
+
+### 数列求和公式
+3) \( 1^3 + 2^3 + 3^3 + \cdots + n^3 = \left[ \frac{1}{2}n(n + 1) \right]^2 \)
+
+4) \( 1 \times 2 + 2 \times 3 + \cdots + n(n + 1) = \frac{1}{3}n(n + 1)(n + 2) \)
+
+4) \( 1 \times 2 \times 3 + 2 \times 3 \times 4 + \cdots + n(n + 1)(n + 2) = \frac{1}{4}n(n + 1)(n + 2)(n + 3) \)
+
+
+### 9. 排列、组合与二项式定理
+#### (1) 排列
+\[
+P_{n}^{m} = n(n - 1)(n - 2) \cdots [n - (m - 1)]
+\]
+
+#### (2) 全排列
+\[
+P_{n}^{n} = n(n - 1) \cdots 3 \times 2 \times 1 = n!
+\]
+
+#### (3) 组合
+\[
+C_{n}^{m} = \frac{n(n - 1) \cdots (n - m + 1)}{m!} = \frac{n!}{m!(n - m)!}
+\]
+
+**组合的性质**：
+1) \( C_{n}^{m} = C_{n}^{n - m} \)
+2) \( C_{n}^{m} = C_{n - 1}^{m} + C_{n - 1}^{m - 1} \)
+
+#### (4) 二项式定理
+\[
+(a + b)^n = a^n + na^{n - 1}b + \frac{n(n - 1)}{2!}a^{n - 2}b^2 + \cdots + \frac{n(n - 1) \cdots [n - (k - 1)]}{k!}a^{n - k}b^k + \cdots + b^n
+\]
+
+
+### 平面几何
+#### 1、图形面积
+##### (1) 任意三角形
+\[
+S = \frac{1}{2}bh = \frac{1}{2}ab\sin C = \sqrt{s(s - a)(s - b)(s - c)},\text{其中 } s = \frac{1}{2}(a + b + c)
+\]
+
+**平行四边形**：
+\[
+S = bh = ab\sin \varphi
+\]
+
+##### (2) 梯形
+\[
+S = \text{中位线} \times \text{高}
+\]
+
+##### (3) 扇形
+\[
+S = \frac{1}{2}rl = \frac{1}{2}r^2\theta
+\]
+
+
+### 2、旋转体
+#### (1) 圆柱
+设 \( R \)----底圆半径，\( H \)----柱高，则：
+
+1) 侧面积 \( S_{\text{侧}} = 2\pi RH \)，
+
+2) 全面积 \( S_{\text{全}} = 2\pi R(H + R) \)
+
+3) 体积 \( V = \pi R^2 H \)
+
+#### (2) 圆锥（\( l = \sqrt{R^2 + H^2} \)母线）
+
+1) 侧面积 \( S_{\text{侧}} = \pi Rl \)
+
+2) 全面积 \( S_{\text{全}} = \pi R(l + R) \)
+
+3) 体积 \( V = \frac{1}{3}\pi R^2 H \)
+
+#### (3) 球
+设 \( R \)----半径，\( d \)----直径，则：
+
+1) 全面积 \( S_{\text{全}} = 4\pi R^2 \)
+
+2) 体积 \( V = \frac{4}{3}\pi R^3 \)
+
+#### (4) 球缺（球被一个平面所截而得到的部分）
+
+1) 面积 \( S = 2\pi Rh \)（不包括底面）
+
+2) 体积 \( V = \pi h^2 \left( R - \frac{h}{3} \right) \)
+
+#### 3. 棱柱及棱锥
+设 \( S \)----底面积，\( H \)----高：
+
+(1) 棱柱体积 \( V = SH \)
+
+(2) 棱锥体积 \( V = \frac{1}{3}SH \)
+
+(3) 正棱锥侧面积 \( A = \frac{1}{2} \times \text{母线} \times \text{底周长} \)
+
+
+
+### 三、平面三角
+#### 1. 三角函数间的关系
+(1) $\boldsymbol{\sin\alpha \csc\alpha = 1}$  
+(2) $\boldsymbol{\cos\alpha \sec\alpha = 1}$  
+(3) $\boldsymbol{\tan\alpha \cot\alpha = 1}$  
+(4) $\boldsymbol{\sin^2\alpha + \cos^2\alpha = 1}$  
+(5) $\boldsymbol{1 + \tan^2\alpha = \sec^2\alpha}$  
+(6) $\boldsymbol{1 + \cot^2\alpha = \csc^2\alpha}$  
+(7) $\boldsymbol{\tan\alpha = \frac{\sin\alpha}{\cos\alpha}}$  
+(8) $\boldsymbol{\cot\alpha = \frac{\cos\alpha}{\sin\alpha}}$  
+
+
+#### 2. 倍角三角函数
+(1) $\boldsymbol{\sin 2\alpha = 2\sin\alpha \cos\alpha}$  
+
+(2) $\boldsymbol{\cos 2\alpha = \cos^2\alpha - \sin^2\alpha = 1 - 2\sin^2\alpha = 2\cos^2\alpha - 1}$  
+
+(3) $\boldsymbol{\tan 2\alpha = \frac{2\tan\alpha}{1 - \tan^2\alpha}}$  
+(4) $\boldsymbol{\cot 2\alpha = \frac{1 - \cot^2\alpha}{2\cot\alpha}}$  
+
+(5) $\boldsymbol{\sin^2\alpha = \frac{1 - \cos 2\alpha}{2}}$  
+(6) $\boldsymbol{\cos^2\alpha = \frac{1 + \cos 2\alpha}{2}}$  
+
+
+#### 3. 三角函数的和差化积与积化和差公式
+(1) $\boldsymbol{\sin\alpha + \sin\beta = 2\sin\frac{\alpha + \beta}{2}\cos\frac{\alpha - \beta}{2}}$  
+
+(2) $\boldsymbol{\sin\alpha - \sin\beta = 2\cos\frac{\alpha + \beta}{2}\sin\frac{\alpha - \beta}{2}}$  
+
+(3) $\boldsymbol{\cos\alpha + \cos\beta = 2\cos\frac{\alpha + \beta}{2}\cos\frac{\alpha - \beta}{2}}$  
+
+(4) $\boldsymbol{\cos\alpha - \cos\beta = -2\sin\frac{\alpha + \beta}{2}\sin\frac{\alpha - \beta}{2}}$  
+
+(5) $\boldsymbol{\sin\alpha \cos\beta = \frac{1}{2}[\sin(\alpha + \beta) + \sin(\alpha - \beta)]}$  
+
+(6) $\boldsymbol{\cos\alpha \cos\beta = \frac{1}{2}[\cos(\alpha + \beta) + \cos(\alpha - \beta)]}$  
+
+(7) $\boldsymbol{\cos\alpha \sin\beta = \frac{1}{2}[\sin(\alpha + \beta) - \sin(\alpha - \beta)]}$  
+
+(8) $\boldsymbol{\sin\alpha \sin\beta = \frac{1}{2}[\cos(\alpha + \beta) - \cos(\alpha - \beta)]}$  
+
+
+#### 4. 边角关系
+(1) **正弦定理**  
+$\boldsymbol{\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R}$，其中 $R$ 为 $\triangle ABC$ 外接圆半径。  
+
+(2) **余弦定理**  
+$\boldsymbol{a^2 = b^2 + c^2 - 2bc\cos A}$  
+$\boldsymbol{b^2 = c^2 + a^2 - 2ca\cos B}$  
+$\boldsymbol{c^2 = a^2 + b^2 - 2ab\cos C}$  
+
+
+#### 5. 反三角函数恒等式
+(1) $\boldsymbol{\arcsin x \pm \arcsin y = \arcsin\left(x\sqrt{1 - y^2} \pm y\sqrt{1 - x^2}\right)}$  
+
+(2) $\boldsymbol{\arccos x \pm \arccos y = \arccos\left(xy \mp \sqrt{(1 - x^2)(1 - y^2)}\right)}$  
+
+(3) $\boldsymbol{\arctan x \pm \arctan y = \arctan\left(\frac{x \pm y}{1 \mp xy}\right)}$（符号需匹配：$+$ 对应 $-$，$-$ 对应 $+$）  
+
+(4) $\boldsymbol{\arcsin x + \arccos x = \frac{\pi}{2}}$  
+
+(5) $\boldsymbol{\arctan x + \text{arccot } x = \frac{\pi}{2}}$
+
